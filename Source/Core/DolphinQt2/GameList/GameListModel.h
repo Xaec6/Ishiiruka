@@ -7,6 +7,7 @@
 #include <QAbstractTableModel>
 #include <QString>
 
+#include "Core/TitleDatabase.h"
 #include "DolphinQt2/GameList/GameFile.h"
 #include "DolphinQt2/GameList/GameTracker.h"
 
@@ -26,21 +27,21 @@ public:
 
   // Path of the Game at the specified index.
   QString GetPath(int index) const { return m_games[index]->GetFilePath(); }
+  bool ShouldDisplayGameListItem(int index) const;
   enum
   {
     COL_PLATFORM = 0,
-    COL_ID,
     COL_BANNER,
     COL_TITLE,
     COL_DESCRIPTION,
     COL_MAKER,
-    COL_SIZE,
+    COL_ID,
     COL_COUNTRY,
+    COL_SIZE,
     COL_RATING,
     NUM_COLS
   };
 
-public slots:
   void UpdateGame(QSharedPointer<GameFile> game);
   void RemoveGame(const QString& path);
 
@@ -54,4 +55,5 @@ private:
 
   GameTracker m_tracker;
   QList<QSharedPointer<GameFile>> m_games;
+  Core::TitleDatabase m_title_database;
 };

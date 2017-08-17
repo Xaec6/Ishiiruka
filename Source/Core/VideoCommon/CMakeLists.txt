@@ -32,6 +32,7 @@ set(SRCS	AsyncRequests.cpp
 			G_SPXP41_pvt.cpp
 			G_SX4E01_pvt.cpp
 			HiresTextures.cpp
+			HostTexture.cpp
 			ImageWrite.cpp
 			IndexGenerator.cpp
 			MainBase.cpp
@@ -68,7 +69,7 @@ set(SRCS	AsyncRequests.cpp
 			VideoState.cpp
 			XFMemory.cpp
 			XFStructs.cpp)
-set(LIBS core png)
+set(LIBS core png xbrz)
 
 if(_M_X86)
 	set(SRCS ${SRCS} x64TextureDecoder.cpp VertexLoaderX64.cpp)
@@ -78,12 +79,14 @@ else()
 	set(SRCS ${SRCS} TextureDecoder_Generic.cpp)
 endif()
 
-if(LIBAV_FOUND OR WIN32)
-	set(SRCS ${SRCS} AVIDump.cpp)
-endif()
-
 add_dolphin_library(videocommon "${SRCS}" "${LIBS}")
 
-if(LIBAV_FOUND)
-	target_link_libraries(videocommon PRIVATE ${LIBS} ${LIBAV_LIBRARIES})
+if(FFmpeg_FOUND)
+  target_sources(videocommon PRIVATE AVIDump.cpp)
+  target_link_libraries(videocommon PRIVATE
+    FFmpeg::avcodec
+    FFmpeg::avformat
+    FFmpeg::avutil
+    FFmpeg::swscale
+  )
 endif()

@@ -3,6 +3,7 @@
 // Refer to the license.txt file included.
 
 #include "Core/PowerPC/Profiler.h"
+
 #include <string>
 #include "Core/PowerPC/JitInterface.h"
 
@@ -12,7 +13,7 @@ bool g_ProfileBlocks;
 
 void WriteProfileResults(const std::string& filename)
 {
-	JitInterface::WriteProfileResults(filename);
+  JitInterface::WriteProfileResults(filename);
 }
 
 }  // namespace

@@ -42,19 +42,20 @@ extern const std::string scm_distributor_str;
 #if defined(_DEBUG)
 #include <crtdbg.h>
 #undef CHECK_HEAP_INTEGRITY
-#define CHECK_HEAP_INTEGRITY() {if (!_CrtCheckMemory()) PanicAlert("memory corruption detected. see log.");}
+#define CHECK_HEAP_INTEGRITY()                                                                     \
+  {                                                                                                \
+    if (!_CrtCheckMemory())                                                                        \
+      PanicAlert("memory corruption detected. see log.");                                          \
+  }
 // If you want to see how much a pain in the ass singletons are, for example:
 // {614} normal block at 0x030C5310, 188 bytes long.
 // Data: <Master Log      > 4D 61 73 74 65 72 20 4C 6F 67 00 00 00 00 00 00
 struct CrtDebugBreak
 {
-	CrtDebugBreak(int spot)
-	{
-		_CrtSetBreakAlloc(spot);
-	}
+  CrtDebugBreak(int spot) { _CrtSetBreakAlloc(spot); }
 };
-//CrtDebugBreak breakAt(614);
-#endif // end DEBUG/FAST
+// CrtDebugBreak breakAt(614);
+#endif  // end DEBUG/FAST
 
 #endif
 
@@ -81,9 +82,9 @@ struct CrtDebugBreak
 // Host communication.
 enum HOST_COMM
 {
-	// Begin at 10 in case there is already messages with wParam = 0, 1, 2 and so on
-	WM_USER_STOP = 10,
-	WM_USER_CREATE,
-	WM_USER_SETCURSOR,
-	WM_USER_JOB_DISPATCH,
+  // Begin at 10 in case there is already messages with wParam = 0, 1, 2 and so on
+  WM_USER_STOP = 10,
+  WM_USER_CREATE,
+  WM_USER_SETCURSOR,
+  WM_USER_JOB_DISPATCH,
 };

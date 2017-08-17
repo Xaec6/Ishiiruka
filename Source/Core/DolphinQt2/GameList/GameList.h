@@ -13,8 +13,6 @@
 #include "DolphinQt2/GameList/GameFile.h"
 #include "DolphinQt2/GameList/GameListModel.h"
 
-class TableDelegate;
-
 class GameList final : public QStackedWidget
 {
   Q_OBJECT
@@ -23,22 +21,31 @@ public:
   explicit GameList(QWidget* parent = nullptr);
   QString GetSelectedGame() const;
 
-public slots:
   void SetTableView() { SetPreferredView(true); }
   void SetListView() { SetPreferredView(false); }
   void SetViewColumn(int col, bool view) { m_table->setColumnHidden(col, !view); }
-private slots:
-  void ShowContextMenu(const QPoint&);
-  void OpenProperties();
-  void OpenWiki();
-  void SetDefaultISO();
+  void OnColumnVisibilityToggled(const QString& row, bool visible);
+  void OnGameListVisibilityChanged();
 
 signals:
   void GameSelected();
-  void DirectoryAdded(const QString& dir);
-  void DirectoryRemoved(const QString& dir);
+  void EmulationStarted();
+  void EmulationStopped();
 
 private:
+  void ShowContextMenu(const QPoint&);
+  void OpenContainingFolder();
+  void OpenProperties();
+  void OpenSaveFolder();
+  void OpenWiki();
+  void SetDefaultISO();
+  void DeleteFile();
+  void InstallWAD();
+  void UninstallWAD();
+  void ExportWiiSave();
+  void CompressISO();
+  void OnHeaderViewChanged();
+
   void MakeTableView();
   void MakeListView();
   void MakeEmptyView();
@@ -47,7 +54,6 @@ private:
   void ConsiderViewChange();
 
   GameListModel* m_model;
-  TableDelegate* m_delegate;
   QSortFilterProxyModel* m_table_proxy;
   QSortFilterProxyModel* m_list_proxy;
 

@@ -4,51 +4,61 @@
 
 #pragma once
 
-#include <QSettings>
+#include <QObject>
+#include <QVector>
+
+#include "Common/NonCopyable.h"
 
 namespace DiscIO
 {
 enum class Language;
 }
 
+class InputConfig;
+
 // UI settings to be stored in the config directory.
-class Settings final : public QSettings
+class Settings final : public QObject, NonCopyable
 {
   Q_OBJECT
 
 public:
-  explicit Settings(QObject* parent = nullptr);
+  static Settings& Instance();
 
   // UI
-  QString GetThemeDir() const;
-  bool IsInDevelopmentWarningEnabled() const;
+  void SetThemeName(const QString& theme_name);
+  QString GetProfilesDir() const;
+  QVector<QString> GetProfiles(const InputConfig* config) const;
+  QString GetProfileINIPath(const InputConfig* config, const QString& name) const;
 
   // GameList
-  QString GetLastGame() const;
-  void SetLastGame(const QString& path);
   QStringList GetPaths() const;
-  void SetPaths(const QStringList& paths);
-  void RemovePath(int i);
-  QString GetDefaultGame() const;
-  void SetDefaultGame(const QString& path);
-  QString GetDVDRoot() const;
-  void SetDVDRoot(const QString& path);
-  QString GetApploader() const;
-  void SetApploader(const QString& path);
-  QString GetWiiNAND() const;
-  void SetWiiNAND(const QString& path);
-  DiscIO::Language GetWiiSystemLanguage() const;
-  DiscIO::Language GetGCSystemLanguage() const;
+  void AddPath(const QString& path);
+  void RemovePath(const QString& path);
   bool GetPreferredView() const;
   void SetPreferredView(bool table);
 
   // Emulation
-  bool GetConfirmStop() const;
   int GetStateSlot() const;
   void SetStateSlot(int);
 
   // Graphics
-  bool GetRenderToMain() const;
-  bool GetFullScreen() const;
-  QSize GetRenderWindowSize() const;
+  void SetHideCursor(bool hide_cursor);
+  bool GetHideCursor() const;
+
+  // Audio
+  int GetVolume() const;
+  void SetVolume(int volume);
+  void IncreaseVolume(int volume);
+  void DecreaseVolume(int volume);
+
+signals:
+  void ThemeChanged();
+  void PathAdded(const QString&);
+  void PathRemoved(const QString&);
+  void HideCursorChanged();
+  void VolumeChanged(int volume);
+  void NANDRefresh();
+
+private:
+  Settings();
 };

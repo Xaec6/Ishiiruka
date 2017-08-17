@@ -14,8 +14,12 @@
 #include "DolphinQt2/RenderWidget.h"
 #include "DolphinQt2/ToolBar.h"
 
-class PathDialog;
+class HotkeyScheduler;
+class MappingWindow;
 class SettingsWindow;
+class ControllersWindow;
+class DragEnterEvent;
+class GraphicsWindow;
 
 class MainWindow final : public QMainWindow
 {
@@ -25,18 +29,20 @@ public:
   explicit MainWindow();
   ~MainWindow();
 
+  bool eventFilter(QObject* object, QEvent* event) override;
+
 signals:
   void EmulationStarted();
   void EmulationPaused();
   void EmulationStopped();
 
-private slots:
+private:
   void Open();
   void Play();
   void Pause();
 
   // May ask for confirmation. Returns whether or not it actually stopped.
-  bool Stop();
+  bool RequestStop();
   void ForceStop();
   void Reset();
   void FrameAdvance();
@@ -50,27 +56,42 @@ private slots:
   void StateSaveUndo();
   void StateSaveOldest();
   void SetStateSlot(int slot);
+  void BootWiiSystemMenu();
+
+  void PerformOnlineUpdate(const std::string& region);
 
   void FullScreen();
   void ScreenShot();
 
-private:
   void CreateComponents();
 
   void ConnectGameList();
+  void ConnectHotkeys();
   void ConnectMenuBar();
   void ConnectRenderWidget();
   void ConnectStack();
   void ConnectToolBar();
-  void ConnectPathsDialog();
+
+  void InitControllers();
+  void ShutdownControllers();
+
+  void InitCoreCallbacks();
 
   void StartGame(const QString& path);
   void ShowRenderWidget();
   void HideRenderWidget();
 
-  void ShowPathsDialog();
   void ShowSettingsWindow();
+  void ShowAudioWindow();
+  void ShowControllersWindow();
+  void ShowGraphicsWindow();
   void ShowAboutDialog();
+  void ShowHotkeyDialog();
+
+  void OnStopComplete();
+  void dragEnterEvent(QDragEnterEvent* event) override;
+  void dropEvent(QDropEvent* event) override;
+  QSize sizeHint() const override;
 
   QStackedWidget* m_stack;
   ToolBar* m_tool_bar;
@@ -78,8 +99,14 @@ private:
   GameList* m_game_list;
   RenderWidget* m_render_widget;
   bool m_rendering_to_main;
+  bool m_stop_requested = false;
+  bool m_exit_requested = false;
   int m_state_slot = 1;
+  QString m_pending_boot;
 
-  PathDialog* m_paths_dialog;
+  HotkeyScheduler* m_hotkey_scheduler;
+  ControllersWindow* m_controllers_window;
   SettingsWindow* m_settings_window;
+  MappingWindow* m_hotkey_window;
+  GraphicsWindow* m_graphics_window;
 };

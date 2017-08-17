@@ -6,6 +6,7 @@
 
 #include "DolphinQt2/Host.h"
 #include "DolphinQt2/RenderWidget.h"
+#include "DolphinQt2/Settings.h"
 
 RenderWidget::RenderWidget(QWidget* parent) : QWidget(parent)
 {
@@ -13,10 +14,18 @@ RenderWidget::RenderWidget(QWidget* parent) : QWidget(parent)
   setAttribute(Qt::WA_NoSystemBackground, true);
 
   connect(Host::GetInstance(), &Host::RequestTitle, this, &RenderWidget::setWindowTitle);
-  connect(this, &RenderWidget::FocusChanged, Host::GetInstance(), &Host::SetRenderFocus);
   connect(this, &RenderWidget::StateChanged, Host::GetInstance(), &Host::SetRenderFullscreen);
   connect(this, &RenderWidget::HandleChanged, Host::GetInstance(), &Host::SetRenderHandle);
   emit HandleChanged((void*)winId());
+
+  connect(&Settings::Instance(), &Settings::HideCursorChanged, this,
+          &RenderWidget::OnHideCursorChanged);
+  OnHideCursorChanged();
+}
+
+void RenderWidget::OnHideCursorChanged()
+{
+  setCursor(Settings::Instance().GetHideCursor() ? Qt::BlankCursor : Qt::ArrowCursor);
 }
 
 bool RenderWidget::event(QEvent* event)
@@ -33,9 +42,11 @@ bool RenderWidget::event(QEvent* event)
   case QEvent::WinIdChange:
     emit HandleChanged((void*)winId());
     break;
-  case QEvent::FocusIn:
-  case QEvent::FocusOut:
-    emit FocusChanged(hasFocus());
+  case QEvent::WindowActivate:
+    Host::GetInstance()->SetRenderFocus(true);
+    break;
+  case QEvent::WindowDeactivate:
+    Host::GetInstance()->SetRenderFocus(false);
     break;
   case QEvent::WindowStateChange:
     emit StateChanged(isFullScreen());

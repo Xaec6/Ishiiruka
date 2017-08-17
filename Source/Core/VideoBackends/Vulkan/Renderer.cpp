@@ -42,7 +42,6 @@ namespace Vulkan
 Renderer::Renderer(std::unique_ptr<SwapChain> swap_chain)
 	: m_swap_chain(std::move(swap_chain))
 {
-	g_Config.bRunning = true;
 	UpdateActiveConfig();
 
 	// Set to something invalid, forcing all states to be re-initialized.
@@ -62,7 +61,6 @@ Renderer::Renderer(std::unique_ptr<SwapChain> swap_chain)
 
 Renderer::~Renderer()
 {
-	g_Config.bRunning = false;
 	UpdateActiveConfig();
 
 	// Ensure all frames are written to frame dump at shutdown.
@@ -589,7 +587,7 @@ void Renderer::SwapImpl(u32 xfb_addr, u32 fb_width, u32 fb_stride, u32 fb_height
 
 	// Update the window size based on the frame that was just rendered.
 	// Due to depending on guest state, we need to call this every frame.
-	SetWindowSize(static_cast<int>(fb_stride), static_cast<int>(fb_height));
+	SetWindowSize(fb_stride, fb_height);
 
 	// Clean up stale textures.
 	TextureCache::GetInstance()->Cleanup(frameCount);
@@ -650,7 +648,7 @@ void Renderer::DrawVirtualXFB(VkRenderPass render_pass, const TargetRectangle& t
 	for (u32 i = 0; i < xfb_count; ++i)
 	{
 		const XFBSource* xfb_source = static_cast<const XFBSource*>(xfb_sources[i]);
-		xfb_source->GetTexture()->GetTexture()->TransitionToLayout(
+		xfb_source->GetTexture()->GetRawTexIdentifier()->TransitionToLayout(
 			g_command_buffer_mgr->GetCurrentCommandBuffer(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 
 		TargetRectangle source_rect = xfb_source->sourceRc;
@@ -675,7 +673,7 @@ void Renderer::DrawVirtualXFB(VkRenderPass render_pass, const TargetRectangle& t
 			2;
 
 		source_rect.right -= Renderer::EFBToScaledX(fb_stride - fb_width);
-		BlitScreen(render_pass, draw_rect, source_rect, xfb_source->GetTexture()->GetTexture(), true);
+		BlitScreen(render_pass, draw_rect, source_rect, xfb_source->GetTexture()->GetRawTexIdentifier(), true);
 	}
 }
 
@@ -686,13 +684,13 @@ void Renderer::DrawRealXFB(VkRenderPass render_pass, const TargetRectangle& targ
 	for (u32 i = 0; i < xfb_count; ++i)
 	{
 		const XFBSource* xfb_source = static_cast<const XFBSource*>(xfb_sources[i]);
-		xfb_source->GetTexture()->GetTexture()->TransitionToLayout(
+		xfb_source->GetTexture()->GetRawTexIdentifier()->TransitionToLayout(
 			g_command_buffer_mgr->GetCurrentCommandBuffer(), VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 
 		TargetRectangle source_rect = xfb_source->sourceRc;
 		TargetRectangle draw_rect = target_rect;
 		source_rect.right -= fb_stride - fb_width;
-		BlitScreen(render_pass, draw_rect, source_rect, xfb_source->GetTexture()->GetTexture(), true);
+		BlitScreen(render_pass, draw_rect, source_rect, xfb_source->GetTexture()->GetRawTexIdentifier(), true);
 	}
 }
 
@@ -1131,7 +1129,7 @@ void Renderer::CheckForSurfaceChange()
 void Renderer::CheckForConfigChanges()
 {
 	// Save the video config so we can compare against to determine which settings have changed.
-	int old_multisamples = g_ActiveConfig.iMultisamples;
+	u32 old_multisamples = g_ActiveConfig.iMultisamples;
 	int old_anisotropy = g_ActiveConfig.iMaxAnisotropy;
 	int old_stereo_mode = g_ActiveConfig.iStereoMode;
 	int old_aspect_ratio = g_ActiveConfig.iAspectRatio;

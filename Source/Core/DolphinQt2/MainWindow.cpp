@@ -2,45 +2,126 @@
 // Licensed under GPLv2+
 // Refer to the license.txt file included.
 
+#include <QApplication>
+#include <QCloseEvent>
 #include <QDir>
+#include <QDragEnterEvent>
+#include <QDropEvent>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QIcon>
 #include <QMessageBox>
+#include <QMimeData>
 
+#include "Common/Common.h"
+
+#include "Core/Boot/Boot.h"
 #include "Core/BootManager.h"
+#include "Core/CommonTitles.h"
 #include "Core/ConfigManager.h"
 #include "Core/Core.h"
+#include "Core/HW/GCKeyboard.h"
+#include "Core/HW/GCPad.h"
 #include "Core/HW/ProcessorInterface.h"
+#include "Core/HW/Wiimote.h"
+#include "Core/HW/WiimoteEmu/WiimoteEmu.h"
+#include "Core/HotkeyManager.h"
 #include "Core/Movie.h"
+#include "Core/NetPlayProto.h"
 #include "Core/State.h"
 
 #include "DolphinQt2/AboutDialog.h"
-#include "DolphinQt2/Config/PathDialog.h"
+#include "DolphinQt2/Config/ControllersWindow.h"
+
+#include "DolphinQt2/Config/Graphics/GraphicsWindow.h"
+#include "DolphinQt2/Config/Mapping/MappingWindow.h"
 #include "DolphinQt2/Config/SettingsWindow.h"
 #include "DolphinQt2/Host.h"
+#include "DolphinQt2/HotkeyScheduler.h"
 #include "DolphinQt2/MainWindow.h"
+#include "DolphinQt2/QtUtils/WindowActivationEventFilter.h"
 #include "DolphinQt2/Resources.h"
 #include "DolphinQt2/Settings.h"
+#include "DolphinQt2/WiiUpdate.h"
+
+#include "InputCommon/ControllerInterface/ControllerInterface.h"
+
+#include "UICommon/UICommon.h"
+
+#if defined(HAVE_XRANDR) && HAVE_XRANDR
+#include <qpa/qplatformnativeinterface.h>
+#include "UICommon/X11Utils.h"
+#endif
 
 MainWindow::MainWindow() : QMainWindow(nullptr)
 {
-  setWindowTitle(tr("Dolphin"));
+  setWindowTitle(QString::fromStdString(scm_rev_str));
   setWindowIcon(QIcon(Resources::GetMisc(Resources::LOGO_SMALL)));
   setUnifiedTitleAndToolBarOnMac(true);
+  setAcceptDrops(true);
 
   CreateComponents();
 
   ConnectGameList();
-  ConnectPathsDialog();
   ConnectToolBar();
   ConnectRenderWidget();
   ConnectStack();
   ConnectMenuBar();
+
+  InitControllers();
+  InitCoreCallbacks();
 }
 
 MainWindow::~MainWindow()
 {
   m_render_widget->deleteLater();
+  ShutdownControllers();
+}
+
+void MainWindow::InitControllers()
+{
+  if (g_controller_interface.IsInit())
+    return;
+
+  g_controller_interface.Initialize(reinterpret_cast<void*>(winId()));
+  Pad::Initialize();
+  Keyboard::Initialize();
+  Wiimote::Initialize(Wiimote::InitializeMode::DO_NOT_WAIT_FOR_WIIMOTES);
+  m_hotkey_scheduler = new HotkeyScheduler();
+  m_hotkey_scheduler->Start();
+
+  ConnectHotkeys();
+}
+
+void MainWindow::ShutdownControllers()
+{
+  m_hotkey_scheduler->Stop();
+
+  g_controller_interface.Shutdown();
+  Pad::Shutdown();
+  Keyboard::Shutdown();
+  Wiimote::Shutdown();
+  HotkeyManagerEmu::Shutdown();
+
+  m_hotkey_scheduler->deleteLater();
+}
+
+void MainWindow::InitCoreCallbacks()
+{
+  Core::SetOnStoppedCallback([this] { emit EmulationStopped(); });
+  installEventFilter(this);
+  m_render_widget->installEventFilter(this);
+}
+
+static void InstallHotkeyFilter(QWidget* dialog)
+{
+  auto* filter = new WindowActivationEventFilter();
+  dialog->installEventFilter(filter);
+
+  filter->connect(filter, &WindowActivationEventFilter::windowDeactivated,
+                  [] { HotkeyManagerEmu::Enable(true); });
+  filter->connect(filter, &WindowActivationEventFilter::windowActivated,
+                  [] { HotkeyManagerEmu::Enable(false); });
 }
 
 void MainWindow::CreateComponents()
@@ -50,8 +131,30 @@ void MainWindow::CreateComponents()
   m_game_list = new GameList(this);
   m_render_widget = new RenderWidget;
   m_stack = new QStackedWidget(this);
-  m_paths_dialog = new PathDialog(this);
+  m_controllers_window = new ControllersWindow(this);
   m_settings_window = new SettingsWindow(this);
+  m_hotkey_window = new MappingWindow(this, 0);
+
+  connect(this, &MainWindow::EmulationStarted, m_settings_window,
+          &SettingsWindow::EmulationStarted);
+  connect(this, &MainWindow::EmulationStopped, m_settings_window,
+          &SettingsWindow::EmulationStopped);
+
+#if defined(HAVE_XRANDR) && HAVE_XRANDR
+  m_graphics_window = new GraphicsWindow(
+      new X11Utils::XRRConfiguration(
+          static_cast<Display*>(QGuiApplication::platformNativeInterface()->nativeResourceForWindow(
+              "display", windowHandle())),
+          winId()),
+      this);
+#else
+  m_graphics_window = new GraphicsWindow(nullptr, this);
+#endif
+
+  InstallHotkeyFilter(m_hotkey_window);
+  InstallHotkeyFilter(m_controllers_window);
+  InstallHotkeyFilter(m_settings_window);
+  InstallHotkeyFilter(m_graphics_window);
 }
 
 void MainWindow::ConnectMenuBar()
@@ -64,7 +167,7 @@ void MainWindow::ConnectMenuBar()
   // Emulation
   connect(m_menu_bar, &MenuBar::Pause, this, &MainWindow::Pause);
   connect(m_menu_bar, &MenuBar::Play, this, &MainWindow::Play);
-  connect(m_menu_bar, &MenuBar::Stop, this, &MainWindow::Stop);
+  connect(m_menu_bar, &MenuBar::Stop, this, &MainWindow::RequestStop);
   connect(m_menu_bar, &MenuBar::Reset, this, &MainWindow::Reset);
   connect(m_menu_bar, &MenuBar::Fullscreen, this, &MainWindow::FullScreen);
   connect(m_menu_bar, &MenuBar::FrameAdvance, this, &MainWindow::FrameAdvance);
@@ -80,14 +183,52 @@ void MainWindow::ConnectMenuBar()
   connect(m_menu_bar, &MenuBar::StateSaveOldest, this, &MainWindow::StateSaveOldest);
   connect(m_menu_bar, &MenuBar::SetStateSlot, this, &MainWindow::SetStateSlot);
 
+  // Options
+  connect(m_menu_bar, &MenuBar::Configure, this, &MainWindow::ShowSettingsWindow);
+  connect(m_menu_bar, &MenuBar::ConfigureGraphics, this, &MainWindow::ShowGraphicsWindow);
+  connect(m_menu_bar, &MenuBar::ConfigureAudio, this, &MainWindow::ShowAudioWindow);
+  connect(m_menu_bar, &MenuBar::ConfigureControllers, this, &MainWindow::ShowControllersWindow);
+  connect(m_menu_bar, &MenuBar::ConfigureHotkeys, this, &MainWindow::ShowHotkeyDialog);
+
+  // Tools
+  connect(m_menu_bar, &MenuBar::PerformOnlineUpdate, this, &MainWindow::PerformOnlineUpdate);
+  connect(m_menu_bar, &MenuBar::BootWiiSystemMenu, this, &MainWindow::BootWiiSystemMenu);
+
   // View
   connect(m_menu_bar, &MenuBar::ShowTable, m_game_list, &GameList::SetTableView);
   connect(m_menu_bar, &MenuBar::ShowList, m_game_list, &GameList::SetListView);
+  connect(m_menu_bar, &MenuBar::ColumnVisibilityToggled, m_game_list,
+          &GameList::OnColumnVisibilityToggled);
+  connect(m_menu_bar, &MenuBar::GameListPlatformVisibilityToggled, m_game_list,
+          &GameList::OnGameListVisibilityChanged);
+  connect(m_menu_bar, &MenuBar::GameListRegionVisibilityToggled, m_game_list,
+          &GameList::OnGameListVisibilityChanged);
   connect(m_menu_bar, &MenuBar::ShowAboutDialog, this, &MainWindow::ShowAboutDialog);
 
   connect(this, &MainWindow::EmulationStarted, m_menu_bar, &MenuBar::EmulationStarted);
   connect(this, &MainWindow::EmulationPaused, m_menu_bar, &MenuBar::EmulationPaused);
   connect(this, &MainWindow::EmulationStopped, m_menu_bar, &MenuBar::EmulationStopped);
+
+  connect(this, &MainWindow::EmulationStarted, this,
+          [=]() { m_controllers_window->OnEmulationStateChanged(true); });
+  connect(this, &MainWindow::EmulationStopped, this,
+          [=]() { m_controllers_window->OnEmulationStateChanged(false); });
+}
+
+void MainWindow::ConnectHotkeys()
+{
+  connect(m_hotkey_scheduler, &HotkeyScheduler::ExitHotkey, this, &MainWindow::close);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::PauseHotkey, this, &MainWindow::Pause);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::StopHotkey, this, &MainWindow::RequestStop);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::ScreenShotHotkey, this, &MainWindow::ScreenShot);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::FullScreenHotkey, this, &MainWindow::FullScreen);
+
+  connect(m_hotkey_scheduler, &HotkeyScheduler::StateLoadSlotHotkey, this,
+          &MainWindow::StateLoadSlot);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::StateSaveSlotHotkey, this,
+          &MainWindow::StateSaveSlot);
+  connect(m_hotkey_scheduler, &HotkeyScheduler::SetStateSlotHotkey, this,
+          &MainWindow::SetStateSlot);
 }
 
 void MainWindow::ConnectToolBar()
@@ -96,41 +237,39 @@ void MainWindow::ConnectToolBar()
   connect(m_tool_bar, &ToolBar::OpenPressed, this, &MainWindow::Open);
   connect(m_tool_bar, &ToolBar::PlayPressed, this, &MainWindow::Play);
   connect(m_tool_bar, &ToolBar::PausePressed, this, &MainWindow::Pause);
-  connect(m_tool_bar, &ToolBar::StopPressed, this, &MainWindow::Stop);
+  connect(m_tool_bar, &ToolBar::StopPressed, this, &MainWindow::RequestStop);
   connect(m_tool_bar, &ToolBar::FullScreenPressed, this, &MainWindow::FullScreen);
   connect(m_tool_bar, &ToolBar::ScreenShotPressed, this, &MainWindow::ScreenShot);
-  connect(m_tool_bar, &ToolBar::PathsPressed, this, &MainWindow::ShowPathsDialog);
   connect(m_tool_bar, &ToolBar::SettingsPressed, this, &MainWindow::ShowSettingsWindow);
+  connect(m_tool_bar, &ToolBar::ControllersPressed, this, &MainWindow::ShowControllersWindow);
+  connect(m_tool_bar, &ToolBar::GraphicsPressed, this, &MainWindow::ShowGraphicsWindow);
 
   connect(this, &MainWindow::EmulationStarted, m_tool_bar, &ToolBar::EmulationStarted);
   connect(this, &MainWindow::EmulationPaused, m_tool_bar, &ToolBar::EmulationPaused);
   connect(this, &MainWindow::EmulationStopped, m_tool_bar, &ToolBar::EmulationStopped);
+
+  connect(this, &MainWindow::EmulationStopped, this, &MainWindow::OnStopComplete);
 }
 
 void MainWindow::ConnectGameList()
 {
   connect(m_game_list, &GameList::GameSelected, this, &MainWindow::Play);
+  connect(this, &MainWindow::EmulationStarted, m_game_list, &GameList::EmulationStarted);
+  connect(this, &MainWindow::EmulationStopped, m_game_list, &GameList::EmulationStopped);
 }
 
 void MainWindow::ConnectRenderWidget()
 {
   m_rendering_to_main = false;
   m_render_widget->hide();
-  connect(m_render_widget, &RenderWidget::EscapePressed, this, &MainWindow::Stop);
+  connect(m_render_widget, &RenderWidget::EscapePressed, this, &MainWindow::RequestStop);
   connect(m_render_widget, &RenderWidget::Closed, this, &MainWindow::ForceStop);
 }
 
 void MainWindow::ConnectStack()
 {
-  m_stack->setMinimumSize(800, 600);
   m_stack->addWidget(m_game_list);
   setCentralWidget(m_stack);
-}
-
-void MainWindow::ConnectPathsDialog()
-{
-  connect(m_paths_dialog, &PathDialog::PathAdded, m_game_list, &GameList::DirectoryAdded);
-  connect(m_paths_dialog, &PathDialog::PathRemoved, m_game_list, &GameList::DirectoryRemoved);
 }
 
 void MainWindow::Open()
@@ -164,18 +303,14 @@ void MainWindow::Play()
     }
     else
     {
-      QString default_path = Settings().GetDefaultGame();
+      auto default_path = QString::fromStdString(SConfig::GetInstance().m_strDefaultISO);
       if (!default_path.isEmpty() && QFile::exists(default_path))
       {
         StartGame(default_path);
       }
       else
       {
-        QString last_path = Settings().GetLastGame();
-        if (!last_path.isEmpty() && QFile::exists(last_path))
-          StartGame(last_path);
-        else
-          Open();
+        Open();
       }
     }
   }
@@ -187,34 +322,81 @@ void MainWindow::Pause()
   emit EmulationPaused();
 }
 
-bool MainWindow::Stop()
+void MainWindow::OnStopComplete()
 {
-  bool stop = true;
-  if (Settings().GetConfirmStop())
+  m_stop_requested = false;
+  m_render_widget->hide();
+
+  if (m_exit_requested)
+    QGuiApplication::instance()->quit();
+
+  // If the current emulation prevented the booting of another, do that now
+  if (!m_pending_boot.isEmpty())
   {
-    // We could pause the game here and resume it if they say no.
+    StartGame(m_pending_boot);
+    m_pending_boot.clear();
+  }
+}
+
+bool MainWindow::RequestStop()
+{
+  if (!Core::IsRunning())
+  {
+    Core::QueueHostJob([this] { OnStopComplete(); }, true);
+    return true;
+  }
+
+  if (SConfig::GetInstance().bConfirmStop)
+  {
+    const Core::State state = Core::GetState();
+    // TODO: Set to false when Netplay is running as a CPU thread
+    bool pause = true;
+
+    if (pause)
+      Core::SetState(Core::State::Paused);
+
     QMessageBox::StandardButton confirm;
-    confirm = QMessageBox::question(m_render_widget, tr("Confirm"), tr("Stop emulation?"));
-    stop = (confirm == QMessageBox::Yes);
+    confirm = QMessageBox::question(m_render_widget, tr("Confirm"),
+                                    m_stop_requested ?
+                                        tr("A shutdown is already in progress. Unsaved data "
+                                           "may be lost if you stop the current emulation "
+                                           "before it completes. Force stop?") :
+                                        tr("Do you want to stop the current emulation?"));
+
+    if (pause)
+      Core::SetState(state);
+
+    if (confirm != QMessageBox::Yes)
+      return false;
   }
 
-  if (stop)
+  // TODO: Add Movie shutdown
+  // TODO: Add Debugger shutdown
+
+  if (!m_stop_requested && UICommon::TriggerSTMPowerEvent())
   {
-    ForceStop();
+    m_stop_requested = true;
 
-#ifdef Q_OS_WIN
-    // Allow windows to idle or turn off display again
-    SetThreadExecutionState(ES_CONTINUOUS);
-#endif
+    // Unpause because gracefully shutting down needs the game to actually request a shutdown.
+    // TODO: Do not unpause in debug mode to allow debugging until the complete shutdown.
+    if (Core::GetState() == Core::State::Paused)
+      Core::SetState(Core::State::Running);
+
+    return true;
   }
-  return stop;
+
+  ForceStop();
+#ifdef Q_OS_WIN
+  // Allow windows to idle or turn off display again
+  SetThreadExecutionState(ES_CONTINUOUS);
+#endif
+  return true;
 }
 
 void MainWindow::ForceStop()
 {
   BootManager::Stop();
   HideRenderWidget();
-  emit EmulationStopped();
 }
 
 void MainWindow::Reset()
@@ -253,16 +435,19 @@ void MainWindow::StartGame(const QString& path)
   // If we're running, only start a new game once we've stopped the last.
   if (Core::GetState() != Core::State::Uninitialized)
   {
-    if (!Stop())
+    if (!RequestStop())
       return;
+
+    // As long as the shutdown isn't complete, we can't boot, so let's boot later
+    m_pending_boot = path;
+    return;
   }
   // Boot up, show an error if it fails to load the game.
-  if (!BootManager::BootCore(path.toStdString()))
+  if (!BootManager::BootCore(BootParameters::GenerateFromFile(path.toStdString())))
   {
     QMessageBox::critical(this, tr("Error"), tr("Failed to init core"), QMessageBox::Ok);
     return;
   }
-  Settings().SetLastGame(path);
   ShowRenderWidget();
   emit EmulationStarted();
 
@@ -276,8 +461,7 @@ void MainWindow::StartGame(const QString& path)
 
 void MainWindow::ShowRenderWidget()
 {
-  Settings settings;
-  if (settings.GetRenderToMain())
+  if (SConfig::GetInstance().bRenderToMain)
   {
     // If we're rendering to main, add it to the stack and update our title when necessary.
     m_rendering_to_main = true;
@@ -288,14 +472,14 @@ void MainWindow::ShowRenderWidget()
   {
     // Otherwise, just show it.
     m_rendering_to_main = false;
-    if (settings.GetFullScreen())
+    if (SConfig::GetInstance().bFullscreen)
     {
       m_render_widget->showFullScreen();
     }
     else
     {
-      m_render_widget->setFixedSize(settings.GetRenderWindowSize());
       m_render_widget->showNormal();
+      m_render_widget->resize(640, 480);
     }
   }
 }
@@ -310,16 +494,16 @@ void MainWindow::HideRenderWidget()
     m_render_widget->setParent(nullptr);
     m_rendering_to_main = false;
     disconnect(Host::GetInstance(), &Host::RequestTitle, this, &MainWindow::setWindowTitle);
-    setWindowTitle(tr("Dolphin"));
+    setWindowTitle(QString::fromStdString(scm_rev_str));
   }
   m_render_widget->hide();
 }
 
-void MainWindow::ShowPathsDialog()
+void MainWindow::ShowControllersWindow()
 {
-  m_paths_dialog->show();
-  m_paths_dialog->raise();
-  m_paths_dialog->activateWindow();
+  m_controllers_window->show();
+  m_controllers_window->raise();
+  m_controllers_window->activateWindow();
 }
 
 void MainWindow::ShowSettingsWindow()
@@ -329,10 +513,31 @@ void MainWindow::ShowSettingsWindow()
   m_settings_window->activateWindow();
 }
 
+void MainWindow::ShowAudioWindow()
+{
+  m_settings_window->SelectAudioPane();
+  ShowSettingsWindow();
+}
+
 void MainWindow::ShowAboutDialog()
 {
   AboutDialog* about = new AboutDialog(this);
   about->show();
+}
+
+void MainWindow::ShowHotkeyDialog()
+{
+  m_hotkey_window->ChangeMappingType(MappingWindow::Type::MAPPING_HOTKEYS);
+  m_hotkey_window->show();
+  m_hotkey_window->raise();
+  m_hotkey_window->activateWindow();
+}
+
+void MainWindow::ShowGraphicsWindow()
+{
+  m_graphics_window->show();
+  m_graphics_window->raise();
+  m_graphics_window->activateWindow();
 }
 
 void MainWindow::StateLoad()
@@ -388,6 +593,81 @@ void MainWindow::StateSaveOldest()
 
 void MainWindow::SetStateSlot(int slot)
 {
-  Settings().SetStateSlot(slot);
+  Settings::Instance().SetStateSlot(slot);
   m_state_slot = slot;
+}
+
+void MainWindow::PerformOnlineUpdate(const std::string& region)
+{
+  WiiUpdate::PerformOnlineUpdate(region, this);
+  // Since the update may have installed a newer system menu, refresh the tools menu.
+  m_menu_bar->UpdateToolsMenu(false);
+}
+
+void MainWindow::BootWiiSystemMenu()
+{
+  StartGame(QString::fromStdString(
+      Common::GetTitleContentPath(Titles::SYSTEM_MENU, Common::FROM_CONFIGURED_ROOT)));
+}
+
+bool MainWindow::eventFilter(QObject* object, QEvent* event)
+{
+  if (event->type() == QEvent::Close)
+  {
+    if (RequestStop() && object == this)
+      m_exit_requested = true;
+
+    static_cast<QCloseEvent*>(event)->ignore();
+    return true;
+  }
+
+  return false;
+}
+
+void MainWindow::dragEnterEvent(QDragEnterEvent* event)
+{
+  if (event->mimeData()->hasUrls() && event->mimeData()->urls().size() == 1)
+    event->acceptProposedAction();
+}
+
+void MainWindow::dropEvent(QDropEvent* event)
+{
+  const auto& urls = event->mimeData()->urls();
+  if (urls.empty())
+    return;
+
+  const auto& url = urls[0];
+  QFileInfo file_info(url.toLocalFile());
+
+  auto path = file_info.filePath();
+
+  if (!file_info.exists() || !file_info.isReadable())
+  {
+    QMessageBox::critical(this, tr("Error"), tr("Failed to open '%1'").arg(path));
+    return;
+  }
+
+  if (file_info.isFile())
+  {
+    StartGame(path);
+  }
+  else
+  {
+    auto& settings = Settings::Instance();
+
+    if (settings.GetPaths().size() != 0)
+    {
+      if (QMessageBox::question(
+              this, tr("Confirm"),
+              tr("Do you want to add \"%1\" to the list of Game Paths?").arg(path)) !=
+          QMessageBox::Yes)
+        return;
+    }
+    settings.AddPath(path);
+  }
+}
+
+QSize MainWindow::sizeHint() const
+{
+  return QSize(800, 600);
 }

@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <string>
+
 #include <QMenu>
 #include <QMenuBar>
 
@@ -13,6 +15,15 @@ class MenuBar final : public QMenuBar
 
 public:
   explicit MenuBar(QWidget* parent = nullptr);
+
+  void EmulationStarted();
+  void EmulationPaused();
+  void EmulationStopped();
+  void UpdateStateSlotMenu();
+  void UpdateToolsMenu(bool emulation_started);
+
+  // Tools
+  void InstallWAD();
 
 signals:
   // File
@@ -37,18 +48,25 @@ signals:
   void StateSaveUndo();
   void StateSaveOldest();
   void SetStateSlot(int slot);
+  void BootWiiSystemMenu();
+
+  void PerformOnlineUpdate(const std::string& region);
+
+  // Options
+  void Configure();
+  void ConfigureGraphics();
+  void ConfigureAudio();
+  void ConfigureControllers();
+  void ConfigureHotkeys();
 
   // View
   void ShowTable();
   void ShowList();
+  void ColumnVisibilityToggled(const QString& row, bool visible);
+  void GameListPlatformVisibilityToggled(const QString& row, bool visible);
+  void GameListRegionVisibilityToggled(const QString& row, bool visible);
 
   void ShowAboutDialog();
-
-public slots:
-  void EmulationStarted();
-  void EmulationPaused();
-  void EmulationStopped();
-  void UpdateStateSlotMenu();
 
 private:
   void AddFileMenu();
@@ -61,12 +79,21 @@ private:
   void AddViewMenu();
   void AddGameListTypeSection(QMenu* view_menu);
   void AddTableColumnsMenu(QMenu* view_menu);
+  void AddShowPlatformsMenu(QMenu* view_menu);
+  void AddShowRegionsMenu(QMenu* view_menu);
 
+  void AddOptionsMenu();
+  void AddToolsMenu();
   void AddHelpMenu();
 
   // File
   QAction* m_open_action;
   QAction* m_exit_action;
+
+  // Tools
+  QAction* m_wad_install_action;
+  QMenu* m_perform_online_update_menu;
+  QAction* m_perform_online_update_for_current_region;
 
   // Emulation
   QAction* m_play_action;
@@ -76,6 +103,7 @@ private:
   QAction* m_fullscreen_action;
   QAction* m_frame_advance_action;
   QAction* m_screenshot_action;
+  QAction* m_boot_sysmenu;
   QMenu* m_state_load_menu;
   QMenu* m_state_save_menu;
   QMenu* m_state_slot_menu;

@@ -1,4 +1,3 @@
-#pragma once
 // Copyright 2017 Dolphin Emulator Project
 // Licensed under GPLv2+
 // Refer to the license.txt file included.
@@ -15,8 +14,8 @@ namespace CommandLineParse
 {
 enum class ParserOptions
 {
-	IncludeGUIOptions,
-	OmitGUIOptions,
+  IncludeGUIOptions,
+  OmitGUIOptions,
 };
 
 std::unique_ptr<optparse::OptionParser> CreateParser(ParserOptions options);
