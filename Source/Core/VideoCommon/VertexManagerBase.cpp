@@ -103,13 +103,6 @@ void VertexManagerBase::PrepareForAdditionalData(int primitive, u32 count, u32 s
     || m_current_primitive_type != primitive_from_gx[primitive])
   {
 #if defined(_DEBUG) || defined(DEBUGFAST)
-<<<<<<< HEAD
-		if (count > IndexGenerator::GetRemainingIndices())
-			ERROR_LOG(VIDEO, "Too little remaining index values. Use 32-bit or reset them on flush.");
-		if (count > GetRemainingIndices(primitive))
-			ERROR_LOG(VIDEO, "VertexManagerBase: Buffer not large enough for all indices! "
-				"Increase MAXIBUFFERSIZE or we need primitive breaking after all.");
-=======
     if (count > IndexGenerator::GetRemainingIndices())
       ERROR_LOG(VIDEO, "Too little remaining index values. Use 32-bit or reset them on flush.");
     if (count > GetRemainingIndices(primitive))
@@ -118,7 +111,6 @@ void VertexManagerBase::PrepareForAdditionalData(int primitive, u32 count, u32 s
     if (needed_vertex_bytes > GetRemainingSize())
       ERROR_LOG(VIDEO, "VertexManagerBase: Buffer not large enough for all vertices! "
         "Increase MAXVBUFFERSIZE or we need primitive breaking after all.");
->>>>>>> Tinob/master
 #endif
     Flush();
   }
@@ -287,47 +279,6 @@ void VertexManagerBase::DoState(PointerWrap& p)
 
 void VertexManagerBase::CalculateZSlope(const PortableVertexDeclaration &vert_decl, const u16* indices)
 {
-<<<<<<< HEAD
-	float out[12];
-	float viewOffset[2] = {
-		xfmem.viewport.xOrig - bpmem.scissorOffset.x * 2,
-		xfmem.viewport.yOrig - bpmem.scissorOffset.y * 2
-	};
-
-	// Lookup vertices of the last rendered triangle and software-transform them
-	// This allows us to determine the depth slope, which will be used if zfreeze
-	// is enabled in the following flush.
-	float *vout = out;
-	for (u32 i = 0; i < 3; ++i, vout += 4)
-	{
-		u8* vtx_ptr = m_pBaseBufferPointer + vert_decl.stride * indices[i];
-		VertexShaderManager::TransformToClipSpace(vtx_ptr, vert_decl, vout);
-		float w = 1.0f / vout[3];
-		// Transform to Screenspace
-		vout[0] = vout[0] * w * xfmem.viewport.wd + viewOffset[0];
-		vout[1] = vout[1] * w * xfmem.viewport.ht + viewOffset[1];
-		vout[2] = vout[2] * w * xfmem.viewport.zRange + xfmem.viewport.farZ;
-	}
-
-	float dx31 = out[8] - out[0];
-	float dx12 = out[0] - out[4];
-	float dy12 = out[1] - out[5];
-	float dy31 = out[9] - out[1];
-	float c = -dx12 * dy31 - dx31 * -dy12;
-
-	if (c == 0)
-		return;
-	c = 1.0f / c;
-	float DF31 = out[10] - out[2];
-	float DF21 = out[6] - out[2];
-	float a = DF31 * -dy12 - DF21 * dy31;
-	float b = dx31 * DF21 + dx12 * DF31;
-	m_zslope.dfdx = -a * c;
-	m_zslope.dfdy = -b * c;
-	m_zslope.f0 = out[2] - (out[0] * m_zslope.dfdx + out[1] * m_zslope.dfdy);
-	m_zslope_refresh_required = true;
-}
-=======
   float out[12];
   float viewOffset[2] = {
       xfmem.viewport.xOrig - bpmem.scissorOffset.x * 2,
@@ -367,4 +318,3 @@ void VertexManagerBase::CalculateZSlope(const PortableVertexDeclaration &vert_de
   m_zslope.f0 = out[2] - (out[0] * m_zslope.dfdx + out[1] * m_zslope.dfdy);
   m_zslope_refresh_required = true;
 }
->>>>>>> Tinob/master

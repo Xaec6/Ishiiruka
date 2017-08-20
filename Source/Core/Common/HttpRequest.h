@@ -7,7 +7,7 @@
 #include <chrono>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -22,8 +22,8 @@ public:
   ~HttpRequest();
   bool IsValid() const;
 
-  using Response = std::optional<std::vector<u8>>;
-  using Headers = std::map<std::string, std::optional<std::string>>;
+    using Response = std::experimental::optional<std::vector<u8>>;
+    using Headers = std::map<std::string, std::experimental::optional<std::string>>;
   Response Get(const std::string& url, const Headers& headers = {});
   Response Post(const std::string& url, const std::vector<u8>& payload,
                 const Headers& headers = {});

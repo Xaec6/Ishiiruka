@@ -8,7 +8,7 @@
 #include <map>
 #include <memory>
 #include <mutex>
-#include <optional>
+#include <experimental/optional>
 #include <thread>
 #include <utility>
 #include <vector>
@@ -211,7 +211,7 @@ IOS::ES::TicketReader GetTicket(const DiscIO::Partition& partition)
   return s_disc->GetTicket(partition);
 }
 
-bool UpdateRunningGameMetadata(const DiscIO::Partition& partition, std::optional<u64> title_id)
+bool UpdateRunningGameMetadata(const DiscIO::Partition& partition, std::experimental::optional<u64> title_id)
 {
   if (!s_disc)
     return false;
@@ -220,7 +220,7 @@ bool UpdateRunningGameMetadata(const DiscIO::Partition& partition, std::optional
 
   if (title_id)
   {
-    const std::optional<u64> volume_title_id = s_disc->GetTitleID(partition);
+    const std::experimental::optional<u64> volume_title_id = s_disc->GetTitleID(partition);
     if (!volume_title_id || *volume_title_id != *title_id)
       return false;
   }

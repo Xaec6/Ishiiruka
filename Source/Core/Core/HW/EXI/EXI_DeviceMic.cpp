@@ -8,7 +8,7 @@
 #include <cstring>
 #include <mutex>
 
-#include <cubeb/cubeb.h>
+//#include <cubeb/cubeb.h>
 
 #include "AudioCommon/CubebUtils.h"
 #include "Common/Common.h"
@@ -36,7 +36,7 @@ void CEXIMic::StreamTerminate()
   m_cubeb_ctx.reset();
 }
 
-static void state_callback(cubeb_stream* stream, void* user_data, cubeb_state state)
+static void state_callback(cubeb_stream* stream, void* user_data)
 {
 }
 
@@ -73,44 +73,44 @@ void CEXIMic::StreamStart()
   stream_size = buff_size_samples * 500;
   stream_buffer = new s16[stream_size];
 
-  cubeb_stream_params params;
-  params.format = CUBEB_SAMPLE_S16LE;
-  params.rate = sample_rate;
-  params.channels = 1;
-  params.layout = CUBEB_LAYOUT_MONO;
-
-  u32 minimum_latency;
-  if (cubeb_get_min_latency(m_cubeb_ctx.get(), params, &minimum_latency) != CUBEB_OK)
-  {
-    WARN_LOG(EXPANSIONINTERFACE, "Error getting minimum latency");
-  }
-
-  if (cubeb_stream_init(m_cubeb_ctx.get(), &m_cubeb_stream, "Dolphin Emulated GameCube Microphone",
-                        nullptr, &params, nullptr, nullptr,
-                        std::max<u32>(buff_size_samples, minimum_latency), data_callback,
-                        state_callback, this) != CUBEB_OK)
-  {
-    ERROR_LOG(EXPANSIONINTERFACE, "Error initializing cubeb stream");
-    return;
-  }
-
-  if (cubeb_stream_start(m_cubeb_stream) != CUBEB_OK)
-  {
-    ERROR_LOG(EXPANSIONINTERFACE, "Error starting cubeb stream");
-    return;
-  }
-
-  INFO_LOG(EXPANSIONINTERFACE, "started cubeb stream");
+//  cubeb_stream_params params;
+//  params.format = CUBEB_SAMPLE_S16LE;
+//  params.rate = sample_rate;
+//  params.channels = 1;
+//  params.layout = CUBEB_LAYOUT_MONO;
+//
+//  u32 minimum_latency;
+//  if (cubeb_get_min_latency(m_cubeb_ctx.get(), params, &minimum_latency) != CUBEB_OK)
+//  {
+//    WARN_LOG(EXPANSIONINTERFACE, "Error getting minimum latency");
+//  }
+//
+//  if (cubeb_stream_init(m_cubeb_ctx.get(), &m_cubeb_stream, "Dolphin Emulated GameCube Microphone",
+//                        nullptr, &params, nullptr, nullptr,
+//                        std::max<u32>(buff_size_samples, minimum_latency), data_callback,
+//                        state_callback, this) != CUBEB_OK)
+//  {
+//    ERROR_LOG(EXPANSIONINTERFACE, "Error initializing cubeb stream");
+//    return;
+//  }
+//
+//  if (cubeb_stream_start(m_cubeb_stream) != CUBEB_OK)
+//  {
+//    ERROR_LOG(EXPANSIONINTERFACE, "Error starting cubeb stream");
+//    return;
+//  }
+//
+//  INFO_LOG(EXPANSIONINTERFACE, "started cubeb stream");
 }
 
 void CEXIMic::StreamStop()
 {
   if (m_cubeb_stream)
   {
-    if (cubeb_stream_stop(m_cubeb_stream) != CUBEB_OK)
-      ERROR_LOG(EXPANSIONINTERFACE, "Error stopping cubeb stream");
-    cubeb_stream_destroy(m_cubeb_stream);
-    m_cubeb_stream = nullptr;
+//    if (cubeb_stream_stop(m_cubeb_stream) != CUBEB_OK)
+//      ERROR_LOG(EXPANSIONINTERFACE, "Error stopping cubeb stream");
+//    cubeb_stream_destroy(m_cubeb_stream);
+//    m_cubeb_stream = nullptr;
   }
 
   samples_avail = stream_wpos = stream_rpos = 0;

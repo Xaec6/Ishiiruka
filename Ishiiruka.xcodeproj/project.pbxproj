@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA5B145C1F49FF4D0067EF98 /* DiscExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5B14581F49FF4B0067EF98 /* DiscExtractor.cpp */; };
+		FA5B145D1F49FF4D0067EF98 /* DiscExtractor.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5B14591F49FF4C0067EF98 /* DiscExtractor.h */; };
+		FA5B145E1F49FF4D0067EF98 /* VolumeWii.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5B145A1F49FF4C0067EF98 /* VolumeWii.cpp */; };
+		FA5B145F1F49FF4D0067EF98 /* VolumeWii.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5B145B1F49FF4C0067EF98 /* VolumeWii.h */; };
+		FA5B14621F4A01F20067EF98 /* VideoUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA5B14601F4A01F10067EF98 /* VideoUtils.cpp */; };
+		FA5B14631F4A01F20067EF98 /* VideoUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5B14611F4A01F10067EF98 /* VideoUtils.h */; };
 		FAA294291ED775D800F8CE55 /* Control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA2459E1ED3618B00F8CE55 /* Control.cpp */; };
 		FAA2942A1ED775DA00F8CE55 /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA245A01ED3618B00F8CE55 /* Input.cpp */; };
 		FAA2942B1ED775DD00F8CE55 /* Output.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA245A21ED3618B00F8CE55 /* Output.cpp */; };
@@ -74,8 +80,6 @@
 		FAA2956F1ED79A2F00F8CE55 /* VolumeGC.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA244AE1ED3618B00F8CE55 /* VolumeGC.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA295701ED79A2F00F8CE55 /* VolumeWad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA244AF1ED3618B00F8CE55 /* VolumeWad.cpp */; };
 		FAA295711ED79A2F00F8CE55 /* VolumeWad.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA244B01ED3618B00F8CE55 /* VolumeWad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAA295721ED79A2F00F8CE55 /* VolumeWiiCrypted.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA244B11ED3618B00F8CE55 /* VolumeWiiCrypted.cpp */; };
-		FAA295731ED79A2F00F8CE55 /* VolumeWiiCrypted.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA244B21ED3618B00F8CE55 /* VolumeWiiCrypted.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA295741ED79A2F00F8CE55 /* WbfsBlob.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA244B31ED3618B00F8CE55 /* WbfsBlob.cpp */; };
 		FAA295751ED79A2F00F8CE55 /* WbfsBlob.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA244B41ED3618B00F8CE55 /* WbfsBlob.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA295761ED79A2F00F8CE55 /* WiiWad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA244B51ED3618B00F8CE55 /* WiiWad.cpp */; };
@@ -293,14 +297,7 @@
 		FAA296631ED85F5E00F8CE55 /* libpng.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28B671ED727A900F8CE55 /* libpng.a */; };
 		FAA296641ED85F5E00F8CE55 /* libxxhash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28AF61ED7249800F8CE55 /* libxxhash.a */; };
 		FAA296651ED85F8C00F8CE55 /* libSOIL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28A311ED5033300F8CE55 /* libSOIL.a */; };
-		FAA296791ED860E200F8CE55 /* libdiscio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2954D1ED799FF00F8CE55 /* libdiscio.a */; };
-		FAA2967A1ED860E200F8CE55 /* libinputcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA294251ED774AE00F8CE55 /* libinputcommon.a */; settings = {ATTRIBUTES = (Required, ); }; };
-		FAA2967B1ED860E200F8CE55 /* libvideoogl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA295A31ED79C7600F8CE55 /* libvideoogl.a */; };
-		FAA2967C1ED860E200F8CE55 /* libvideosoftware.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2957C1ED79B9500F8CE55 /* libvideosoftware.a */; };
-		FAA2967D1ED860E200F8CE55 /* libaudiocommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA293701ED76FBA00F8CE55 /* libaudiocommon.a */; };
 		FAA2967E1ED860E200F8CE55 /* libbdisasm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA288031ED4ACA400F8CE55 /* libbdisasm.a */; };
-		FAA2967F1ED860E200F8CE55 /* libcommon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA293631ED76F9900F8CE55 /* libcommon.a */; };
-		FAA296801ED860E200F8CE55 /* libenet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28AD41ED7203A00F8CE55 /* libenet.a */; };
 		FAA296811ED860E200F8CE55 /* liblzo2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28B1B1ED7268500F8CE55 /* liblzo2.a */; };
 		FAA296821ED860E200F8CE55 /* libsfml-network.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA289981ED4FFFF00F8CE55 /* libsfml-network.a */; };
 		FAA296831ED860E200F8CE55 /* libsfml-system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2899A1ED4FFFF00F8CE55 /* libsfml-system.a */; };
@@ -462,8 +459,6 @@
 		FAA297271ED8627B00F8CE55 /* DSPLLE.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA243051ED3618B00F8CE55 /* DSPLLE.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA297281ED8627B00F8CE55 /* DSPLLEGlobals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA243061ED3618B00F8CE55 /* DSPLLEGlobals.cpp */; };
 		FAA297291ED8627B00F8CE55 /* DSPLLEGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA243071ED3618B00F8CE55 /* DSPLLEGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAA2972A1ED8627B00F8CE55 /* DSPLLETools.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA243081ED3618B00F8CE55 /* DSPLLETools.cpp */; };
-		FAA2972B1ED8627B00F8CE55 /* DSPLLETools.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA243091ED3618B00F8CE55 /* DSPLLETools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA2972C1ED8627B00F8CE55 /* DSPSymbols.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA2430A1ED3618B00F8CE55 /* DSPSymbols.cpp */; };
 		FAA2972D1ED8627B00F8CE55 /* DSPSymbols.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA2430B1ED3618B00F8CE55 /* DSPSymbols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FAA2972E1ED8627B00F8CE55 /* DVDInterface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA2430D1ED3618B00F8CE55 /* DVDInterface.cpp */; };
@@ -908,7 +903,6 @@
 		FAA299811ED894DE00F8CE55 /* libusb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2940D1ED773CA00F8CE55 /* libusb.a */; };
 		FAA299821ED894DE00F8CE55 /* libxbrz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28A511ED504FD00F8CE55 /* libxbrz.a */; };
 		FAA299831ED894DE00F8CE55 /* libxxhash.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA28AF61ED7249800F8CE55 /* libxxhash.a */; };
-		FAA2998C1ED8999200F8CE55 /* libportaudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA2998B1ED8998900F8CE55 /* libportaudio.a */; };
 		FAA299CF1ED89C3500F8CE55 /* libsoundtouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA299CE1ED89C2400F8CE55 /* libsoundtouch.a */; };
 		FAA299E41ED89CE000F8CE55 /* libmbedcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA299D91ED89CA700F8CE55 /* libmbedcrypto.a */; };
 		FAA299E51ED89CE000F8CE55 /* libmbedtls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA299DD1ED89CA700F8CE55 /* libmbedtls.a */; };
@@ -2660,13 +2654,6 @@
 			remoteGlobalIDString = FAA295381ED7990F00F8CE55;
 			remoteInfo = hidapi;
 		};
-		FAA2998A1ED8998900F8CE55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAA299861ED8998900F8CE55 /* portaudio.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = FAA294581ED778C500F8CE55;
-			remoteInfo = portaudio;
-		};
 		FAA2998D1ED89B5E00F8CE55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FA6FC0A31ED3511300E3AD69 /* Project object */;
@@ -2736,13 +2723,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FAA28A9E1ED71EA600F8CE55;
 			remoteInfo = enet;
-		};
-		FAA299A31ED89B5E00F8CE55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FAA299861ED8998900F8CE55 /* portaudio.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FAA294571ED778C500F8CE55;
-			remoteInfo = portaudio;
 		};
 		FAA299A51ED89B5E00F8CE55 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2922,6 +2902,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA5B14581F49FF4B0067EF98 /* DiscExtractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiscExtractor.cpp; sourceTree = "<group>"; };
+		FA5B14591F49FF4C0067EF98 /* DiscExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscExtractor.h; sourceTree = "<group>"; };
+		FA5B145A1F49FF4C0067EF98 /* VolumeWii.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeWii.cpp; sourceTree = "<group>"; };
+		FA5B145B1F49FF4C0067EF98 /* VolumeWii.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeWii.h; sourceTree = "<group>"; };
+		FA5B14601F4A01F10067EF98 /* VideoUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoUtils.cpp; sourceTree = "<group>"; };
+		FA5B14611F4A01F10067EF98 /* VideoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoUtils.h; sourceTree = "<group>"; };
 		FAA23F4C1ED3618A00F8CE55 /* .clang-format */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".clang-format"; sourceTree = "<group>"; };
 		FAA23F4F1ED3618A00F8CE55 /* applicationhost.config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = applicationhost.config; sourceTree = "<group>"; };
 		FAA241621ED3618A00F8CE55 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
@@ -3083,8 +3069,6 @@
 		FAA243051ED3618B00F8CE55 /* DSPLLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPLLE.h; sourceTree = "<group>"; };
 		FAA243061ED3618B00F8CE55 /* DSPLLEGlobals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DSPLLEGlobals.cpp; sourceTree = "<group>"; };
 		FAA243071ED3618B00F8CE55 /* DSPLLEGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPLLEGlobals.h; sourceTree = "<group>"; };
-		FAA243081ED3618B00F8CE55 /* DSPLLETools.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DSPLLETools.cpp; sourceTree = "<group>"; };
-		FAA243091ED3618B00F8CE55 /* DSPLLETools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPLLETools.h; sourceTree = "<group>"; };
 		FAA2430A1ED3618B00F8CE55 /* DSPSymbols.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DSPSymbols.cpp; sourceTree = "<group>"; };
 		FAA2430B1ED3618B00F8CE55 /* DSPSymbols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPSymbols.h; sourceTree = "<group>"; };
 		FAA2430D1ED3618B00F8CE55 /* DVDInterface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DVDInterface.cpp; sourceTree = "<group>"; };
@@ -3431,15 +3415,12 @@
 		FAA244A71ED3618B00F8CE55 /* TGCBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGCBlob.h; sourceTree = "<group>"; };
 		FAA244A81ED3618B00F8CE55 /* Volume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Volume.cpp; sourceTree = "<group>"; };
 		FAA244A91ED3618B00F8CE55 /* Volume.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Volume.h; sourceTree = "<group>"; };
-		FAA244AA1ED3618B00F8CE55 /* VolumeCommon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeCommon.cpp; sourceTree = "<group>"; };
 		FAA244AB1ED3618B00F8CE55 /* VolumeDirectory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeDirectory.cpp; sourceTree = "<group>"; };
 		FAA244AC1ED3618B00F8CE55 /* VolumeDirectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeDirectory.h; sourceTree = "<group>"; };
 		FAA244AD1ED3618B00F8CE55 /* VolumeGC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeGC.cpp; sourceTree = "<group>"; };
 		FAA244AE1ED3618B00F8CE55 /* VolumeGC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeGC.h; sourceTree = "<group>"; };
 		FAA244AF1ED3618B00F8CE55 /* VolumeWad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeWad.cpp; sourceTree = "<group>"; };
 		FAA244B01ED3618B00F8CE55 /* VolumeWad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeWad.h; sourceTree = "<group>"; };
-		FAA244B11ED3618B00F8CE55 /* VolumeWiiCrypted.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VolumeWiiCrypted.cpp; sourceTree = "<group>"; };
-		FAA244B21ED3618B00F8CE55 /* VolumeWiiCrypted.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VolumeWiiCrypted.h; sourceTree = "<group>"; };
 		FAA244B31ED3618B00F8CE55 /* WbfsBlob.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WbfsBlob.cpp; sourceTree = "<group>"; };
 		FAA244B41ED3618B00F8CE55 /* WbfsBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WbfsBlob.h; sourceTree = "<group>"; };
 		FAA244B51ED3618B00F8CE55 /* WiiWad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WiiWad.cpp; sourceTree = "<group>"; };
@@ -4085,7 +4066,6 @@
 		FAA299671ED894A700F8CE55 /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
 		FAA299691ED894AD00F8CE55 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		FAA2996B1ED894B100F8CE55 /* ForceFeedback.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ForceFeedback.framework; path = System/Library/Frameworks/ForceFeedback.framework; sourceTree = SDKROOT; };
-		FAA299861ED8998900F8CE55 /* portaudio.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = portaudio.xcodeproj; path = Externals/portaudio/portaudio.xcodeproj; sourceTree = "<group>"; };
 		FAA299C91ED89C2400F8CE55 /* soundtouch.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = soundtouch.xcodeproj; path = Externals/soundtouch/soundtouch.xcodeproj; sourceTree = "<group>"; };
 		FAA299D21ED89CA700F8CE55 /* mbedtls.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = mbedtls.xcodeproj; path = Externals/mbedtls/mbedtls.xcodeproj; sourceTree = "<group>"; };
 		FAA299EE1ED8A21A00F8CE55 /* ICMPLin.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ICMPLin.cpp; sourceTree = "<group>"; };
@@ -5755,14 +5735,7 @@
 				FAA2988E1ED87DAE00F8CE55 /* libhidapi.a in Frameworks */,
 				FAA296871ED8612A00F8CE55 /* IOBluetooth.framework in Frameworks */,
 				FAA296851ED860FD00F8CE55 /* libusb.a in Frameworks */,
-				FAA296791ED860E200F8CE55 /* libdiscio.a in Frameworks */,
-				FAA2967A1ED860E200F8CE55 /* libinputcommon.a in Frameworks */,
-				FAA2967B1ED860E200F8CE55 /* libvideoogl.a in Frameworks */,
-				FAA2967C1ED860E200F8CE55 /* libvideosoftware.a in Frameworks */,
-				FAA2967D1ED860E200F8CE55 /* libaudiocommon.a in Frameworks */,
 				FAA2967E1ED860E200F8CE55 /* libbdisasm.a in Frameworks */,
-				FAA2967F1ED860E200F8CE55 /* libcommon.a in Frameworks */,
-				FAA296801ED860E200F8CE55 /* libenet.a in Frameworks */,
 				FAA296811ED860E200F8CE55 /* liblzo2.a in Frameworks */,
 				FAA296821ED860E200F8CE55 /* libsfml-network.a in Frameworks */,
 				FAA296831ED860E200F8CE55 /* libsfml-system.a in Frameworks */,
@@ -5821,7 +5794,6 @@
 				FAA299741ED894DE00F8CE55 /* libcommon.a in Frameworks */,
 				FAA299811ED894DE00F8CE55 /* libusb.a in Frameworks */,
 				FAA2996E1ED894D700F8CE55 /* libinputcommon.a in Frameworks */,
-				FAA2998C1ED8999200F8CE55 /* libportaudio.a in Frameworks */,
 				FAA299771ED894DE00F8CE55 /* libhidapi.a in Frameworks */,
 				FAA2996D1ED894D700F8CE55 /* libdiscio.a in Frameworks */,
 				FAA299711ED894D700F8CE55 /* libvideosoftware.a in Frameworks */,
@@ -6222,8 +6194,6 @@
 				FAA243051ED3618B00F8CE55 /* DSPLLE.h */,
 				FAA243061ED3618B00F8CE55 /* DSPLLEGlobals.cpp */,
 				FAA243071ED3618B00F8CE55 /* DSPLLEGlobals.h */,
-				FAA243081ED3618B00F8CE55 /* DSPLLETools.cpp */,
-				FAA243091ED3618B00F8CE55 /* DSPLLETools.h */,
 				FAA2430A1ED3618B00F8CE55 /* DSPSymbols.cpp */,
 				FAA2430B1ED3618B00F8CE55 /* DSPSymbols.h */,
 			);
@@ -6761,6 +6731,10 @@
 		FAA2448C1ED3618B00F8CE55 /* DiscIO */ = {
 			isa = PBXGroup;
 			children = (
+				FA5B14581F49FF4B0067EF98 /* DiscExtractor.cpp */,
+				FA5B14591F49FF4C0067EF98 /* DiscExtractor.h */,
+				FA5B145A1F49FF4C0067EF98 /* VolumeWii.cpp */,
+				FA5B145B1F49FF4C0067EF98 /* VolumeWii.h */,
 				FAA2448D1ED3618B00F8CE55 /* Blob.cpp */,
 				FAA2448E1ED3618B00F8CE55 /* Blob.h */,
 				FAA2448F1ED3618B00F8CE55 /* CISOBlob.cpp */,
@@ -6788,15 +6762,12 @@
 				FAA244A71ED3618B00F8CE55 /* TGCBlob.h */,
 				FAA244A81ED3618B00F8CE55 /* Volume.cpp */,
 				FAA244A91ED3618B00F8CE55 /* Volume.h */,
-				FAA244AA1ED3618B00F8CE55 /* VolumeCommon.cpp */,
 				FAA244AB1ED3618B00F8CE55 /* VolumeDirectory.cpp */,
 				FAA244AC1ED3618B00F8CE55 /* VolumeDirectory.h */,
 				FAA244AD1ED3618B00F8CE55 /* VolumeGC.cpp */,
 				FAA244AE1ED3618B00F8CE55 /* VolumeGC.h */,
 				FAA244AF1ED3618B00F8CE55 /* VolumeWad.cpp */,
 				FAA244B01ED3618B00F8CE55 /* VolumeWad.h */,
-				FAA244B11ED3618B00F8CE55 /* VolumeWiiCrypted.cpp */,
-				FAA244B21ED3618B00F8CE55 /* VolumeWiiCrypted.h */,
 				FAA244B31ED3618B00F8CE55 /* WbfsBlob.cpp */,
 				FAA244B41ED3618B00F8CE55 /* WbfsBlob.h */,
 				FAA244B51ED3618B00F8CE55 /* WiiWad.cpp */,
@@ -7268,6 +7239,8 @@
 		FAA246061ED3618B00F8CE55 /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
+				FA5B14601F4A01F10067EF98 /* VideoUtils.cpp */,
+				FA5B14611F4A01F10067EF98 /* VideoUtils.h */,
 				FAA246071ED3618B00F8CE55 /* CMakeLists.txt */,
 				FAA246081ED3618B00F8CE55 /* CommandLineParse.cpp */,
 				FAA246091ED3618B00F8CE55 /* CommandLineParse.h */,
@@ -7744,7 +7717,6 @@
 				FAA29A081ED8ABAF00F8CE55 /* libiconv.tbd */,
 				FAA299D21ED89CA700F8CE55 /* mbedtls.xcodeproj */,
 				FAA299C91ED89C2400F8CE55 /* soundtouch.xcodeproj */,
-				FAA299861ED8998900F8CE55 /* portaudio.xcodeproj */,
 				FAA2996B1ED894B100F8CE55 /* ForceFeedback.framework */,
 				FAA299691ED894AD00F8CE55 /* IOKit.framework */,
 				FAA299671ED894A700F8CE55 /* CoreServices.framework */,
@@ -7904,14 +7876,6 @@
 			isa = PBXGroup;
 			children = (
 				FAA2988D1ED87DA800F8CE55 /* libhidapi.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FAA299871ED8998900F8CE55 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				FAA2998B1ED8998900F8CE55 /* libportaudio.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -9744,6 +9708,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5B145F1F49FF4D0067EF98 /* VolumeWii.h in Headers */,
+				FA5B14631F4A01F20067EF98 /* VideoUtils.h in Headers */,
+				FA5B145D1F49FF4D0067EF98 /* DiscExtractor.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9767,7 +9734,6 @@
 				FAA2956D1ED79A2F00F8CE55 /* VolumeDirectory.h in Headers */,
 				FAA2956F1ED79A2F00F8CE55 /* VolumeGC.h in Headers */,
 				FAA295711ED79A2F00F8CE55 /* VolumeWad.h in Headers */,
-				FAA295731ED79A2F00F8CE55 /* VolumeWiiCrypted.h in Headers */,
 				FAA295751ED79A2F00F8CE55 /* WbfsBlob.h in Headers */,
 				FAA295771ED79A2F00F8CE55 /* WiiWad.h in Headers */,
 			);
@@ -10077,7 +10043,6 @@
 				FAA297241ED8627B00F8CE55 /* DSPDebugInterface.h in Headers */,
 				FAA297271ED8627B00F8CE55 /* DSPLLE.h in Headers */,
 				FAA297291ED8627B00F8CE55 /* DSPLLEGlobals.h in Headers */,
-				FAA2972B1ED8627B00F8CE55 /* DSPLLETools.h in Headers */,
 				FAA2972D1ED8627B00F8CE55 /* DSPSymbols.h in Headers */,
 				FAA2972F1ED8627B00F8CE55 /* DVDInterface.h in Headers */,
 				FAA297311ED8627B00F8CE55 /* DVDMath.h in Headers */,
@@ -10311,7 +10276,6 @@
 				FAA2A7011ED8B05F00F8CE55 /* PBXTargetDependency */,
 				FAA299A81ED89B5E00F8CE55 /* PBXTargetDependency */,
 				FAA2998E1ED89B5E00F8CE55 /* PBXTargetDependency */,
-				FAA299A41ED89B5E00F8CE55 /* PBXTargetDependency */,
 				FAA299A61ED89B5E00F8CE55 /* PBXTargetDependency */,
 				FAA299901ED89B5E00F8CE55 /* PBXTargetDependency */,
 				FAA299921ED89B5E00F8CE55 /* PBXTargetDependency */,
@@ -10425,10 +10389,6 @@
 				{
 					ProductGroup = FAA28B631ED727A900F8CE55 /* Products */;
 					ProjectRef = FAA28B621ED727A900F8CE55 /* png.xcodeproj */;
-				},
-				{
-					ProductGroup = FAA299871ED8998900F8CE55 /* Products */;
-					ProjectRef = FAA299861ED8998900F8CE55 /* portaudio.xcodeproj */;
 				},
 				{
 					ProductGroup = FAA289931ED4FFFE00F8CE55 /* Products */;
@@ -10598,13 +10558,6 @@
 			fileType = archive.ar;
 			path = libhidapi.a;
 			remoteRef = FAA2988C1ED87DA800F8CE55 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FAA2998B1ED8998900F8CE55 /* libportaudio.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libportaudio.a;
-			remoteRef = FAA2998A1ED8998900F8CE55 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FAA299CE1ED89C2400F8CE55 /* libsoundtouch.a */ = {
@@ -12278,10 +12231,13 @@
 				FAA294451ED7768C00F8CE55 /* Buttons.cpp in Sources */,
 				FAA294461ED7768E00F8CE55 /* AnalogStick.cpp in Sources */,
 				FAA294411ED7767F00F8CE55 /* Force.cpp in Sources */,
+				FA5B145E1F49FF4D0067EF98 /* VolumeWii.cpp in Sources */,
+				FA5B14621F4A01F20067EF98 /* VideoUtils.cpp in Sources */,
 				FAA2A06E1ED8AD3D00F8CE55 /* TextureDecoder.cl in Sources */,
 				FAA294401ED7767D00F8CE55 /* MixedTriggers.cpp in Sources */,
 				FAA2943F1ED7767B00F8CE55 /* ModifySettingsButton.cpp in Sources */,
 				FAA2943E1ED7767800F8CE55 /* Slider.cpp in Sources */,
+				FA5B145C1F49FF4D0067EF98 /* DiscExtractor.cpp in Sources */,
 				FAA2943D1ED7767500F8CE55 /* Tilt.cpp in Sources */,
 				FAA294361ED7761400F8CE55 /* Quartz.mm in Sources */,
 				FAA294371ED7761600F8CE55 /* QuartzKeyboardAndMouse.mm in Sources */,
@@ -12312,7 +12268,6 @@
 				FAA2956C1ED79A2F00F8CE55 /* VolumeDirectory.cpp in Sources */,
 				FAA2956E1ED79A2F00F8CE55 /* VolumeGC.cpp in Sources */,
 				FAA295701ED79A2F00F8CE55 /* VolumeWad.cpp in Sources */,
-				FAA295721ED79A2F00F8CE55 /* VolumeWiiCrypted.cpp in Sources */,
 				FAA295741ED79A2F00F8CE55 /* WbfsBlob.cpp in Sources */,
 				FAA295761ED79A2F00F8CE55 /* WiiWad.cpp in Sources */,
 			);
@@ -12511,7 +12466,6 @@
 				FAA297251ED8627B00F8CE55 /* DSPHost.cpp in Sources */,
 				FAA297261ED8627B00F8CE55 /* DSPLLE.cpp in Sources */,
 				FAA297281ED8627B00F8CE55 /* DSPLLEGlobals.cpp in Sources */,
-				FAA2972A1ED8627B00F8CE55 /* DSPLLETools.cpp in Sources */,
 				FAA2972C1ED8627B00F8CE55 /* DSPSymbols.cpp in Sources */,
 				FAA2972E1ED8627B00F8CE55 /* DVDInterface.cpp in Sources */,
 				FAA297301ED8627B00F8CE55 /* DVDMath.cpp in Sources */,
@@ -12843,11 +12797,6 @@
 			name = enet;
 			targetProxy = FAA299A11ED89B5E00F8CE55 /* PBXContainerItemProxy */;
 		};
-		FAA299A41ED89B5E00F8CE55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = portaudio;
-			targetProxy = FAA299A31ED89B5E00F8CE55 /* PBXContainerItemProxy */;
-		};
 		FAA299A61ED89B5E00F8CE55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = hidapi;
@@ -13133,7 +13082,7 @@
 		FAA2954F1ED799FF00F8CE55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -13144,7 +13093,7 @@
 		FAA295501ED799FF00F8CE55 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -13156,7 +13105,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -13169,7 +13118,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -13248,7 +13197,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -13296,7 +13245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -13343,7 +13292,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;
@@ -13366,7 +13315,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = c11;

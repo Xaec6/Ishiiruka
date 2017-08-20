@@ -430,7 +430,7 @@ ReturnCode ES::ImportTitleDone(Context& context)
           return true;
 
         if (content.IsShared())
-          return shared_content_map.GetFilenameFromSHA1(content.sha1).has_value();
+          return bool(shared_content_map.GetFilenameFromSHA1(content.sha1));
 
         // Note: the import hasn't been finalised yet, so the whole title directory
         // is still in /import, not /title.

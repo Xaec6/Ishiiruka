@@ -6,7 +6,7 @@
 
 #include <cstring>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -19,7 +19,7 @@ class ConfigLayerLoader;
 
 namespace ConfigLoaders
 {
-std::vector<std::string> GetGameIniFilenames(const std::string& id, std::optional<u16> revision);
+std::vector<std::string> GetGameIniFilenames(const std::string& id, std::experimental::optional<u16> revision);
 
 std::unique_ptr<Config::ConfigLayerLoader> GenerateGlobalGameConfigLoader(const std::string& id,
                                                                           u16 revision);

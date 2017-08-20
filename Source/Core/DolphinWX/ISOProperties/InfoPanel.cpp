@@ -6,7 +6,7 @@
 
 #include <algorithm>
 #include <iterator>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -38,7 +38,7 @@
 namespace
 {
 template <typename T>
-wxString OptionalToString(std::optional<T> value)
+wxString OptionalToString(std::experimental::optional<T> value)
 {
   return value ? StrToWxStr(std::to_string(*value)) : wxString();
 }

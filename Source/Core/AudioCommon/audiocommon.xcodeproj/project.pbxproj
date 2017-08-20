@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAA2875D1ED49EC900F8CE55 /* aldlist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA2874C1ED49EC900F8CE55 /* aldlist.cpp */; };
+		FA947F021F461DEB0055F26F /* AudioStretcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA947EFC1F461DEB0055F26F /* AudioStretcher.cpp */; };
+		FA947F031F461DEB0055F26F /* AudioStretcher.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947EFD1F461DEB0055F26F /* AudioStretcher.h */; };
+		FA947F041F461DEB0055F26F /* CubebStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA947EFE1F461DEB0055F26F /* CubebStream.cpp */; };
+		FA947F051F461DEB0055F26F /* CubebStream.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947EFF1F461DEB0055F26F /* CubebStream.h */; };
+		FA947F061F461DEB0055F26F /* CubebUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA947F001F461DEB0055F26F /* CubebUtils.cpp */; };
+		FA947F071F461DEB0055F26F /* CubebUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = FA947F011F461DEB0055F26F /* CubebUtils.h */; };
+		FA947F091F461EAD0055F26F /* libcore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA947F081F461EAD0055F26F /* libcore.a */; };
 		FAA2875F1ED49EC900F8CE55 /* AudioCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA2874E1ED49EC900F8CE55 /* AudioCommon.cpp */; };
 		FAA287611ED49EC900F8CE55 /* CoreAudioSoundStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA287501ED49EC900F8CE55 /* CoreAudioSoundStream.cpp */; };
 		FAA287631ED49EC900F8CE55 /* DPL2Decoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA287521ED49EC900F8CE55 /* DPL2Decoder.cpp */; };
@@ -30,9 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA947EFB1F461DAA0055F26F /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		FA947EFC1F461DEB0055F26F /* AudioStretcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioStretcher.cpp; sourceTree = "<group>"; };
+		FA947EFD1F461DEB0055F26F /* AudioStretcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStretcher.h; sourceTree = "<group>"; };
+		FA947EFE1F461DEB0055F26F /* CubebStream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubebStream.cpp; sourceTree = "<group>"; };
+		FA947EFF1F461DEB0055F26F /* CubebStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubebStream.h; sourceTree = "<group>"; };
+		FA947F001F461DEB0055F26F /* CubebUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CubebUtils.cpp; sourceTree = "<group>"; };
+		FA947F011F461DEB0055F26F /* CubebUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubebUtils.h; sourceTree = "<group>"; };
+		FA947F081F461EAD0055F26F /* libcore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcore.a; path = "../../../../Library/Developer/Xcode/DerivedData/Ishiiruka-hflnhmdwnufarpcgwvcuuxjfyqpn/Build/Products/Debug/libcore.a"; sourceTree = "<group>"; };
 		FAA286E71ED49AEE00F8CE55 /* libaudiocommon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libaudiocommon.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAA2874C1ED49EC900F8CE55 /* aldlist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aldlist.cpp; sourceTree = "<group>"; };
-		FAA2874D1ED49EC900F8CE55 /* aldlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = aldlist.h; sourceTree = "<group>"; };
 		FAA2874E1ED49EC900F8CE55 /* AudioCommon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioCommon.cpp; sourceTree = "<group>"; };
 		FAA2874F1ED49EC900F8CE55 /* AudioCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioCommon.h; sourceTree = "<group>"; };
 		FAA287501ED49EC900F8CE55 /* CoreAudioSoundStream.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CoreAudioSoundStream.cpp; sourceTree = "<group>"; };
@@ -57,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA947F091F461EAD0055F26F /* libcore.a in Frameworks */,
 				FAA287C51ED4A1CA00F8CE55 /* libsoundtouch.a in Frameworks */,
 				FAA287701ED49EE500F8CE55 /* OpenAL.framework in Frameworks */,
 			);
@@ -68,8 +81,13 @@
 		FAA286DE1ED49AEE00F8CE55 = {
 			isa = PBXGroup;
 			children = (
-				FAA2874C1ED49EC900F8CE55 /* aldlist.cpp */,
-				FAA2874D1ED49EC900F8CE55 /* aldlist.h */,
+				FA947EFC1F461DEB0055F26F /* AudioStretcher.cpp */,
+				FA947EFD1F461DEB0055F26F /* AudioStretcher.h */,
+				FA947EFE1F461DEB0055F26F /* CubebStream.cpp */,
+				FA947EFF1F461DEB0055F26F /* CubebStream.h */,
+				FA947F001F461DEB0055F26F /* CubebUtils.cpp */,
+				FA947F011F461DEB0055F26F /* CubebUtils.h */,
+				FA947EFB1F461DAA0055F26F /* CMakeLists.txt */,
 				FAA2874E1ED49EC900F8CE55 /* AudioCommon.cpp */,
 				FAA2874F1ED49EC900F8CE55 /* AudioCommon.h */,
 				FAA287501ED49EC900F8CE55 /* CoreAudioSoundStream.cpp */,
@@ -101,6 +119,7 @@
 		FAA2876E1ED49EE500F8CE55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA947F081F461EAD0055F26F /* libcore.a */,
 				FAA287BD1ED4A1BF00F8CE55 /* soundtouch.xcodeproj */,
 				FAA2876F1ED49EE500F8CE55 /* OpenAL.framework */,
 			);
@@ -122,6 +141,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA947F071F461DEB0055F26F /* CubebUtils.h in Headers */,
+				FA947F051F461DEB0055F26F /* CubebStream.h in Headers */,
+				FA947F031F461DEB0055F26F /* AudioStretcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,13 +220,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2875D1ED49EC900F8CE55 /* aldlist.cpp in Sources */,
 				FAA2875F1ED49EC900F8CE55 /* AudioCommon.cpp in Sources */,
+				FA947F061F461DEB0055F26F /* CubebUtils.cpp in Sources */,
+				FA947F021F461DEB0055F26F /* AudioStretcher.cpp in Sources */,
 				FAA287611ED49EC900F8CE55 /* CoreAudioSoundStream.cpp in Sources */,
 				FAA287631ED49EC900F8CE55 /* DPL2Decoder.cpp in Sources */,
 				FAA287651ED49EC900F8CE55 /* Mixer.cpp in Sources */,
 				FAA287671ED49EC900F8CE55 /* NullSoundStream.cpp in Sources */,
 				FAA287691ED49EC900F8CE55 /* OpenALStream.cpp in Sources */,
+				FA947F041F461DEB0055F26F /* CubebStream.cpp in Sources */,
 				FAA2876C1ED49EC900F8CE55 /* WaveFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

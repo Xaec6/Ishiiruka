@@ -8,7 +8,7 @@
 #include <cstring>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -195,8 +195,8 @@ FileSystemGCWii::FileSystemGCWii(const Volume* volume, const Partition& partitio
   else
     return;
 
-  const std::optional<u64> fst_offset = GetFSTOffset(*m_volume, m_partition);
-  const std::optional<u64> fst_size = GetFSTSize(*m_volume, m_partition);
+    const std::experimental::optional<u64> fst_offset = GetFSTOffset(*m_volume, m_partition);
+    const std::experimental::optional<u64> fst_size = GetFSTSize(*m_volume, m_partition);
   if (!fst_offset || !fst_size)
     return;
   if (*fst_size < FST_ENTRY_SIZE)

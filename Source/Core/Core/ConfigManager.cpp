@@ -7,7 +7,7 @@
 #include <cinttypes>
 #include <climits>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <sstream>
 #include <variant>
 
@@ -1091,7 +1091,7 @@ IniFile SConfig::LoadGameIni() const
   return LoadGameIni(GetGameID(), m_revision);
 }
 
-IniFile SConfig::LoadDefaultGameIni(const std::string& id, std::optional<u16> revision)
+IniFile SConfig::LoadDefaultGameIni(const std::string& id, std::experimental::optional<u16> revision)
 {
   IniFile game_ini;
   for (const std::string& filename : ConfigLoaders::GetGameIniFilenames(id, revision))
@@ -1099,7 +1099,7 @@ IniFile SConfig::LoadDefaultGameIni(const std::string& id, std::optional<u16> re
   return game_ini;
 }
 
-IniFile SConfig::LoadLocalGameIni(const std::string& id, std::optional<u16> revision)
+IniFile SConfig::LoadLocalGameIni(const std::string& id, std::experimental::optional<u16> revision)
 {
   IniFile game_ini;
   for (const std::string& filename : ConfigLoaders::GetGameIniFilenames(id, revision))
@@ -1107,7 +1107,7 @@ IniFile SConfig::LoadLocalGameIni(const std::string& id, std::optional<u16> revi
   return game_ini;
 }
 
-IniFile SConfig::LoadGameIni(const std::string& id, std::optional<u16> revision)
+IniFile SConfig::LoadGameIni(const std::string& id, std::experimental::optional<u16> revision)
 {
   IniFile game_ini;
   for (const std::string& filename : ConfigLoaders::GetGameIniFilenames(id, revision))

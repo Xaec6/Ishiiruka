@@ -6,7 +6,7 @@
 
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -49,7 +49,7 @@ public:
 
   std::string GetMakerID(const Partition& partition = PARTITION_NONE) const override;
 
-  std::optional<u16> GetRevision(const Partition& partition = PARTITION_NONE) const override
+    std::experimental::optional<u16> GetRevision(const Partition& partition = PARTITION_NONE) const override
   {
     return {};
   }

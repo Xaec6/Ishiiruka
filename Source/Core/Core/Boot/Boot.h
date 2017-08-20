@@ -6,7 +6,7 @@
 
 #include <cstdlib>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <variant>
 #include <vector>
@@ -51,7 +51,7 @@ struct BootParameters
     std::string path;
     DiscIO::Region region;
     // It is possible to boot the IPL with a disc inserted (with "skip IPL" disabled).
-    std::optional<Disc> disc;
+    std::experimental::optional<Disc> disc;
   };
 
   struct DFF

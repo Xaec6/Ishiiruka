@@ -5,7 +5,7 @@
 #include <cstddef>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -60,7 +60,7 @@ std::string VolumeGC::GetGameID(const Partition& partition) const
 
 Region VolumeGC::GetRegion() const
 {
-  const std::optional<u32> region_code = ReadSwapped<u32>(0x458, PARTITION_NONE);
+    const std::experimental::optional<u32> region_code = ReadSwapped<u32>(0x458, PARTITION_NONE);
   if (!region_code)
     return Region::UNKNOWN_REGION;
   const Region region = static_cast<Region>(*region_code);
@@ -96,10 +96,10 @@ std::string VolumeGC::GetMakerID(const Partition& partition) const
   return DecodeString(makerID);
 }
 
-std::optional<u16> VolumeGC::GetRevision(const Partition& partition) const
+std::experimental::optional<u16> VolumeGC::GetRevision(const Partition& partition) const
 {
-  std::optional<u8> revision = ReadSwapped<u8>(7, partition);
-  return revision ? *revision : std::optional<u16>();
+  std::experimental::optional<u8> revision = ReadSwapped<u8>(7, partition);
+  return revision ? *revision : std::experimental::optional<u16>();
 }
 
 std::string VolumeGC::GetInternalName(const Partition& partition) const
@@ -173,7 +173,7 @@ u64 VolumeGC::GetRawSize() const
   return m_pReader->GetRawSize();
 }
 
-std::optional<u8> VolumeGC::GetDiscNumber(const Partition& partition) const
+std::experimental::optional<u8> VolumeGC::GetDiscNumber(const Partition& partition) const
 {
   return ReadSwapped<u8>(6, partition);
 }

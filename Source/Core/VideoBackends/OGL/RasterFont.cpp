@@ -185,16 +185,10 @@ RasterFont::RasterFont()
 
 RasterFont::~RasterFont()
 {
-<<<<<<< HEAD
-	glDeleteBuffers(1, &VBO);
-	glDeleteVertexArrays(1, &VAO);
-	s_shader.Destroy();
-=======
   glDeleteTextures(1, &texture);
   glDeleteBuffers(1, &VBO);
   glDeleteVertexArrays(1, &VAO);
   s_shader.Destroy();
->>>>>>> Tinob/master
 }
 
 void RasterFont::printMultilineText(const std::string& text, double start_x, double start_y,

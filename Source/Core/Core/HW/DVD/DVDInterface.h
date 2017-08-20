@@ -5,7 +5,7 @@
 #pragma once
 
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -120,7 +120,7 @@ void ChangeDiscAsCPU(const std::string& new_path);   // Can only be called by th
 // if both of the following conditions are true:
 // - A disc is inserted
 // - The title_id argument doesn't contain a value, or its value matches the disc's title ID
-bool UpdateRunningGameMetadata(std::optional<u64> title_id = {});
+bool UpdateRunningGameMetadata(std::experimental::optional<u64> title_id = {});
 
 // Direct access to DI for IOS HLE (simpler to implement than how real IOS accesses DI,
 // and lets us skip encrypting/decrypting in some cases)

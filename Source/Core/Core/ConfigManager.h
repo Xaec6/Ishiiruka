@@ -5,7 +5,7 @@
 #pragma once
 
 #include <limits>
-#include <optional>
+#include <experimental/optional>
 #include <set>
 #include <string>
 #include <utility>
@@ -232,9 +232,9 @@ struct SConfig : NonCopyable
   IniFile LoadLocalGameIni() const;
   IniFile LoadGameIni() const;
 
-  static IniFile LoadDefaultGameIni(const std::string& id, std::optional<u16> revision);
-  static IniFile LoadLocalGameIni(const std::string& id, std::optional<u16> revision);
-  static IniFile LoadGameIni(const std::string& id, std::optional<u16> revision);
+    static IniFile LoadDefaultGameIni(const std::string& id, std::experimental::optional<u16> revision);
+    static IniFile LoadLocalGameIni(const std::string& id, std::experimental::optional<u16> revision);
+    static IniFile LoadGameIni(const std::string& id, std::experimental::optional<u16> revision);
 
   std::string m_NANDPath;
   std::string m_DumpPath;

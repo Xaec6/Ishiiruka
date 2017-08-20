@@ -5,7 +5,7 @@
 #pragma once
 
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <vector>
 
 #include "Common/CommonTypes.h"
@@ -50,7 +50,7 @@ IOS::ES::TicketReader GetTicket(const DiscIO::Partition& partition);
 // - A disc is inserted
 // - The title_id argument doesn't contain a value, or its value matches the disc's title ID
 bool UpdateRunningGameMetadata(const DiscIO::Partition& partition,
-                               std::optional<u64> title_id = {});
+                               std::experimental::optional<u64> title_id = {});
 
 void StartRead(u64 dvd_offset, u32 length, const DiscIO::Partition& partition,
                DVDInterface::ReplyType reply_type, s64 ticks_until_completion);

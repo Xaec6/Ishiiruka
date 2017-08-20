@@ -103,7 +103,7 @@ ReturnCode ES::GetV0TicketFromView(const u8* ticket_view, u8* ticket) const
   const u64 ticket_id = Common::swap64(&ticket_view[offsetof(IOS::ES::TicketView, ticket_id)]);
 
   const auto installed_ticket = DiscIO::FindSignedTicket(title_id);
-  // TODO: when we get std::optional, check for presence instead of validity.
+  // TODO: when we get std::experimental::optional, check for presence instead of validity.
   // This is close enough, though.
   if (!installed_ticket.IsValid())
     return ES_NO_TICKET;

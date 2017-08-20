@@ -16,7 +16,7 @@
 
 #include <array>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -48,7 +48,7 @@ public:
   // NOT thread-safe - can't call this from multiple threads.
   virtual bool Read(u64 offset, u64 size, u8* out_ptr) = 0;
   template <typename T>
-  std::optional<T> ReadSwapped(u64 offset)
+    std::experimental::optional<T> ReadSwapped(u64 offset)
   {
     T temp;
     if (!Read(offset, sizeof(T), reinterpret_cast<u8*>(&temp)))

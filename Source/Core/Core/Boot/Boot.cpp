@@ -6,7 +6,7 @@
 
 #include <algorithm>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <unordered_set>
 #include <vector>
@@ -150,9 +150,9 @@ void CBoot::Load_FST(bool is_wii, const DiscIO::Volume* volume)
   if (is_wii)
     shift = 2;
 
-  const std::optional<u32> fst_offset = volume->ReadSwapped<u32>(0x0424, partition);
-  const std::optional<u32> fst_size = volume->ReadSwapped<u32>(0x0428, partition);
-  const std::optional<u32> max_fst_size = volume->ReadSwapped<u32>(0x042c, partition);
+  const std::experimental::optional<u32> fst_offset = volume->ReadSwapped<u32>(0x0424, partition);
+  const std::experimental::optional<u32> fst_size = volume->ReadSwapped<u32>(0x0428, partition);
+  const std::experimental::optional<u32> max_fst_size = volume->ReadSwapped<u32>(0x042c, partition);
   if (!fst_offset || !fst_size || !max_fst_size)
     return;
 

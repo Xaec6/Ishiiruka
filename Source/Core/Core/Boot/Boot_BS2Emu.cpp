@@ -3,7 +3,7 @@
 // Refer to the license.txt file included.
 
 #include <map>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -90,9 +90,9 @@ bool CBoot::RunApploader(bool is_wii, const DiscIO::Volume& volume)
   // Load Apploader to Memory - The apploader is hardcoded to begin at 0x2440 on the disc,
   // but the size can differ between discs. Compare with YAGCD chap 13.
   constexpr u32 offset = 0x2440;
-  const std::optional<u32> entry = volume.ReadSwapped<u32>(offset + 0x10, partition);
-  const std::optional<u32> size = volume.ReadSwapped<u32>(offset + 0x14, partition);
-  const std::optional<u32> trailer = volume.ReadSwapped<u32>(offset + 0x18, partition);
+  const std::experimental::optional<u32> entry = volume.ReadSwapped<u32>(offset + 0x10, partition);
+  const std::experimental::optional<u32> size = volume.ReadSwapped<u32>(offset + 0x14, partition);
+  const std::experimental::optional<u32> trailer = volume.ReadSwapped<u32>(offset + 0x18, partition);
   if (!entry || !size || !trailer || *entry == (u32)-1 || *size + *trailer == (u32)-1)
   {
     INFO_LOG(BOOT, "Invalid apploader. Your disc image is probably corrupted.");

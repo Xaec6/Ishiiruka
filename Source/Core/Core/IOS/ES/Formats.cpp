@@ -11,7 +11,7 @@
 #include <cstring>
 #include <locale>
 #include <map>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -495,7 +495,7 @@ SharedContentMap::SharedContentMap(Common::FromWhichRoot root) : m_root(root)
 
 SharedContentMap::~SharedContentMap() = default;
 
-std::optional<std::string>
+std::experimental::optional<std::string>
 SharedContentMap::GetFilenameFromSHA1(const std::array<u8, 20>& sha1) const
 {
   const auto it = std::find_if(m_entries.begin(), m_entries.end(),

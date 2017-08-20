@@ -8,7 +8,7 @@
 #include <array>
 #include <list>
 #include <map>
-#include <optional>
+#include <experimental/optional>
 #include <sstream>
 #include <string>
 #include <tuple>
@@ -29,7 +29,7 @@
 namespace ConfigLoaders
 {
 // Returns all possible filenames in ascending order of priority
-std::vector<std::string> GetGameIniFilenames(const std::string& id, std::optional<u16> revision)
+std::vector<std::string> GetGameIniFilenames(const std::string& id, std::experimental::optional<u16> revision)
 {
   std::vector<std::string> filenames;
 

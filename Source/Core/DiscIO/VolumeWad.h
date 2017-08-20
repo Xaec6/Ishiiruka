@@ -6,7 +6,7 @@
 
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -34,11 +34,11 @@ public:
   ~VolumeWAD();
   bool Read(u64 offset, u64 length, u8* buffer,
     const Partition& partition = PARTITION_NONE) const override;
-  std::optional<u64> GetTitleID(const Partition& partition = PARTITION_NONE) const override;
+    std::experimental::optional<u64> GetTitleID(const Partition& partition = PARTITION_NONE) const override;
   const IOS::ES::TMDReader& GetTMD(const Partition& partition = PARTITION_NONE) const override;
   std::string GetGameID(const Partition& partition = PARTITION_NONE) const override;
   std::string GetMakerID(const Partition& partition = PARTITION_NONE) const override;
-  std::optional<u16> GetRevision(const Partition& partition = PARTITION_NONE) const override;
+    std::experimental::optional<u16> GetRevision(const Partition& partition = PARTITION_NONE) const override;
   std::string GetInternalName(const Partition& partition = PARTITION_NONE) const override
   {
     return "";

@@ -9,7 +9,7 @@
 #include <cstddef>
 #include <cstdio>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -128,18 +128,18 @@ void DiscScrubber::MarkAsUsedE(u64 partition_data_offset, u64 offset, u64 size)
 // Helper functions for reading the BE volume
 bool DiscScrubber::ReadFromVolume(u64 offset, u32& buffer, const Partition& partition)
 {
-  std::optional<u32> value = m_disc->ReadSwapped<u32>(offset, partition);
+    std::experimental::optional<u32> value = m_disc->ReadSwapped<u32>(offset, partition);
   if (value)
     buffer = *value;
-  return value.has_value();
+  return bool(value);
 }
 
 bool DiscScrubber::ReadFromVolume(u64 offset, u64& buffer, const Partition& partition)
 {
-  std::optional<u32> value = m_disc->ReadSwapped<u32>(offset, partition);
+    std::experimental::optional<u32> value = m_disc->ReadSwapped<u32>(offset, partition);
   if (value)
     buffer = static_cast<u64>(*value) << 2;
-  return value.has_value();
+  return bool(value);
 }
 
 bool DiscScrubber::ParseDisc()
@@ -203,10 +203,10 @@ bool DiscScrubber::ParsePartitionData(const Partition& partition, PartitionHeade
               0x2440 + header->apploader_size + header->apploader_trailer_size);
 
   // DOL
-  const std::optional<u64> dol_offset = GetBootDOLOffset(*m_disc, partition);
+    const std::experimental::optional<u64> dol_offset = GetBootDOLOffset(*m_disc, partition);
   if (!dol_offset)
     return false;
-  const std::optional<u64> dol_size = GetBootDOLSize(*m_disc, partition, *dol_offset);
+    const std::experimental::optional<u64> dol_size = GetBootDOLSize(*m_disc, partition, *dol_offset);
   if (!dol_size)
     return false;
   header->dol_offset = *dol_offset;

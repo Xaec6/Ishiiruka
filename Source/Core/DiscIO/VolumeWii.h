@@ -7,7 +7,7 @@
 #include <map>
 #include <mbedtls/aes.h>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -34,18 +34,18 @@ public:
   bool Read(u64 _Offset, u64 _Length, u8* _pBuffer, const Partition& partition) const override;
   std::vector<Partition> GetPartitions() const override;
   Partition GetGamePartition() const override;
-  std::optional<u32> GetPartitionType(const Partition& partition) const override;
-  std::optional<u64> GetTitleID(const Partition& partition) const override;
+    std::experimental::optional<u32> GetPartitionType(const Partition& partition) const override;
+    std::experimental::optional<u64> GetTitleID(const Partition& partition) const override;
   const IOS::ES::TicketReader& GetTicket(const Partition& partition) const override;
   const IOS::ES::TMDReader& GetTMD(const Partition& partition) const override;
   std::string GetGameID(const Partition& partition) const override;
   std::string GetMakerID(const Partition& partition) const override;
-  std::optional<u16> GetRevision(const Partition& partition) const override;
+    std::experimental::optional<u16> GetRevision(const Partition& partition) const override;
   std::string GetInternalName(const Partition& partition) const override;
   std::map<Language, std::string> GetLongNames() const override;
   std::vector<u32> GetBanner(int* width, int* height) const override;
   std::string GetApploaderDate(const Partition& partition) const override;
-  std::optional<u8> GetDiscNumber(const Partition& partition) const override;
+    std::experimental::optional<u8> GetDiscNumber(const Partition& partition) const override;
 
   Platform GetVolumeType() const override;
   bool SupportsIntegrityCheck() const override { return true; }

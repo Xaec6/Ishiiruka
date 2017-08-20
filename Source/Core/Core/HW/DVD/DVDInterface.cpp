@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <cinttypes>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -503,7 +503,7 @@ void SetLidOpen()
     GenerateDIInterrupt(INT_CVRINT);
 }
 
-bool UpdateRunningGameMetadata(std::optional<u64> title_id)
+bool UpdateRunningGameMetadata(std::experimental::optional<u64> title_id)
 {
   if (!DVDThread::HasDisc())
     return false;

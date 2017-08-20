@@ -7,7 +7,7 @@
 #include <locale>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -108,12 +108,12 @@ std::string VolumeWAD::GetMakerID(const Partition& partition) const
   return DecodeString(temp);
 }
 
-std::optional<u64> VolumeWAD::GetTitleID(const Partition& partition) const
+std::experimental::optional<u64> VolumeWAD::GetTitleID(const Partition& partition) const
 {
   return ReadSwapped<u64>(m_offset + 0x01DC, partition);
 }
 
-std::optional<u16> VolumeWAD::GetRevision(const Partition& partition) const
+std::experimental::optional<u16> VolumeWAD::GetRevision(const Partition& partition) const
 {
   if (!m_tmd.IsValid())
     return {};
@@ -142,7 +142,7 @@ std::vector<u32> VolumeWAD::GetBanner(int* width, int* height) const
   *width = 0;
   *height = 0;
 
-  const std::optional<u64> title_id = GetTitleID();
+  const std::experimental::optional<u64> title_id = GetTitleID();
   if (!title_id)
     return std::vector<u32>();
 

@@ -4,7 +4,7 @@
 
 #include <cstddef>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 
 #include "Common/Align.h"
@@ -37,8 +37,8 @@ std::vector<u8> CreateWADEntry(BlobReader& reader, u32 size, u64 offset)
 
 bool IsWiiWAD(BlobReader& reader)
 {
-  const std::optional<u32> header_size = reader.ReadSwapped<u32>(0x0);
-  const std::optional<u32> header_type = reader.ReadSwapped<u32>(0x4);
+  const std::experimental::optional<u32> header_size = reader.ReadSwapped<u32>(0x0);
+  const std::experimental::optional<u32> header_type = reader.ReadSwapped<u32>(0x4);
   return header_size == u32(0x20) &&
          (header_type == u32(0x49730000) || header_type == u32(0x69620000));
 }
@@ -64,12 +64,12 @@ bool WiiWAD::ParseWAD()
   if (!IsWiiWAD(*m_reader))
     return false;
 
-  std::optional<u32> certificate_chain_size = m_reader->ReadSwapped<u32>(0x08);
-  std::optional<u32> reserved = m_reader->ReadSwapped<u32>(0x0C);
-  std::optional<u32> ticket_size = m_reader->ReadSwapped<u32>(0x10);
-  std::optional<u32> tmd_size = m_reader->ReadSwapped<u32>(0x14);
-  std::optional<u32> data_app_size = m_reader->ReadSwapped<u32>(0x18);
-  std::optional<u32> footer_size = m_reader->ReadSwapped<u32>(0x1C);
+  std::experimental::optional<u32> certificate_chain_size = m_reader->ReadSwapped<u32>(0x08);
+  std::experimental::optional<u32> reserved = m_reader->ReadSwapped<u32>(0x0C);
+  std::experimental::optional<u32> ticket_size = m_reader->ReadSwapped<u32>(0x10);
+  std::experimental::optional<u32> tmd_size = m_reader->ReadSwapped<u32>(0x14);
+  std::experimental::optional<u32> data_app_size = m_reader->ReadSwapped<u32>(0x18);
+  std::experimental::optional<u32> footer_size = m_reader->ReadSwapped<u32>(0x1C);
   if (!certificate_chain_size || !reserved || !ticket_size || !tmd_size || !data_app_size ||
       !footer_size)
   {

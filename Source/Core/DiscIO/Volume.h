@@ -8,7 +8,7 @@
 #include <limits>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <vector>
 
@@ -44,7 +44,7 @@ public:
   virtual ~Volume() {}
   virtual bool Read(u64 _Offset, u64 _Length, u8* _pBuffer, const Partition& partition) const = 0;
   template <typename T>
-  std::optional<T> ReadSwapped(u64 offset, const Partition& partition) const
+    std::experimental::optional<T> ReadSwapped(u64 offset, const Partition& partition) const
   {
     T temp;
     if (!Read(offset, sizeof(T), reinterpret_cast<u8*>(&temp), partition))
@@ -53,9 +53,9 @@ public:
   }
   virtual std::vector<Partition> GetPartitions() const { return {}; }
   virtual Partition GetGamePartition() const { return PARTITION_NONE; }
-  virtual std::optional<u32> GetPartitionType(const Partition& partition) const { return {}; }
-  std::optional<u64> GetTitleID() const { return GetTitleID(GetGamePartition()); }
-  virtual std::optional<u64> GetTitleID(const Partition& partition) const { return {}; }
+    virtual std::experimental::optional<u32> GetPartitionType(const Partition& partition) const { return {}; }
+    std::experimental::optional<u64> GetTitleID() const { return GetTitleID(GetGamePartition()); }
+    virtual std::experimental::optional<u64> GetTitleID(const Partition& partition) const { return {}; }
   virtual const IOS::ES::TicketReader& GetTicket(const Partition& partition) const
   {
     return INVALID_TICKET;
@@ -65,8 +65,8 @@ public:
   virtual std::string GetGameID(const Partition& partition) const = 0;
   std::string GetMakerID() const { return GetMakerID(GetGamePartition()); }
   virtual std::string GetMakerID(const Partition& partition) const = 0;
-  std::optional<u16> GetRevision() const { return GetRevision(GetGamePartition()); }
-  virtual std::optional<u16> GetRevision(const Partition& partition) const = 0;
+    std::experimental::optional<u16> GetRevision() const { return GetRevision(GetGamePartition()); }
+    virtual std::experimental::optional<u16> GetRevision(const Partition& partition) const = 0;
   std::string GetInternalName() const { return GetInternalName(GetGamePartition()); }
   virtual std::string GetInternalName(const Partition& partition) const = 0;
   virtual std::map<Language, std::string> GetShortNames() const { return {}; }
@@ -78,8 +78,8 @@ public:
   std::string GetApploaderDate() const { return GetApploaderDate(GetGamePartition()); }
   virtual std::string GetApploaderDate(const Partition& partition) const = 0;
   // 0 is the first disc, 1 is the second disc
-  std::optional<u8> GetDiscNumber() const { return GetDiscNumber(GetGamePartition()); }
-  virtual std::optional<u8> GetDiscNumber(const Partition& partition) const { return 0; }
+    std::experimental::optional<u8> GetDiscNumber() const { return GetDiscNumber(GetGamePartition()); }
+    virtual std::experimental::optional<u8> GetDiscNumber(const Partition& partition) const { return 0; }
   virtual Platform GetVolumeType() const = 0;
   virtual bool SupportsIntegrityCheck() const { return false; }
   virtual bool CheckIntegrity(const Partition& partition) const { return false; }

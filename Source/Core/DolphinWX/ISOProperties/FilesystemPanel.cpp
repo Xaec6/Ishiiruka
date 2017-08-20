@@ -292,7 +292,7 @@ void FilesystemPanel::OnExtractAll(wxCommandEvent& event)
     while (item.IsOk())
     {
       const auto* const partition = static_cast<WiiPartition*>(m_tree_ctrl->GetItemData(item));
-      const std::optional<u32> partition_type =
+      const std::experimental::optional<u32> partition_type =
           *m_opened_iso->GetPartitionType(partition->filesystem->GetPartition());
       if (partition_type)
       {

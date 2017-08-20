@@ -171,7 +171,6 @@
 		FAA292991ED7404E00F8CE55 /* TraversalClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA291CF1ED7404E00F8CE55 /* TraversalClient.cpp */; };
 		FAA2929A1ED7404E00F8CE55 /* TraversalClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA291D01ED7404E00F8CE55 /* TraversalClient.h */; };
 		FAA2929B1ED7404E00F8CE55 /* TraversalProto.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA291D11ED7404E00F8CE55 /* TraversalProto.h */; };
-		FAA2929D1ED7404E00F8CE55 /* ucrtFreadWorkaround.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA291D31ED7404E00F8CE55 /* ucrtFreadWorkaround.cpp */; };
 		FAA2929E1ED7404E00F8CE55 /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA291D41ED7404E00F8CE55 /* Version.cpp */; };
 		FAA2929F1ED7404E00F8CE55 /* x64ABI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAA291D81ED7404E00F8CE55 /* x64ABI.cpp */; };
 		FAA292A01ED7404E00F8CE55 /* x64ABI.h in Headers */ = {isa = PBXBuildFile; fileRef = FAA291D91ED7404E00F8CE55 /* x64ABI.h */; };
@@ -400,7 +399,6 @@
 		FAA291D01ED7404E00F8CE55 /* TraversalClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraversalClient.h; sourceTree = "<group>"; };
 		FAA291D11ED7404E00F8CE55 /* TraversalProto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TraversalProto.h; sourceTree = "<group>"; };
 		FAA291D21ED7404E00F8CE55 /* TraversalServer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TraversalServer.cpp; sourceTree = "<group>"; };
-		FAA291D31ED7404E00F8CE55 /* ucrtFreadWorkaround.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ucrtFreadWorkaround.cpp; sourceTree = "<group>"; };
 		FAA291D41ED7404E00F8CE55 /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Version.cpp; sourceTree = "<group>"; };
 		FAA291D71ED7404E00F8CE55 /* SCMRevGen.log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SCMRevGen.log; sourceTree = "<group>"; };
 		FAA291D81ED7404E00F8CE55 /* x64ABI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = x64ABI.cpp; sourceTree = "<group>"; };
@@ -538,7 +536,6 @@
 				FAA291D01ED7404E00F8CE55 /* TraversalClient.h */,
 				FAA291D11ED7404E00F8CE55 /* TraversalProto.h */,
 				FAA291D21ED7404E00F8CE55 /* TraversalServer.cpp */,
-				FAA291D31ED7404E00F8CE55 /* ucrtFreadWorkaround.cpp */,
 				FAA291D41ED7404E00F8CE55 /* Version.cpp */,
 				FAA291D51ED7404E00F8CE55 /* x64 */,
 				FAA291D81ED7404E00F8CE55 /* x64ABI.cpp */,
@@ -1011,7 +1008,6 @@
 				FAA292451ED7404E00F8CE55 /* GLExtensions.cpp in Sources */,
 				FAA2926C1ED7404E00F8CE55 /* ConsoleListenerNix.cpp in Sources */,
 				FAA292991ED7404E00F8CE55 /* TraversalClient.cpp in Sources */,
-				FAA2929D1ED7404E00F8CE55 /* ucrtFreadWorkaround.cpp in Sources */,
 				FAA2927B1ED7404E00F8CE55 /* NandPaths.cpp in Sources */,
 				FAA292581ED7404E00F8CE55 /* GLInterface.cpp in Sources */,
 				FAA292A41ED7404E00F8CE55 /* x64FPURoundMode.cpp in Sources */,

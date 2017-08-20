@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <map>
 #include <memory>
-#include <optional>
+#include <experimental/optional>
 #include <string>
 #include <utility>
 #include <vector>
@@ -93,18 +93,18 @@ std::unique_ptr<Volume> CreateVolumeFromFilename(const std::string& filename)
     return nullptr;
 
   // Check for Wii
-  const std::optional<u32> wii_magic = reader->ReadSwapped<u32>(0x18);
+    const std::experimental::optional<u32> wii_magic = reader->ReadSwapped<u32>(0x18);
   if (wii_magic == u32(0x5D1C9EA3))
     return std::make_unique<VolumeWii>(std::move(reader));
 
   // Check for WAD
   // 0x206962 for boot2 wads
-  const std::optional<u32> wad_magic = reader->ReadSwapped<u32>(0x02);
+    const std::experimental::optional<u32> wad_magic = reader->ReadSwapped<u32>(0x02);
   if (wad_magic == u32(0x00204973) || wad_magic == u32(0x00206962))
     return std::make_unique<VolumeWAD>(std::move(reader));
 
   // Check for GC
-  const std::optional<u32> gc_magic = reader->ReadSwapped<u32>(0x1C);
+    const std::experimental::optional<u32> gc_magic = reader->ReadSwapped<u32>(0x1C);
   if (gc_magic == u32(0xC2339F3D))
     return std::make_unique<VolumeGC>(std::move(reader));
 
