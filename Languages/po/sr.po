@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # nikolassj, 2011
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:17+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Serbian (http://www.transifex.com/delroth/dolphin-emu/"
 "language/sr/)\n"
@@ -1274,7 +1274,7 @@ msgstr ""
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
 msgid "CPU Emulator Engine"
-msgstr "CPU Emulacije \"Engine\""
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1645,8 +1645,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Povezivanje..."
+msgstr "Skeniranje..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2490,8 +2491,9 @@ msgid "Emulation State: "
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr ""
+msgstr "&Emulacija"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3560,8 +3562,9 @@ msgid "Graphics settings"
 msgstr "Graficke opcije/podesavanja/konfiguracije..."
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Graficke opcije/podesavanja/konfiguracije..."
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -4014,7 +4017,8 @@ msgstr "Italianski "
 msgid "Italy"
 msgstr ""
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4329,16 +4333,18 @@ msgid "Load from selected slot"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "Loaduj Savestate"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "Loaduj Savestate"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -4856,7 +4862,8 @@ msgid ""
 "text editor."
 msgstr ""
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5542,8 +5549,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr ""
+msgstr "Snimaj state..."
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -5714,8 +5722,9 @@ msgid "Select floating windows"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Izaberi state za ucitavanje "
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6512,12 +6521,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr ""
+msgstr "Blue left "
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr ""
+msgstr "Blue right "
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"

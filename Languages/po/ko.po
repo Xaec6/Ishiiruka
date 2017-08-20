@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # Siegfried <iori3000@hanafos.com>, 2013-2017
 # its take <bexco2010@gmail.com>, 2016
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Korean (http://www.transifex.com/delroth/dolphin-emu/language/"
 "ko/)\n"
@@ -600,16 +600,18 @@ msgid "+ ADD"
 msgstr "+ ADD"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x 원본 (960x792)"
+msgstr "5x 원본 (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-비트"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x 원본 (1600x1320)"
+msgstr "5x 원본 (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -626,6 +628,7 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
 msgstr "3D 깊이"
 
@@ -846,8 +849,9 @@ msgstr "어댑터가 감지되었습니다"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "어댑터가 감지되지 않았습니다"
+msgstr "어댑터가 감지되었습니다"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1023,15 +1027,16 @@ msgstr "앱로더 날짜:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "앱로더의 크기가 잘못되었습니다... 정말로 앱로더가 맞습니까?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "앱로더가 파일으로 부터 로드할 수 없음"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "앱로더:"
+msgstr "앱로더 날짜:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1112,10 +1117,12 @@ msgid "Auto (Multiple of 640x528)"
 msgstr "자동 (640x528의 배수)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
+#, fuzzy
 msgid "Auto (Window Size)"
-msgstr "자동 (창 크기)"
+msgstr "창 크기 자동 조정"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
+#, fuzzy
 msgid "Auto Adjust Window Size"
 msgstr "창 크기 자동 조정"
 
@@ -1360,8 +1367,9 @@ msgid "CP register "
 msgstr "CP 레지스터"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "CPU 에뮬레이터 엔진"
+msgstr "CPU 에뮬레이션 엔진"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1497,8 +1505,9 @@ msgid "Checking integrity..."
 msgstr "파티션 무결성 체크중..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "DVD 루트 디렉토리 선택:"
+msgstr "NAND 루트 디렉토리 선택:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1533,7 +1542,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"앱로더로 사용할 파일을 선택: (디렉토리들로만 구성된 디스크에게만 적용됨)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1750,8 +1758,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr "인터넷에 연결하여 온라인 시스템 업데이트를 하시겠습니까?"
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "연결 중..."
+msgstr "계산중..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2090,8 +2099,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE 리컴파일러"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD 루트:"
+msgstr "Wii NAND 루트:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2139,16 +2149,16 @@ msgstr "10 진수"
 
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1146
 msgid "Decompress ISO..."
-msgstr "ISO를 압축 해제 하기..."
+msgstr "ISO 압축풀기..."
 
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1179
 msgid "Decompress selected ISOs..."
-msgstr "선택된 ISO를 압축 해제 하기..."
+msgstr "선택된 ISO 들을 압축풀기..."
 
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1395
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1513
 msgid "Decompressing ISO"
-msgstr "ISO 압축 해제 하기"
+msgstr "ISO 압축풀기"
 
 #: Source/Core/Core/HotkeyManager.cpp:100
 msgid "Decrease Convergence"
@@ -2668,6 +2678,7 @@ msgid "Emulation State: "
 msgstr "에뮬레이션 상태:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
 msgstr "에뮬레이션 속도"
 
@@ -3055,11 +3066,11 @@ msgstr "NAND 에서 증명서 추출"
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:208
 msgid "Extract Entire Disc..."
-msgstr ""
+msgstr "전체 디스크 압축 풀기..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:210
 msgid "Extract Entire Partition..."
-msgstr ""
+msgstr "전체 파티션 압축 풀기..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:228
 msgid "Extract File"
@@ -3071,11 +3082,11 @@ msgstr "파일 압축 풀기..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:200
 msgid "Extract Files..."
-msgstr ""
+msgstr "파일 압축 풀기..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:205
 msgid "Extract System Data..."
-msgstr ""
+msgstr "시스템 데이터 압축 풀기..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:384
 #, c-format
@@ -3562,6 +3573,7 @@ msgid "Frame Range"
 msgstr "프레임 범위"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
 msgstr "프레임 진행"
 
@@ -3682,14 +3694,14 @@ msgid "GCI Folder"
 msgstr "GCI 폴더"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"GCI 저장 파일이 로드되지 않았습니다 이 메모리 카드와 맞지 않은 지역입니다:\n"
-"%s"
+"%s\n"
+"는 가상 메모리 카드에 충분한 빈 블록이 없기 때문에 로드되지 않았습니다."
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3850,6 +3862,7 @@ msgid "Graphics settings"
 msgstr "그래픽 설정"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
 msgstr "그래픽 토글"
 
@@ -3895,7 +3908,7 @@ msgstr "기타 환경설정"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:627
 msgid "HDMI 3D"
-msgstr ""
+msgstr "HDMI 3D"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:677
 msgid "Hacks"
@@ -3912,11 +3925,11 @@ msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes do not match."
-msgstr "해쉬가 일치하지 않습니다."
+msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes match!"
-msgstr "해쉬가 일치합니다!"
+msgstr ""
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcard.cpp:131
 msgid "Header checksum failed"
@@ -3995,7 +4008,7 @@ msgstr "넷플레이로 호스트"
 #: Source/Core/Core/HotkeyManager.cpp:165
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:323
 msgid "Hotkeys"
-msgstr "단축키들"
+msgstr "단축키"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:313
 msgid "Hybrid Wii Remote"
@@ -4068,6 +4081,7 @@ msgid "Icon"
 msgstr "아이콘"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
 msgstr "식별자 생성"
 
@@ -4140,11 +4154,11 @@ msgid ""
 "\n"
 "If unsure, leave this unchecked."
 msgstr ""
-"배타적 모드를 사용하는 대신에 틀없는 창을 전체화면으로 늘려서 전체화면 모드"
-"를 수행합니다.\n"
+"전용 모드를 사용하는 대신에 틀없는 창을 전체화면으로 늘려서 전체화면 모드를 "
+"수행합니다.\n"
 "전체화면과 윈도우 모드간에 빠른 변경을 허용합니다, 하지만 약간 인풋 랙을 늘립"
 "니다, 이동을 덜 부드럽게 만들고 약간 성능을 감소시킵니다.\n"
-"Nvidia 3D Vision이 Direct3D 백엔드에서 작동하려면 배타적 모드가 필요합니다.\n"
+"Nvidia 3D Vision이 Direct3D 백엔드에서 작동하려면 전용 모드가 필요합니다.\n"
 "\n"
 "잘 모르겠으면, 체크 해제해 두세요."
 
@@ -4281,7 +4295,7 @@ msgid ""
 "Internal LZO Error - decompression failed (%d) (%li, %li) \n"
 "Try loading the state again"
 msgstr ""
-"내부 LZO 오류 - 압축해제 실패했습니다 (%d) (%li, %li) \n"
+"내부 LZO 오류 - 압축풀기 실패했습니다 (%d) (%li, %li) \n"
 "상태 로딩을 다시 해보세요"
 
 #: Source/Core/Core/State.cpp:650
@@ -4364,7 +4378,8 @@ msgstr "이탈리아어"
 msgid "Italy"
 msgstr "이탈리아"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4696,14 +4711,16 @@ msgid "Load from selected slot"
 msgstr "선택된 슬롯에서 로드"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr "최근 상태 로드"
+msgstr "마지막 상태 로드"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr "맵 파일 로드"
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
 msgstr "상태 로드"
 
@@ -5114,8 +5131,9 @@ msgstr ""
 "모든 플레이어가 그 게임을 가지고 있지는 않습니다. 정말 시작하고 싶습니까?"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "연결되지 않음"
+msgstr "연결"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5192,6 +5210,7 @@ msgid "Offset:"
 msgstr "오프셋:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
+#, fuzzy
 msgid "On-Screen Display Messages"
 msgstr "온-스크린 메시지 보여주기"
 
@@ -5255,7 +5274,8 @@ msgid ""
 msgstr ""
 "외부 텍스트 에디터로 이 게임에 대한 기본 (읽기-전용) 환경설정을 엽니다."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5294,8 +5314,9 @@ msgid "Other game"
 msgstr "다른 게임"
 
 #: Source/Core/Core/HotkeyManager.cpp:261
+#, fuzzy
 msgid "Other state hotkeys"
-msgstr "다른 상태  핫키"
+msgstr "다른 상태 단축키"
 
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:739
 msgid "Output"
@@ -5370,6 +5391,7 @@ msgid "Pause at End of Movie"
 msgstr "무비의 끝에서 일시정지"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
+#, fuzzy
 msgid "Pause on Focus Lost"
 msgstr "초점 잃을 때 일시정지"
 
@@ -5472,17 +5494,17 @@ msgstr "커스텀 텍스처 프리패치"
 #: Source/Core/Core/Movie.cpp:1181
 #, c-format
 msgid "Premature movie end in PlayController. %u + %zu > %zu"
-msgstr ""
+msgstr "PlayController 로 무비 마무리가 미완성되었습니다. %u + %zu > %zu"
 
 #: Source/Core/Core/Movie.cpp:1308
 #, c-format
 msgid "Premature movie end in PlayWiimote. %u + %d > %zu"
-msgstr ""
+msgstr "PlayWiimote 로 무비 마무리가 미완성되었습니다. %u + %d > %zu"
 
 #: Source/Core/Core/Movie.cpp:1282
 #, c-format
 msgid "Premature movie end in PlayWiimote. %u > %zu"
-msgstr ""
+msgstr "PlayWiimote 로 무비 마무리가 미완성되었습니다. %u > %zu"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:1329
 msgid ""
@@ -5583,6 +5605,9 @@ msgid ""
 "games themselves, except for games that aren't in the database. The names in "
 "the database are often more consistently formatted, especially for Wii games."
 msgstr ""
+"게임 자체에서 이름을 읽는 대신 내부 데이터베이스에서 게임 이름을 읽습니다, 데"
+"이터베이스에 없는 게임은 제외합니다. 데이터베이스에 있는 이름은 대체로 더 일"
+"관된 형식으로 되어있습니다, 특히 Wii 게임들이 그렇습니다."
 
 #. i18n: This string is used for a radio button that represents the type of
 #. memory breakpoint that gets triggered when a read operation occurs.
@@ -5876,7 +5901,7 @@ msgstr "상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:115
 msgid "Save State Slot 1"
-msgstr "슬롯1 상태 저장"
+msgstr "슬롯 1 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:124
 msgid "Save State Slot 10"
@@ -5884,23 +5909,23 @@ msgstr "슬롯 10 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:116
 msgid "Save State Slot 2"
-msgstr "슬롯2 상태 저장"
+msgstr "슬롯 2 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:117
 msgid "Save State Slot 3"
-msgstr "슬롯3 상태 저장"
+msgstr "슬롯 3 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:118
 msgid "Save State Slot 4"
-msgstr "슬롯4 상태 저장"
+msgstr "슬롯 4 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:119
 msgid "Save State Slot 5"
-msgstr "슬롯5 상태 저장"
+msgstr "슬롯 5 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:120
 msgid "Save State Slot 6"
-msgstr "슬롯6 상태 저장"
+msgstr "슬롯 6 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:121
 msgid "Save State Slot 7"
@@ -5908,7 +5933,7 @@ msgstr "슬롯 7 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:122
 msgid "Save State Slot 8"
-msgstr "슬롯8 상태 저장"
+msgstr "슬롯 8 상태 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:123
 msgid "Save State Slot 9"
@@ -5960,6 +5985,7 @@ msgid "Save signature as"
 msgstr "서명 다른 이름으로 저장"
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
 msgstr "상태 저장"
 
@@ -6141,6 +6167,7 @@ msgid "Select floating windows"
 msgstr "떠있는 창들 선택"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
 msgstr "상태 선택"
 
@@ -6222,6 +6249,14 @@ msgid ""
 "\n"
 "If unsure, select Off."
 msgstr ""
+"입체 3D 모드를 선택합니다. 입체 보기는 필요한 하드웨어가 있다면 깊이의 더 좋"
+"은 느낌을 줍니다.\n"
+"대부분의 3D TV에서는 Side-by-Side 와 Top-and-Bottom이 사용됩니다.\n"
+"여색 입체시는 빨강-청록색의 안경이 사용됩니다.\n"
+"HDMI 3D는 모니터가 3D 디스플레이 해상도를 지원할 때 사용됩니다.\n"
+"심하게 에뮬레이션 스피드를 감소시키고 때로는 이슈를 유발합니다.\n"
+"\n"
+"잘 모르겠으면, 끄기를 선택하세요."
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:112
 msgid ""
@@ -6695,15 +6730,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"렌더에 사용되는 해상도를 지정합니다. 고해상도는 비주얼 품질을 엄청 향상시킵니"
-"다, 하지만 또한 GPU 로드를 엄청 증가시키고 특정 게임에서 이슈들을 유발할 수 "
-"있습니다.\n"
-"\"640x528의 배수\"는 \"창 크기\"보다 좀 더 큰 크기로 나올 것이지만 더 적은 이"
-"슈들을 냅니다. 일반적으로 말해서, 더 낮은 내부 해상도는, 더 좋은 성능이 될 것"
-"입니다. 자동 (창 크기), 1.5x, 2.5x 는 일부 게임에서 이슈를 유발할지도 모릅니"
-"다.\n"
-"\n"
-"잘 모르겠으면, 원본을 선택하세요."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -6881,8 +6907,8 @@ msgid ""
 "\n"
 "If unsure, leave this checked."
 msgstr ""
-"시스템 메모리를 우회해서 GPU 상에 EFB 복사를 담습니다. 소수 게임에서 그래픽 "
-"결함을 일으킵니다.\n"
+"시스템 메모리를 우회해서 GPU 상에 EFB 복사를 전용으로 담습니다. 소수 게임에"
+"서 그래픽 결함을 일으킵니다.\n"
 "\n"
 "활성 = EFB 복사를 텍스처에\n"
 "비활성 = EFB 복사를 램(과 텍스처)에\n"
@@ -7018,12 +7044,14 @@ msgid "Tab Split"
 msgstr "탭 분리"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "테이블 왼쪽"
+msgstr "파랑 왼쪽"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "테이블 오른쪽"
+msgstr "파랑 오른쪽"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7740,7 +7768,7 @@ msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:94
 msgid "Use Built-In Database of Game Names"
-msgstr ""
+msgstr "내장된 데이터 베이스의 게임 이름 사용"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:427
 msgid "Use Fullscreen"
@@ -7993,6 +8021,9 @@ msgid ""
 "%u > %zu) (input %u > %u). You should load another save before continuing, "
 "or load this state with read-only mode off."
 msgstr ""
+"경고: 현재 무비의 마지막 뒤에 있는 저장을 로드하였습니다. (byte %u > %zu) (입"
+"력 %u > %u). 계속하기전에 다른 저장을 로드해야합니다, 그렇지 않으면 읽기-전"
+"용 모드가 꺼진 상태로 이것을 로드합니다."
 
 #: Source/Core/Core/Movie.cpp:1033
 #, c-format
@@ -8115,8 +8146,9 @@ msgid "Wii Remote %i"
 msgstr "Wii 리모트 %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "Wii 리모트가 연결되었습니다"
+msgstr "Wii 리모트 %1"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8307,7 +8339,7 @@ msgstr "[ 대기 ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "앱로더 (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"
@@ -8336,3 +8368,459 @@ msgstr "x86 크기"
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:756
 msgid "| OR"
 msgstr "| OR"
+
+#~ msgid "%1 %"
+#~ msgstr "%1 %"
+
+#~ msgid "%1 ms"
+#~ msgstr "%1 ms"
+
+#~ msgid "&Cancel"
+#~ msgstr "취소(&C)"
+
+#~ msgid "&Language:"
+#~ msgstr "언어(&L):"
+
+#~ msgid "&Speed Limit:"
+#~ msgstr "속도 제한(&S):"
+
+#~ msgid "&Theme:"
+#~ msgstr "테마(&T):"
+
+#~ msgid "16x"
+#~ msgstr "16x"
+
+#~ msgid "1x"
+#~ msgstr "1x"
+
+#~ msgid "2x"
+#~ msgstr "2x"
+
+#~ msgid "4x"
+#~ msgstr "4x"
+
+#~ msgid "8x"
+#~ msgstr "8x"
+
+#~ msgid ""
+#~ "<p>DolphinQt is a new experimental GUI that is intended to replace the "
+#~ "current GUI based on wxWidgets. The implementation is <b>currently "
+#~ "incomplete</b> so some functionality (like changing certain settings) may "
+#~ "be missing.</p>\n"
+#~ "<p>Only developers working on the DolphinQt implementation and curious "
+#~ "testers should use it at the present time; normal users are recommended "
+#~ "to continue using the older DolphinWX GUI for the time being.</p>\n"
+#~ "<h3>Bug Reports</h3><p>At the current time there is no point making bug "
+#~ "reports about DolphinQt GUI's missing features as the developers are "
+#~ "already aware of those.</p>\n"
+#~ msgstr ""
+#~ "<p>DolphinQt 는 wxWidgets 에 기반한 현재 GUI를 대체할 의도된 새로운 실험"
+#~ "적 GUI 입니다. 시행은 <b>현재 미완료입니다 </b> 그래서 일부 기능(특정 설"
+#~ "정 바꾸기 같은)은 놓치고 있을지 모릅니다.</p>\n"
+#~ "<p>개발자들만이 DolphinQt 시행 작업을 하고 호기심있는 테스터들이 현재 사용"
+#~ "해야합니다; 일반 유저들은 예전의 DolphinWX GUI 를 당분간 사용하기를 권장합"
+#~ "니다.</p>\n"
+#~ "<h3>버그 리포트</h3><p>현시점에서 DolphinQt GUI 의 놓친 사항들에 대한 버"
+#~ "그 리포트를 만들 포인트가 없습니다 개발자들이 이미 그것들을 알고 있거든요."
+#~ "</p>\n"
+
+#~ msgid "Abort"
+#~ msgstr "중단"
+
+#~ msgid ""
+#~ "All GC/Wii files (*.elf *.dol *.gcm *.iso *.tgc *.wbfs *.ciso *.gcz *."
+#~ "wad);;All Files (*)"
+#~ msgstr ""
+#~ "모든 GC/Wii 파일들 (*.elf *.dol *.gcm *.iso *.tgc *.wbfs *.ciso *.gcz *."
+#~ "wad);;모든 파일들 (*)"
+
+#~ msgid "All Save States (*.sav *.s##);; All Files (*)"
+#~ msgstr "모든 저장 상태 (*.sav *.s##);; 모든 파일들 (*)"
+
+#~ msgid "Apply"
+#~ msgstr "적용"
+
+#~ msgid "Are you sure that you want to delete '%1'?"
+#~ msgstr "'%1' 를 정말로 지우고 싶습니까?"
+
+#~ msgid "Are you sure you want to delete this file?"
+#~ msgstr "이 파일을 정말로 삭제하시겠습니까?"
+
+#~ msgid "Are you sure?"
+#~ msgstr "확신합니까?"
+
+#~ msgid "Branch: "
+#~ msgstr "분기:"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
+
+#~ msgid ""
+#~ "Check whether you have the permissions required to delete the file or "
+#~ "whether it's still in use."
+#~ msgstr ""
+#~ "파일 삭제에 필요한 권한이 있는지 아니면 파일이 여전히 사용중에 있는지 확인"
+#~ "하세요."
+
+#~ msgid "Classic Controller"
+#~ msgstr "클래식 컨트롤러"
+
+#~ msgid "Compiled: "
+#~ msgstr "컴파일됨:"
+
+#~ msgid "Compiling shaders..."
+#~ msgstr "쉐이더들 컴파일하기..."
+
+#~ msgid "Compressed GC/Wii images (*.gcz)"
+#~ msgstr "압축된 GC/Wii 이미지들 (*.gcz)"
+
+#~ msgid "Compressing..."
+#~ msgstr "압축하기..."
+
+#~ msgid "Computing MD5 Checksum"
+#~ msgstr "MD5 체크섬 계산하기"
+
+#~ msgid "Configuration"
+#~ msgstr "환경설정"
+
+#~ msgid "Configure Input"
+#~ msgstr "입력 설정"
+
+#~ msgid "Configure Output"
+#~ msgstr "출력 설정"
+
+#~ msgid "Confirm"
+#~ msgstr "확정"
+
+#~ msgid "Controller Settings"
+#~ msgstr "컨트롤러 설정"
+
+#~ msgid ""
+#~ "Could not start DolphinWX. Check for dolphin.exe in the installation "
+#~ "directory."
+#~ msgstr ""
+#~ "DolphinWX 를 시작할 수 없었습니다. 설치 디렉토리에서 dolphin.exe 를 확인하"
+#~ "세요."
+
+#~ msgid "Country"
+#~ msgstr "국가"
+
+#~ msgid "Decompressing..."
+#~ msgstr "압축풀기..."
+
+#~ msgid "Default Font"
+#~ msgstr "기본 폰트"
+
+#~ msgid "Delete File..."
+#~ msgstr "파일 삭제..."
+
+#~ msgid "Disabled"
+#~ msgstr "비활성화됨"
+
+#~ msgid ""
+#~ "Disabled: Ubershaders are never used. Stuttering will occur during shader "
+#~ "compilation, but GPU demands are low. Recommended for low-end hardware.\n"
+#~ "\n"
+#~ "Hybrid: Ubershaders will be used to prevent stuttering during shader "
+#~ "compilation, but traditional shaders will be used when they will not "
+#~ "cause stuttering. Balances performance and smoothness.\n"
+#~ "\n"
+#~ "Exclusive: Ubershaders will always be used. Only recommended for high-end "
+#~ "systems."
+#~ msgstr ""
+#~ "비활성화됨: 우버쉐이더스가 전혀 사용되지 않습니다. 쉐이더 컴파일 동안 버벅"
+#~ "임이 발생할 것입니다, 하지만 GPU 요구가 낮아집니다. 로우-엔드 저가 하드웨"
+#~ "어에 권장됩니다.\n"
+#~ "\n"
+#~ "하이브리드: 쉐이더 컴파일 동안 버벅임을 막는데에 우버쉐이더스가 사용될 것"
+#~ "입니다, 하지만 버벅임을 유발하지 않을 때는 기존 쉐이더가 사용될 것입니다. "
+#~ "성능과 부드러움의 균형을 유지합니다.\n"
+#~ "\n"
+#~ "전용: 우버쉐이더스가 항상 사용될 것입니다. 하이-엔드 고급 시스템에 대해서"
+#~ "만 권장됩니다."
+
+#~ msgid "Disc Number:"
+#~ msgstr "디스크 번호:"
+
+#~ msgid ""
+#~ "Do you authorize Dolphin to report information to Dolphin's developers?"
+#~ msgstr "돌핀이 정보를 돌핀 개발자들에게 보고하도록 허가하시겠습니까?"
+
+#~ msgid "Do you want to add \"%1\" to the list of Game Paths?"
+#~ msgstr "\"%1\" 를 게임 경로들의 목록에 추가하고 싶습니까?"
+
+#~ msgid "Dolphin %1 Graphics Configuration"
+#~ msgstr "돌핀 %1 그래픽 환경설정"
+
+#~ msgid ""
+#~ "Dolphin could not find any GameCube/Wii ISOs or WADs.\n"
+#~ "Double-click here to set a games directory..."
+#~ msgstr ""
+#~ "돌핀이 어떠한 게임큐브/Wii ISO나 WAD를 찾을 수 없습니다.\n"
+#~ "게임 디렉토리를 설정하려면 여기를 더블클릭하세요..."
+
+#~ msgid "Dolphin failed to complete the requested action."
+#~ msgstr "돌핀이 요청된 액션 완수에 실패했습니다."
+
+#~ msgid "Dolphin is a free and open-source GameCube and Wii emulator."
+#~ msgstr "돌핀은 무료이고 오픈-소스 게임큐브 및 Wii 에뮬레이터입니다."
+
+#~ msgid "DolphinQt Experimental GUI"
+#~ msgstr "DolphinQt 실험적 GUI"
+
+#~ msgid "DolphinQt2 Experimental GUI"
+#~ msgstr "DolphinQt2 실험적 GUI"
+
+#~ msgid "ELF/DOL"
+#~ msgstr "ELF/DOL"
+
+#~ msgid "Enable Rumble"
+#~ msgstr "진동 활성화"
+
+#~ msgid "Exclusive"
+#~ msgstr "전용"
+
+#~ msgid "Failed to delete the selected file."
+#~ msgstr "선택된 파일 삭제에 실패했습니다."
+
+#~ msgid "Failed to export save files!"
+#~ msgstr "저장 파일들 내보내기에 실패했습니다!"
+
+#~ msgid "Failed to init core"
+#~ msgstr "코어 인식에 실패했습니다"
+
+#~ msgid "Failed to install this title to the NAND."
+#~ msgstr "NAND 에 이 타이틀 설치에 실패했습니다."
+
+#~ msgid "Failed to launch"
+#~ msgstr "런치에 실패했습니다"
+
+#~ msgid "Failed to open '%1'"
+#~ msgstr "'%1' 를 열기에 실패했습니다"
+
+#~ msgid "File Path:"
+#~ msgstr "파일 경로:"
+
+#~ msgid ""
+#~ "Finishing the update...\n"
+#~ "This can take a while."
+#~ msgstr ""
+#~ "업데이트를 완료중입니다...\n"
+#~ "시간이 잠시 걸릴 수 있습니다."
+
+#~ msgid "Game Folders"
+#~ msgstr "게임 폴더들"
+
+#~ msgid "GameCube Adapter for Wii U at Port %1"
+#~ msgstr "포트 %1 에 Wii U 용 게임큐브 어댑터 "
+
+#~ msgid "GameCube Controller"
+#~ msgstr "게임큐브 컨트롤러"
+
+#~ msgid "GameCube Controller at Port %1"
+#~ msgstr "포트 %1 에 게임큐브 컨트롤러"
+
+#~ msgid "GameCube Keyboard"
+#~ msgstr "게임큐브 키보드"
+
+#~ msgid "GameCube Keyboard at Port %1"
+#~ msgstr "포트 %1 에 겜임큐브 키보드"
+
+#~ msgid "Hotkey Settings"
+#~ msgstr "단축키 설정"
+
+#~ msgid "Hybrid"
+#~ msgstr "하이브리드"
+
+#~ msgid "ISO Size:"
+#~ msgstr "ISO 크기:"
+
+#~ msgid ""
+#~ "If authorized, Dolphin can collect data on its performance, feature "
+#~ "usage, and configuration, as well as data on your system's hardware and "
+#~ "operating system.\n"
+#~ "\n"
+#~ "No private data is ever collected. This data helps us understand how "
+#~ "people and emulated games use Dolphin and prioritize our efforts. It also "
+#~ "helps us identify rare configurations that are causing bugs, performance "
+#~ "and stability issues.\n"
+#~ "This authorization can be revoked at any time through Dolphin's settings."
+#~ msgstr ""
+#~ "허가되면, 돌핀은 그 성능, 특성 사용, 환경설정 데이터, 또 시스템의 하드웨"
+#~ "어 와 운영체제에 대한 데이터를 수집할 수 있습니다.\n"
+#~ "\n"
+#~ "사적인 데이터는 절대 수집되지 않습니다. 이 데이터는 우리가 어떻게 사람들"
+#~ "과 에뮬레이트된 게임들이 돌핀을 사용하는지 이해하고 우리의 활동 우선순위"
+#~ "를 매기게 도와줍니다. 이것은 또한 버그, 성능과 안정성 이슈들을 유발하는 드"
+#~ "문 환경설정을 우리가 식별하게 도와줍니다.\n"
+#~ "이 허가는 돌핀 설정에서 어느 때라도 철회될 수 있습니다."
+
+#~ msgid "Latency:"
+#~ msgstr "지연:"
+
+#~ msgid "Left Table"
+#~ msgstr "왼쪽 테이블"
+
+#~ msgid "Load State from File"
+#~ msgstr "파일에서 상태 로드"
+
+#~ msgid "Load State from Slot"
+#~ msgstr "슬롯에서 상태 로드"
+
+#~ msgid "Load Wii System Menu %1"
+#~ msgstr "Wii 시스템 메뉴 %1 로드"
+
+#~ msgid "Load from Slot %1 - %2"
+#~ msgstr "슬롯 %1 - %2 로부터 로드"
+
+#~ msgid "Long Maker:"
+#~ msgstr "긴 제작사:"
+
+#~ msgid "Long Name:"
+#~ msgstr "긴 이름:"
+
+#~ msgid "Monospaced Font"
+#~ msgstr "단일띄어쓰기 폰트"
+
+#~ msgid "Netplay has desynced in NetPlay_GetButtonPress()"
+#~ msgstr "넷플레이가 NetPlay_GetButtonPress() 에서 비동기화되었습니다"
+
+#~ msgid "No Adapter Detected"
+#~ msgstr "감지된 어댑터가 없습니다"
+
+#~ msgid "No extension selected."
+#~ msgstr "선택된 확장이 없습니다."
+
+#~ msgid "Not implemented yet."
+#~ msgstr "아직 시행되지 않았습니다."
+
+#~ msgid "Operation in progress..."
+#~ msgstr "작동 처리중..."
+
+#~ msgid "PNG image file (*.png);; All Files (*)"
+#~ msgstr "PNG 이미지 파일 (*.png);; 모든 파일들 (*)"
+
+#~ msgid "Port %1"
+#~ msgstr "포트 %1"
+
+#~ msgid "Recommended for normal users"
+#~ msgstr "일반 사용자에게 권장됩니다"
+
+#~ msgid "Revision: "
+#~ msgstr "개정:"
+
+#~ msgid "Right Table"
+#~ msgstr "오른쪽 테이블"
+
+#~ msgid "Run DolphinWX Instead"
+#~ msgstr "DolphinWX 대신 실행합니다"
+
+#~ msgid "Save State to File"
+#~ msgstr "파일에 상태 저장"
+
+#~ msgid "Save State to Oldest Slot"
+#~ msgstr "가장 오래된 슬롯에 상태 저장"
+
+#~ msgid "Save State to Slot"
+#~ msgstr "슬롯에 상태 저장"
+
+#~ msgid "Save to Slot %1 - %2"
+#~ msgstr "슬롯 %1 - %2 에 저장"
+
+#~ msgid "Select Slot %1 - %2"
+#~ msgstr "슬롯 %1 - %2 선택"
+
+#~ msgid "Select Wii NAND Root"
+#~ msgstr "Wii NAND 루트 선택"
+
+#~ msgid "Select a Directory"
+#~ msgstr "디렉토리 선택"
+
+#~ msgid "Select a File"
+#~ msgstr "파일 선택"
+
+#~ msgid "Select a Game"
+#~ msgstr "게임 선택"
+
+#~ msgid "Select a title to install to NAND"
+#~ msgstr "NAND 에 설치할 타이틀 선택"
+
+#~ msgid "Select where you want to save the compressed image"
+#~ msgstr "압축된 이미지를 저장하고 싶은 곳을 선택하세요"
+
+#~ msgid "Select where you want to save the decompressed image"
+#~ msgstr "압축풀린 이미지를 저장하고 싶은 곳을 선택하세요"
+
+#~ msgid "Settings"
+#~ msgstr "설정"
+
+#~ msgid "Short Maker:"
+#~ msgstr "단축 제작사:"
+
+#~ msgid "Short Name:"
+#~ msgstr "단축 이름:"
+
+#~ msgid "Software Renderer"
+#~ msgstr "소프트웨어 렌더러"
+
+#~ msgid "Success!"
+#~ msgstr "성공!"
+
+#~ msgid "Successfully compressed image."
+#~ msgstr "성공적으로 이미지를 압축했습니다."
+
+#~ msgid "Successfully deleted '%1'."
+#~ msgstr "'%1' 를 성공적으로 삭제했습니다."
+
+#~ msgid "Successfully exported save files"
+#~ msgstr "저장 파일들을 성공적으로 내보냈습니다"
+
+#~ msgid "Successfully installed this title to the NAND."
+#~ msgstr "NAND 에 이 타이틀을 성공적으로 설치했습니다."
+
+#~ msgid "Successfully removed this title from the NAND."
+#~ msgstr "NAND 에서 이 타이틀을 성공적으로 제거했습니다."
+
+#~ msgid "The profile '%1' does not exist"
+#~ msgstr "프로파일 '%1' 이 존재하지 않습니다"
+
+#~ msgid "This cannot be undone!"
+#~ msgstr "이것은 되돌릴 수 없습니다!"
+
+#~ msgid ""
+#~ "This software should not be used to play games you do not legally own."
+#~ msgstr ""
+#~ "이 소프트웨어는 합법적 소유가 아닌 게임을 플레이하기 위해 쓰여서는 안됩니"
+#~ "다."
+
+#~ msgid "Ubershaders:"
+#~ msgstr "우버쉐이더스:"
+
+#~ msgid "Uncompressed GC/Wii images (*.iso *.gcm)"
+#~ msgstr "압축풀린 GC/Wii 이미지들 (*.iso *.gcm)"
+
+#~ msgid ""
+#~ "Updating title %1...\n"
+#~ "This can take a while."
+#~ msgstr ""
+#~ "타이틀 %1 를 업데이트중...\n"
+#~ "시간이 잠시 걸릴 수 있습니다."
+
+#~ msgid "Use DolphinQt Anyway"
+#~ msgstr "DolphinQt 를 아무튼 사용합니다"
+
+#~ msgid "User Interface"
+#~ msgstr "사용자 인터페이스"
+
+#~ msgid "WAD files (*.wad)"
+#~ msgstr "WAD 파일들 (*.wad)"
+
+#~ msgid "Wii Channel"
+#~ msgstr "Wii 채널"
+
+#~ msgid ""
+#~ "© 2003-%1 Dolphin Team. “GameCube” and “Wii” are trademarks of Nintendo. "
+#~ "Dolphin is not affiliated with Nintendo in any way."
+#~ msgstr ""
+#~ "© 2003-%1 돌핀 팀. “게임큐브” 와 “Wii” 는 닌텐도의 상표입니다. 돌핀은 닌텐"
+#~ "도와 아무런 관련이 없습니다."

@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # João Frade <100nome.portugal@gmail.com>, 2013
 # Zilaan <nunogomesrebelo@hotmail.com>, 2011
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:17+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Portuguese (http://www.transifex.com/delroth/dolphin-emu/"
 "language/pt/)\n"
@@ -968,15 +968,15 @@ msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Apploader é do tamanho errado...é mesmo uma apploader?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Apploader impossibilitada de carregar através do ficheiro"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1058,7 +1058,7 @@ msgstr "Automático (Multiplo de 640x528)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Auto (Dimensão da Janela)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
@@ -1293,8 +1293,9 @@ msgid "CP register "
 msgstr ""
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "Motor de emulador de CPU"
+msgstr "Motor de Emulador DSP"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1418,8 +1419,9 @@ msgid "Checking integrity..."
 msgstr "A verificar integridade..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Escolha uma pasta de raiz do DVD:"
+msgstr "Escolha uma pasta de raiz NAND:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1454,8 +1456,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Escolha o ficheiro a usar como apploader: (aplica-se a apenas a discos "
-"construídos através de pastas)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1667,8 +1667,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "A conectar..."
+msgstr "Conectar"
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -1972,8 +1973,9 @@ msgid "DSP LLE recompiler"
 msgstr "Recompilador de DSP LLE"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "Raiz de DVD:"
+msgstr "Raiz de NAND Wii:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2528,8 +2530,9 @@ msgid "Emulation State: "
 msgstr "Estado da Emulação:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr ""
+msgstr "&Emulação"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3354,8 +3357,9 @@ msgid "Frame Range"
 msgstr "Alcance de Quadros"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr ""
+msgstr "Avançar Quadro"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3631,8 +3635,9 @@ msgid "Graphics settings"
 msgstr "Definições Gráficas"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Definições Gráficas"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -4087,7 +4092,8 @@ msgstr "Italiano"
 msgid "Italy"
 msgstr ""
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4407,16 +4413,18 @@ msgid "Load from selected slot"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "&Carregar Estado"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "&Carregar Estado"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -4806,8 +4814,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Não conectado"
+msgstr "Conectar"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -4944,7 +4953,8 @@ msgid ""
 "text editor."
 msgstr ""
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5633,8 +5643,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr ""
+msgstr "Gua&rdar Estado"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -5805,8 +5816,9 @@ msgid "Select floating windows"
 msgstr "Seleccionar janelas flutuantes"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Seleccione o estado para carregar"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6612,12 +6624,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Table Esquerda"
+msgstr "Azul esquerda"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Table Direita"
+msgstr "Azul Direita"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7803,7 +7817,7 @@ msgstr "[ em espera ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "apploader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

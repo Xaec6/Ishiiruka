@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # Yueyu <gaoboyuan8@qq.com>, 2014
 # Kazushim <kazushim@outlook.com>, 2017
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Chinese (China) (http://www.transifex.com/delroth/dolphin-emu/"
 "language/zh_CN/)\n"
@@ -53,7 +53,7 @@ msgstr " （项目太多，无法显示）"
 #: Source/Core/DolphinWX/NetPlay/NetWindow.cpp:548
 #: Source/Core/DolphinWX/NetPlay/NetWindow.cpp:654
 msgid " Game : "
-msgstr " 游戏："
+msgstr " 游戏 :"
 
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:770
 msgid "! NOT"
@@ -606,16 +606,18 @@ msgid "+ ADD"
 msgstr "+ 加"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x 原生 (960x792)"
+msgstr "5x 原生 (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16位"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x 原生 (1600x1320)"
+msgstr "5x 原生 (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -632,6 +634,7 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
 msgstr "3D 深度"
 
@@ -665,7 +668,7 @@ msgstr "8x 原生 (5120x4224) 适合 5K"
 
 #: Source/Core/DolphinWX/PatchAddEdit.cpp:40
 msgid "<Insert name here>"
-msgstr "<在这里插入名称>"
+msgstr "<Insert name here>"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:390
 msgid "<No resolutions found>"
@@ -845,8 +848,9 @@ msgstr "检测到适配器"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "未检测到适配器"
+msgstr "检测到适配器"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -956,7 +960,7 @@ msgstr "所有 GameCube 文件 (gcm)"
 #: Source/Core/DolphinWX/FrameTools.cpp:1455
 #: Source/Core/DolphinWX/FrameTools.cpp:1467
 msgid "All Save States (sav, s##)"
-msgstr "所有存档状态 (sav, s##)"
+msgstr "所有状态存档 (sav, s##)"
 
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1483
 msgid "All Wii ISO files (iso)"
@@ -1021,15 +1025,16 @@ msgstr "应用载入器时间："
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "应用程序载入器 (apploader) 大小错误...这真的是一个应用程序载入器？"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "应用程序载入器不能从文件载入"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "应用载入器："
+msgstr "应用载入器时间："
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1110,10 +1115,12 @@ msgid "Auto (Multiple of 640x528)"
 msgstr "自动（640x528 的倍数）"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
+#, fuzzy
 msgid "Auto (Window Size)"
-msgstr "自动（窗口大小）"
+msgstr "自动调整窗口大小"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
+#, fuzzy
 msgid "Auto Adjust Window Size"
 msgstr "自动调整窗口大小"
 
@@ -1266,7 +1273,7 @@ msgstr "底部"
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:343
 #, c-format
 msgid "Bound Controls: %lu"
-msgstr "关联输入数：%lu"
+msgstr "绑定控件数：%lu"
 
 #: Source/Core/DolphinWX/AboutDolphin.cpp:31
 #, c-format
@@ -1354,6 +1361,7 @@ msgid "CP register "
 msgstr "CP 寄存器"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
 msgstr "CPU 模拟引擎"
 
@@ -1491,8 +1499,9 @@ msgid "Checking integrity..."
 msgstr "正在检查完整性..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "选择一个 DVD 根目录:"
+msgstr "选择一个 NAND 根目录:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1526,7 +1535,7 @@ msgstr "选择一个 SD 卡文件:"
 msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
-msgstr "选择要作为应用加载器的文件: (仅适用于由文件夹构成的光盘)"
+msgstr ""
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1742,8 +1751,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr "是否连接到互联网并执行在线系统更新？"
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "正在连接..."
+msgstr "正在计算..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2071,8 +2081,9 @@ msgid "DSP LLE recompiler"
 msgstr "音频 LLE 重编译器"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD 根目录："
+msgstr "Wii NAND 根目录："
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2644,6 +2655,7 @@ msgid "Emulation State: "
 msgstr "模拟状态："
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
 msgstr "模拟速度"
 
@@ -3022,11 +3034,11 @@ msgstr "从 NAND 中提取证书"
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:208
 msgid "Extract Entire Disc..."
-msgstr ""
+msgstr "提取整个光盘..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:210
 msgid "Extract Entire Partition..."
-msgstr ""
+msgstr "提取整个分区..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:228
 msgid "Extract File"
@@ -3038,11 +3050,11 @@ msgstr "提取文件..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:200
 msgid "Extract Files..."
-msgstr ""
+msgstr "提取文件..."
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:205
 msgid "Extract System Data..."
-msgstr ""
+msgstr "提取系统数据"
 
 #: Source/Core/DolphinWX/ISOProperties/FilesystemPanel.cpp:384
 #, c-format
@@ -3526,6 +3538,7 @@ msgid "Frame Range"
 msgstr "帧范围"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
 msgstr "逐帧播放"
 
@@ -3646,12 +3659,14 @@ msgid "GCI Folder"
 msgstr "GCI 文件夹"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
-msgstr "未加载 GCI 存档文件，其地区对于存储卡 %s 不正确。"
+msgstr ""
+"%s \n"
+"无法加载，因为虚拟存储卡上空闲区块数不足。"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3812,6 +3827,7 @@ msgid "Graphics settings"
 msgstr "图形设置"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
 msgstr "图形切换"
 
@@ -3857,7 +3873,7 @@ msgstr "吉他配置（吉他英雄）"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:627
 msgid "HDMI 3D"
-msgstr ""
+msgstr "HDMI 3D"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:677
 msgid "Hacks"
@@ -3873,10 +3889,12 @@ msgstr ""
 "你需要手动编辑此 INI 文件。"
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
+#, fuzzy
 msgid "Hashes do not match."
-msgstr "哈希值不匹配。"
+msgstr "哈希值不匹配！"
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
+#, fuzzy
 msgid "Hashes match!"
 msgstr "哈希值匹配！"
 
@@ -3928,8 +3946,8 @@ msgstr ""
 "更高的数值可以在更高的帧速运行可变帧率游戏，会增加 CPU 负担。\n"
 "较低的数值可以以较低的帧速运行可变帧率游戏，节省 CPU 资源。\n"
 "\n"
-"警告：改动默认值 (100%) 可能会破坏游戏而导致故障。这样做需要您自担风险。\n"
-"请不要提交非默认时钟频率下出现的错误。"
+"警告：改动默认值 (100%) 可能会破坏游戏而导致故障。\n"
+"这样做需要您自担风险。请不要提交非默认时钟频率下出现的错误。"
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:173
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:240
@@ -3950,7 +3968,7 @@ msgstr ""
 
 #: Source/Core/DolphinWX/GameListCtrl.cpp:1168
 msgid "Host with Netplay"
-msgstr "建主机对战"
+msgstr "建主机联网"
 
 #: Source/Core/Core/HotkeyManager.cpp:165
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:323
@@ -4026,6 +4044,7 @@ msgid "Icon"
 msgstr "图标"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
 msgstr "身份标识生成"
 
@@ -4046,7 +4065,7 @@ msgstr ""
 "如果得到您的授权，Dolphin 将收集关于其性能表现、功能使用、程序设置，以及您的"
 "系统硬件和操作系统的数据。\n"
 "\n"
-"我们不会收集您的个人数据。这些数据能帮助我们了解用户与被模拟的游戏怎样使用 "
+"我们不会收集您的隐私数据。这些数据能帮助我们了解用户与被模拟的游戏怎样使用 "
 "Dolphin 以确定我们的工作重点。它们还将帮助我们发现导致故障、性能问题与稳定性"
 "问题的罕见程序设置。\n"
 "您可以随时通过 Dolphin 的程序设置取消本授权。\n"
@@ -4097,12 +4116,10 @@ msgid ""
 "\n"
 "If unsure, leave this unchecked."
 msgstr ""
-"使用一个全屏幕大小的无边框窗口来实现全屏模式而非\n"
-"使用独占模式。\n"
-"开启后将可以更快地在全屏与窗口模式之间切换，但会\n"
-"造成轻微的输入延迟，移动的迟钝和性能下降。\n"
-"如要在 Direct3D 后端开启 NVIDIA 3D Vision 则必须\n"
-"使用独占模式。\n"
+"使用一个全屏幕大小的无边框窗口来实现全屏模式而非使用独占模式。\n"
+"开启后将可以更快地在全屏与窗口模式之间切换，但会造成轻微的输入延迟，移动的迟"
+"钝和性能下降。\n"
+"如要在 Direct3D 后端开启 NVIDIA 3D Vision 则必须使用独占模式。\n"
 "\n"
 "如果不确定，请不要勾选此项。"
 
@@ -4320,7 +4337,8 @@ msgstr "意大利语"
 msgid "Italy"
 msgstr "意大利"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4652,6 +4670,7 @@ msgid "Load from selected slot"
 msgstr "从选择的插槽中加载"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
 msgstr "载入最近状态"
 
@@ -4660,6 +4679,7 @@ msgid "Load map file"
 msgstr "载入映射文件"
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
 msgstr "载入状态"
 
@@ -5066,8 +5086,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr "并不是所有玩家都有该游戏。你真的要开始吗？"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "未连接"
+msgstr "连接"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5144,8 +5165,9 @@ msgid "Offset:"
 msgstr "偏移量："
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
+#, fuzzy
 msgid "On-Screen Display Messages"
-msgstr "屏幕显示消息"
+msgstr "显示屏幕消息"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5206,7 +5228,8 @@ msgid ""
 "text editor."
 msgstr "在外部文本编辑器中打开本游戏的默认（只读）设置。"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5245,6 +5268,7 @@ msgid "Other game"
 msgstr "其他游戏"
 
 #: Source/Core/Core/HotkeyManager.cpp:261
+#, fuzzy
 msgid "Other state hotkeys"
 msgstr "其他状态热键"
 
@@ -5321,6 +5345,7 @@ msgid "Pause at End of Movie"
 msgstr "在影片末尾暂停"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
+#, fuzzy
 msgid "Pause on Focus Lost"
 msgstr "窗口非活动时暂停"
 
@@ -5423,17 +5448,17 @@ msgstr "预读取自定义材质"
 #: Source/Core/Core/Movie.cpp:1181
 #, c-format
 msgid "Premature movie end in PlayController. %u + %zu > %zu"
-msgstr ""
+msgstr "在 PlayController 中提前结束影片。 %u+%zu >%zu"
 
 #: Source/Core/Core/Movie.cpp:1308
 #, c-format
 msgid "Premature movie end in PlayWiimote. %u + %d > %zu"
-msgstr ""
+msgstr "在 PlayWiimote 中提前结束影片。 %u+%d> %zu"
 
 #: Source/Core/Core/Movie.cpp:1282
 #, c-format
 msgid "Premature movie end in PlayWiimote. %u > %zu"
-msgstr ""
+msgstr "在PlayWiimote 中提前结束影片。 %u> %zu"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:1329
 msgid ""
@@ -5534,6 +5559,8 @@ msgid ""
 "games themselves, except for games that aren't in the database. The names in "
 "the database are often more consistently formatted, especially for Wii games."
 msgstr ""
+"从内部数据库读取游戏名称，而不是从游戏本身读取名称，但不在数据库中的游戏除"
+"外。数据库中的名称格式通常更加一致，特别是对于 Wii 游戏。"
 
 #. i18n: This string is used for a radio button that represents the type of
 #. memory breakpoint that gets triggered when a read operation occurs.
@@ -5814,7 +5841,7 @@ msgstr "保存GCI为..."
 #: Source/Core/Core/HotkeyManager.cpp:149
 #: Source/Core/DolphinWX/MainMenuBar.cpp:102
 msgid "Save Oldest State"
-msgstr "保存最早状态"
+msgstr "保存到最早状态存档"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:417
 msgid "Save Perspectives"
@@ -5910,6 +5937,7 @@ msgid "Save signature as"
 msgstr "将签名另存为"
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
 msgstr "保存状态"
 
@@ -6089,6 +6117,7 @@ msgid "Select floating windows"
 msgstr "选择浮动窗口"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
 msgstr "选择状态"
 
@@ -6170,6 +6199,14 @@ msgid ""
 "\n"
 "If unsure, select Off."
 msgstr ""
+"选择立体 3D 显示模式。如果硬件支持，开启此功能可产生\n"
+"更强烈的立体感。\n"
+"多数 3D 电视采用左右并排或上下并排模式。\n"
+"色差模式配合红青眼镜使用。\n"
+"显示器支持 3D 显示分辨率时才可使用 HDMI 3D 模式\n"
+"严重降低模拟速度，有时会造成问题。\n"
+"\n"
+"如果不确定，请选择“关”。"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:112
 msgid ""
@@ -6627,6 +6664,7 @@ msgid "Speaker Volume:"
 msgstr "扬声器音量："
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:187
+#, fuzzy
 msgid ""
 "Specifies the resolution used to render at. A high resolution greatly "
 "improves visual quality, but also greatly increases GPU load and can cause "
@@ -6638,15 +6676,10 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"指定渲染使用的分辨率。选择较高的分辨率将显著 \n"
-"提高图像质量，但也将显著增加 GPU 负荷且可能 \n"
-"在某些游戏中引起故障。\n"
-" “640x528 的倍数”采用的尺寸将比“窗口大小”略大 \n"
-"然而问题更少。一般而言，内部分辨率越低，性能 \n"
-"将越高。 自动（窗口大小）、1.5x 和 2.5x 在一些游戏\n"
-"中可能会出现故障。\n"
+"指定渲染使用的分辨率。选择较高的分辨率将显著提高图像质量，但也将显著增加 GPU "
+"负荷且可能在一些游戏中引起故障。一般而言，内部分辨率越低，性能将越高。\n"
 "\n"
-"如果不确定，请选择”原生“。"
+"如果不确定，请选择“原生”。"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -6823,8 +6856,7 @@ msgid ""
 "\n"
 "If unsure, leave this checked."
 msgstr ""
-"绕过系统内存而仅在 GPU 中存储 EFB 副本。\n"
-"会在少数游戏中导致图形缺陷。\n"
+"绕过系统内存而仅在 GPU 中存储 EFB 副本。会在少数游戏中导致图形缺陷。\n"
 "\n"
 "开启 = EFB 副本为纹理 \n"
 "关闭 = EFB 副本为内存（和纹理）\n"
@@ -6959,12 +6991,14 @@ msgid "Tab Split"
 msgstr "标签拆分"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "左唱盘"
+msgstr "蓝 左"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "右唱盘"
+msgstr "蓝 右"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7660,7 +7694,7 @@ msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:94
 msgid "Use Built-In Database of Game Names"
-msgstr ""
+msgstr "使用内建数据库游戏名称"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:427
 msgid "Use Fullscreen"
@@ -7909,6 +7943,8 @@ msgid ""
 "%u > %zu) (input %u > %u). You should load another save before continuing, "
 "or load this state with read-only mode off."
 msgstr ""
+"警告: 您读取的存档在当前影片结束之后。 (字节 %u > %zu) (输入 %u > %u) 。您需"
+"要读取另一个存档方可继续，或关闭只读模式再读取此状态存档。"
 
 #: Source/Core/Core/Movie.cpp:1033
 #, c-format
@@ -8028,8 +8064,9 @@ msgid "Wii Remote %i"
 msgstr "Wii 控制器 %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "Wii 控制器已连接"
+msgstr "Wii 控制器 %1"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8220,7 +8257,7 @@ msgstr "[ 等待中 ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "应用程序载入器 (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"
@@ -8249,3 +8286,530 @@ msgstr "x86 大小"
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:756
 msgid "| OR"
 msgstr "| 或"
+
+#~ msgid "%1 %"
+#~ msgstr "%1 %"
+
+#~ msgid "%1 ms"
+#~ msgstr "%1 毫秒"
+
+#~ msgid "%1[%2]: %3"
+#~ msgstr "%1[%2]: %3"
+
+#~ msgid "%1[%2]: %3 %"
+#~ msgstr "%1[%2]: %3 %"
+
+#~ msgid "&Cancel"
+#~ msgstr "取消(&C)"
+
+#~ msgid "&Language:"
+#~ msgstr "语言(&L):"
+
+#~ msgid "&Speed Limit:"
+#~ msgstr "速度限制(&S):"
+
+#~ msgid "&Theme:"
+#~ msgstr "主题(&T):"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "16x"
+#~ msgstr "16x"
+
+#~ msgid "1x"
+#~ msgstr "1x"
+
+#~ msgid "2x"
+#~ msgstr "2x"
+
+#~ msgid "4x"
+#~ msgstr "4x"
+
+#~ msgid "8x"
+#~ msgstr "8x"
+
+#~ msgid ""
+#~ "<p>DolphinQt is a new experimental GUI that is intended to replace the "
+#~ "current GUI based on wxWidgets. The implementation is <b>currently "
+#~ "incomplete</b> so some functionality (like changing certain settings) may "
+#~ "be missing.</p>\n"
+#~ "<p>Only developers working on the DolphinQt implementation and curious "
+#~ "testers should use it at the present time; normal users are recommended "
+#~ "to continue using the older DolphinWX GUI for the time being.</p>\n"
+#~ "<h3>Bug Reports</h3><p>At the current time there is no point making bug "
+#~ "reports about DolphinQt GUI's missing features as the developers are "
+#~ "already aware of those.</p>\n"
+#~ msgstr ""
+#~ "<p>DolphinQt 是一套新的实验性用户界面，意欲替代当前基于 wxWidgets 的用户界"
+#~ "面。该系统 <b>现在尚未完成</b>，因此会缺少一些功能 (例如修改某些设置)。</"
+#~ "p>\n"
+#~ "<p>当前该系统仅面向致力于 DolphinQt 的开发者和感兴趣的测试者。我们建议一般"
+#~ "用户暂时继续使用原本的 wxWidgets 界面。</p>\n"
+#~ "<h3>Bug 报告</h3><p>现阶段提交 Bug 报告反馈 DolphinQt 界面缺失的功能并没有"
+#~ "意义，这些对于开发者是已知的。</p>\n"
+
+#~ msgid "A NetPlay Session is already in progress!"
+#~ msgstr "已经有一个联机会话正在进行中！"
+
+#~ msgid "Abort"
+#~ msgstr "终止"
+
+#~ msgid ""
+#~ "All GC/Wii files (*.elf *.dol *.gcm *.iso *.tgc *.wbfs *.ciso *.gcz *."
+#~ "wad);;All Files (*)"
+#~ msgstr ""
+#~ "所有 GC/Wii 文件 (*.elf *.dol *.gcm *.iso *.tgc *.wbfs *.ciso *.gcz *."
+#~ "wad);;所有文件 (*)"
+
+#~ msgid "All Save States (*.sav *.s##);; All Files (*)"
+#~ msgstr "所有状态存档 (*.sav *.s##);; 所有文件 (*)"
+
+#~ msgid "Apply"
+#~ msgstr "应用"
+
+#~ msgid "Are you sure that you want to delete '%1'?"
+#~ msgstr "确定要删除 '%1' 吗?"
+
+#~ msgid "Are you sure you want to delete this file?"
+#~ msgstr "确定要删除该文件吗?"
+
+#~ msgid "Are you sure you want to quit NetPlay?"
+#~ msgstr "确定要退出联机吗？"
+
+#~ msgid "Are you sure?"
+#~ msgstr "确定?"
+
+#~ msgid "Branch: "
+#~ msgstr "分支: "
+
+#~ msgid "Can't start a NetPlay Session while a game is still running!"
+#~ msgstr "游戏运行时无法启动联机会话！"
+
+#~ msgid "Cancel"
+#~ msgstr "取消"
+
+#~ msgid ""
+#~ "Check whether you have the permissions required to delete the file or "
+#~ "whether it's still in use."
+#~ msgstr "请检查您是否有删除该文件的权限以及其是否仍在使用。"
+
+#~ msgid "Classic Controller"
+#~ msgstr "传统控制器"
+
+#~ msgid "Compiled: "
+#~ msgstr "已编译: "
+
+#~ msgid "Compiling shaders..."
+#~ msgstr "正在编译着色器..."
+
+#~ msgid "Compressed GC/Wii images (*.gcz)"
+#~ msgstr "压缩的 GC/Wii 镜像 (*.gcz)"
+
+#~ msgid "Compressing..."
+#~ msgstr "正在压缩..."
+
+#~ msgid "Computing MD5 Checksum"
+#~ msgstr "正在计算 MD5 值"
+
+#~ msgid "Configuration"
+#~ msgstr "设置"
+
+#~ msgid "Configure Input"
+#~ msgstr "设置输入"
+
+#~ msgid "Configure Output"
+#~ msgstr "设置输出"
+
+#~ msgid "Confirm"
+#~ msgstr "确定"
+
+#~ msgid "Confirmation"
+#~ msgstr "确定"
+
+#~ msgid "Controller Settings"
+#~ msgstr "控制器设置"
+
+#~ msgid ""
+#~ "Could not start DolphinWX. Check for dolphin.exe in the installation "
+#~ "directory."
+#~ msgstr "无法启动 DolphinWX。请查找安装目录下的 dolphin.exe 文件。"
+
+#~ msgid "Country"
+#~ msgstr "国家"
+
+#~ msgid "Decompressing..."
+#~ msgstr "正在解压..."
+
+#~ msgid "Default Font"
+#~ msgstr "默认字体"
+
+#~ msgid "Delete File..."
+#~ msgstr "删除文件..."
+
+#~ msgid "Disabled"
+#~ msgstr "禁用"
+
+#~ msgid ""
+#~ "Disabled: Ubershaders are never used. Stuttering will occur during shader "
+#~ "compilation, but GPU demands are low. Recommended for low-end hardware.\n"
+#~ "\n"
+#~ "Hybrid: Ubershaders will be used to prevent stuttering during shader "
+#~ "compilation, but traditional shaders will be used when they will not "
+#~ "cause stuttering. Balances performance and smoothness.\n"
+#~ "\n"
+#~ "Exclusive: Ubershaders will always be used. Only recommended for high-end "
+#~ "systems."
+#~ msgstr ""
+#~ "禁用: 从不使用 Ubershader。着色器编译时会发生卡顿，但 GPU 需求较低。推荐用"
+#~ "于低端硬件。\n"
+#~ "\n"
+#~ "混合: 在着色器编译期间使用 Ubershader 以避免卡顿，而传统着色器将在不会导致"
+#~ "卡顿时使用。平衡性能与流畅性。\n"
+#~ "\n"
+#~ "独占: 总是使用 Ubershader。仅推荐用于高端系统。"
+
+#~ msgid "Disc Number:"
+#~ msgstr "光盘号:"
+
+#~ msgid ""
+#~ "Do you authorize Dolphin to report information to Dolphin's developers?"
+#~ msgstr "是否授权 Dolphin 向开发者报告信息?"
+
+#~ msgid "Do you want to add \"%1\" to the list of Game Paths?"
+#~ msgstr "是否要添加 \"%1\" 到游戏路径列表?"
+
+#~ msgid "Dolphin %1 Graphics Configuration"
+#~ msgstr "Dolphin %1 图形配置"
+
+#~ msgid ""
+#~ "Dolphin could not find any GameCube/Wii ISOs or WADs.\n"
+#~ "Double-click here to set a games directory..."
+#~ msgstr ""
+#~ "Dolphin 无法找到任何 GameCube/Wii 镜像或 WAD 文件。\n"
+#~ "双击这里设置一个游戏目录……"
+
+#~ msgid "Dolphin failed to complete the requested action."
+#~ msgstr "Dolphin 未能完成请求的操作。"
+
+#~ msgid "Dolphin is a free and open-source GameCube and Wii emulator."
+#~ msgstr "Dolphin 是一个免费开源的 GameCube/Wii 模拟器。"
+
+#~ msgid "DolphinQt Experimental GUI"
+#~ msgstr "DolphinQt 实验性用户界面"
+
+#~ msgid "DolphinQt2 Experimental GUI"
+#~ msgstr "DolphinQt2 实验性用户界面"
+
+#~ msgid "ELF/DOL"
+#~ msgstr "ELF/DOL"
+
+#~ msgid "Enable Rumble"
+#~ msgstr "启用震动"
+
+#~ msgid "Exclusive"
+#~ msgstr "独占"
+
+#~ msgid "Failed to connect to server"
+#~ msgstr "连接服务器失败"
+
+#~ msgid "Failed to delete the selected file."
+#~ msgstr "无法删除所选文件。"
+
+#~ msgid "Failed to export save files!"
+#~ msgstr "导出存档文件失败！"
+
+#~ msgid "Failed to init core"
+#~ msgstr "初始化核心失败"
+
+#~ msgid "Failed to install this title to the NAND."
+#~ msgstr "无法将该游戏安装到 NAND。"
+
+#~ msgid "Failed to launch"
+#~ msgstr "启动失败"
+
+#~ msgid ""
+#~ "Failed to listen on port %1. Is another instance of the NetPlay server "
+#~ "running?"
+#~ msgstr "监听端口 %1 失败。是否有另一个联机服务器的实例正在运行？"
+
+#~ msgid "Failed to open '%1'"
+#~ msgstr "无法打开 '%1'"
+
+#~ msgid "Failed to open server"
+#~ msgstr "打开服务器失败"
+
+#~ msgid "File Path:"
+#~ msgstr "文件路径:"
+
+#~ msgid ""
+#~ "Finishing the update...\n"
+#~ "This can take a while."
+#~ msgstr ""
+#~ "正在结束更新...\n"
+#~ "这可能需要一段时间。"
+
+#~ msgid "GC Port %1"
+#~ msgstr "GC 端口 %1"
+
+#~ msgid "Game Folders"
+#~ msgstr "游戏文件夹"
+
+#~ msgid "Game changed to \"%1\""
+#~ msgstr "游戏更改为 \"%1\""
+
+#~ msgid "GameCube Adapter for Wii U at Port %1"
+#~ msgstr "端口%1的Wii U GameCube 适配器"
+
+#~ msgid "GameCube Controller"
+#~ msgstr "GameCube 控制器"
+
+#~ msgid "GameCube Controller at Port %1"
+#~ msgstr "端口%1的GameCube 控制器"
+
+#~ msgid "GameCube Keyboard"
+#~ msgstr "GameCube 键盘"
+
+#~ msgid "GameCube Keyboard at Port %1"
+#~ msgstr "端口%1的 GameCube 键盘"
+
+#~ msgid "Grid View"
+#~ msgstr "网格视图"
+
+#~ msgid "Host with NetPlay"
+#~ msgstr "建主机联网"
+
+#~ msgid "Hotkey Settings"
+#~ msgstr "热键设置"
+
+#~ msgid "Hybrid"
+#~ msgstr "混合"
+
+#~ msgid "ISO Size:"
+#~ msgstr "镜像大小:"
+
+#~ msgid ""
+#~ "If authorized, Dolphin can collect data on its performance, feature "
+#~ "usage, and configuration, as well as data on your system's hardware and "
+#~ "operating system.\n"
+#~ "\n"
+#~ "No private data is ever collected. This data helps us understand how "
+#~ "people and emulated games use Dolphin and prioritize our efforts. It also "
+#~ "helps us identify rare configurations that are causing bugs, performance "
+#~ "and stability issues.\n"
+#~ "This authorization can be revoked at any time through Dolphin's settings."
+#~ msgstr ""
+#~ "如果得到您的授权，Dolphin 将收集关于其性能表现、功能使用、程序设置，以及您"
+#~ "的系统硬件和操作系统的数据。\n"
+#~ "\n"
+#~ "我们不会收集您的隐私数据。这些数据能帮助我们了解用户与被模拟的游戏怎样使"
+#~ "用 Dolphin 以确定我们的工作重点。它们还将帮助我们发现导致故障、性能问题与"
+#~ "稳定性问题的罕见程序设置。\n"
+#~ "您可以随时通过 Dolphin 的程序设置取消本授权。"
+
+#~ msgid "Invalid Player ID"
+#~ msgstr "无效玩家 ID"
+
+#~ msgid "Latency:"
+#~ msgstr "延迟:"
+
+#~ msgid "Left Table"
+#~ msgstr "左碟片"
+
+#~ msgid "List Columns"
+#~ msgstr "表单列"
+
+#~ msgid "List View"
+#~ msgstr "列表视图"
+
+#~ msgid "Load State from File"
+#~ msgstr "从文件中载入状态"
+
+#~ msgid "Load State from Slot"
+#~ msgstr "从插槽中载入状态"
+
+#~ msgid "Load Wii System Menu %1"
+#~ msgstr "加载 Wii 系统菜单 %1"
+
+#~ msgid "Load from Slot %1 - %2"
+#~ msgstr "从插槽 %1 - %2 载入"
+
+#~ msgid "Long Maker:"
+#~ msgstr "完整制作者:"
+
+#~ msgid "Long Name:"
+#~ msgstr "完整名称:"
+
+#~ msgid "Lost connection to NetPlay server..."
+#~ msgstr "丢失联机服务器连接..."
+
+#~ msgid "MD5 Check:"
+#~ msgstr "MD5 校验:"
+
+#~ msgid "Monospaced Font"
+#~ msgstr "等宽字体"
+
+#~ msgid "Netplay has desynced in NetPlay_GetButtonPress()"
+#~ msgstr "联机在 NetPlay_GetButtonPress() 中不同步"
+
+#~ msgid "No Adapter Detected"
+#~ msgstr "未检测到适配器"
+
+#~ msgid "No extension selected."
+#~ msgstr "未选择扩展名。"
+
+#~ msgid "Not implemented yet."
+#~ msgstr "还未实现。"
+
+#~ msgid "Operation in progress..."
+#~ msgstr "操作正在进行中..."
+
+#~ msgid "PNG image file (*.png);; All Files (*)"
+#~ msgstr "PNG 图像文件 (*.png);; 所有文件 (*)"
+
+#~ msgid "Port %1"
+#~ msgstr "端口 %1"
+
+#~ msgid "Possible desync detected: %1 might have desynced at frame %2"
+#~ msgstr "检测到可能的非同步异常: %1  或许已在帧 %2 处不同步 "
+
+#~ msgid "Recommended for normal users"
+#~ msgstr "推荐普通用户使用"
+
+#~ msgid "Reset Traversal Server"
+#~ msgstr "重置穿透服务器"
+
+#~ msgid "Reset Traversal Server to %1:%2"
+#~ msgstr "重置穿透服务器到 %1:%2"
+
+#~ msgid "Revision: "
+#~ msgstr "修订版:"
+
+#~ msgid "Right Table"
+#~ msgstr "右碟片"
+
+#~ msgid "Room ID"
+#~ msgstr "房间 ID"
+
+#~ msgid "Run DolphinWX Instead"
+#~ msgstr "转回运行 DolphinWX"
+
+#~ msgid "Save State to File"
+#~ msgstr "保存状态到文件"
+
+#~ msgid "Save State to Oldest Slot"
+#~ msgstr "保存状态到最早的插槽"
+
+#~ msgid "Save State to Slot"
+#~ msgstr "保存状态到插槽"
+
+#~ msgid "Save to Slot %1 - %2"
+#~ msgstr "保存到插槽 %1 - %2"
+
+#~ msgid "Select Slot %1 - %2"
+#~ msgstr "选择插槽 %1 - %2"
+
+#~ msgid "Select Wii NAND Root"
+#~ msgstr "选择 Wii NAND 根目录"
+
+#~ msgid "Select a Directory"
+#~ msgstr "选择目录"
+
+#~ msgid "Select a File"
+#~ msgstr "选择文件"
+
+#~ msgid "Select a Game"
+#~ msgstr "选择游戏"
+
+#~ msgid "Select a title to install to NAND"
+#~ msgstr "选择要安装到 NAND 的软件"
+
+#~ msgid "Select where you want to save the compressed image"
+#~ msgstr "选择要保存压缩镜像的位置"
+
+#~ msgid "Select where you want to save the decompressed image"
+#~ msgstr "选择要保存解压缩镜像的位置"
+
+#~ msgid "Settings"
+#~ msgstr "设置"
+
+#~ msgid "Short Maker:"
+#~ msgstr "缩写制作者:"
+
+#~ msgid "Short Name:"
+#~ msgstr "缩写名称:"
+
+#~ msgid "Software Renderer"
+#~ msgstr "软件渲染器"
+
+#~ msgid "Started game"
+#~ msgstr "游戏已启动"
+
+#~ msgid "Stopped game"
+#~ msgstr "游戏已停止"
+
+#~ msgid "Success!"
+#~ msgstr "成功！"
+
+#~ msgid "Successfully compressed image."
+#~ msgstr "成功压缩镜像。"
+
+#~ msgid "Successfully deleted '%1'."
+#~ msgstr "成功删除 '%1'。"
+
+#~ msgid "Successfully exported save files"
+#~ msgstr "成功导出存档文件"
+
+#~ msgid "Successfully installed this title to the NAND."
+#~ msgstr "成功将此软件安装到 NAND。"
+
+#~ msgid "Successfully removed this title from the NAND."
+#~ msgstr "成功将此软件从 NAND 中移除。"
+
+#~ msgid "The profile '%1' does not exist"
+#~ msgstr "配置文件 '%1' 不存在"
+
+#~ msgid "This cannot be undone!"
+#~ msgstr "不能被撤销！"
+
+#~ msgid ""
+#~ "This software should not be used to play games you do not legally own."
+#~ msgstr "该软件不能用于运行你非法持有的游戏。"
+
+#~ msgid "Traversal Error"
+#~ msgstr "穿透错误"
+
+#~ msgid "Ubershaders:"
+#~ msgstr "Uber 着色器："
+
+#~ msgid "Uncompressed GC/Wii images (*.iso *.gcm)"
+#~ msgstr "未压缩的 GC/Wii 镜像 (*.iso *.gcm)"
+
+#~ msgid ""
+#~ "Updating title %1...\n"
+#~ "This can take a while."
+#~ msgstr ""
+#~ "正在更新软件 %1...\n"
+#~ "这可能需要一段时间。"
+
+#~ msgid "Use DolphinQt Anyway"
+#~ msgstr "仍然使用 DolphinQt "
+
+#~ msgid "User Interface"
+#~ msgstr "用户界面"
+
+#~ msgid "WAD files (*.wad)"
+#~ msgstr "WAD 文件 (*.wad)"
+
+#~ msgid "Wii Channel"
+#~ msgstr "Wii 频道"
+
+#~ msgid "You must select a game to host!"
+#~ msgstr "你必须选择一个游戏来建主机！"
+
+#~ msgid ""
+#~ "© 2003-%1 Dolphin Team. “GameCube” and “Wii” are trademarks of Nintendo. "
+#~ "Dolphin is not affiliated with Nintendo in any way."
+#~ msgstr ""
+#~ "© 2003-%1 Dolphin 团队。“GameCube” 和 “Wii” 是任天堂的商标。Dolphin 与任天"
+#~ "堂没有任何形式的关联。"

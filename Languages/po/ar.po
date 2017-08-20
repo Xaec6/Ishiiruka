@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # mansoor, 2011
 # mansoor <asseryma@hotmail.com>, 2013,2015-2017
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Arabic (http://www.transifex.com/delroth/dolphin-emu/language/"
 "ar/)\n"
@@ -602,16 +602,18 @@ msgid "+ ADD"
 msgstr "+ أضف"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x Native (960x792)"
+msgstr "5x Native (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x Native (1600x1320)"
+msgstr "5x Native (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -628,8 +630,9 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr "3D عمق"
+msgstr "العمق:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -850,8 +853,9 @@ msgstr "الكشف عن المحول"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "لم يتم الكشف عن المحول"
+msgstr "الكشف عن المحول"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1026,15 +1030,16 @@ msgstr "تاريخ المنتج:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "محمل التطبيق هو حجم الخطأ... هل حقا محمل التطبيق؟"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Apploader غير قادر على تحميل ملف من"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr "تاريخ المنتج:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1116,11 +1121,11 @@ msgstr "تلقائي (Multiple of 640x528)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "تلقائي حجم النافذة"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
-msgstr "ضبط تلقائي حجم الإطار"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:126
 msgid ""
@@ -1365,8 +1370,9 @@ msgid "CP register "
 msgstr "تسجيل CP"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "محرك محاكي المعالج"
+msgstr "محرك محاكي الصوت"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1503,8 +1509,9 @@ msgid "Checking integrity..."
 msgstr "التحقق من سلامة ..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "DVD اختيار الدليل أصل  :"
+msgstr "Choose a NAND root directory:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1539,7 +1546,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"اختيار ملف لاستخدام رافعة التطبيقات: (ينطبق على الأقراص مصنوعة من الادله فقط)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1753,8 +1759,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "متصل"
+msgstr "إحصاء"
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2091,8 +2098,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE recompiler"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD Root:"
+msgstr "Wii NAND Root:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2669,8 +2677,9 @@ msgid "Emulation State: "
 msgstr "حالة المحاكاه: "
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr "سرعة المضاهاة"
+msgstr "&محاكاة"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3565,8 +3574,9 @@ msgid "Frame Range"
 msgstr "مجموعة الإطار "
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr "تقدم الإطار"
+msgstr "الإطار المسبق"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3685,15 +3695,14 @@ msgid "GCI Folder"
 msgstr "مجلد GCI"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"GCI save file was not loaded because it is the wrong region for this memory "
-"card:\n"
-"%s"
+"%s\n"
+"لم يتم تحميل لأنه لا يوجد مساحه حرة كافية على بطاقة الذاكرة"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3855,8 +3864,9 @@ msgid "Graphics settings"
 msgstr "إعدادات الرسومات"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr "Graphics toggles"
+msgstr "إعدادات الرسومات"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -3918,11 +3928,11 @@ msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes do not match."
-msgstr "Hashes do not match."
+msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes match!"
-msgstr "Hashes match!"
+msgstr ""
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcard.cpp:131
 msgid "Header checksum failed"
@@ -4075,8 +4085,9 @@ msgid "Icon"
 msgstr " أيقونة"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
-msgstr "إنشاء هوية"
+msgstr "تم إنشاء هوية جديدة ."
 
 #: Source/Core/DolphinWX/Main.cpp:216
 msgid ""
@@ -4373,7 +4384,8 @@ msgstr "الإيطالية"
 msgid "Italy"
 msgstr "إيطاليا"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4706,14 +4718,16 @@ msgid "Load from selected slot"
 msgstr "تحميل من فتحة مختارة"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr "تحميل الحالة الاخيرة"
+msgstr "تحميل الحالة"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr "Load map file"
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
 msgstr "تحميل الحالة"
 
@@ -5123,8 +5137,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr "ليس كل اللاعبين لديهم اللعبة. هل تريد حقا أن تبدأ؟"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "غير متصل"
+msgstr "اتصال"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5202,7 +5217,7 @@ msgstr "تعويض :"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "عرض الرسائل التي تظهر على الشاشة"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5265,7 +5280,8 @@ msgstr ""
 "Opens the default (read-only) configuration for this game in an external "
 "text editor."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5305,7 +5321,7 @@ msgstr "لعبة أخرى"
 
 #: Source/Core/Core/HotkeyManager.cpp:261
 msgid "Other state hotkeys"
-msgstr "حالة أخرى مفاتيح الاختصار "
+msgstr ""
 
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:739
 msgid "Output"
@@ -5381,7 +5397,7 @@ msgstr "وقفة في نهاية الفيلم"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "وقفة على فقدان التركيز"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -5974,6 +5990,7 @@ msgid "Save signature as"
 msgstr "Save signature as"
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
 msgstr "حفظ حالة"
 
@@ -6156,8 +6173,9 @@ msgid "Select floating windows"
 msgstr "اختر النوافذ العائمة"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr "اختر الحالة "
+msgstr "اختر لعبة"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6712,15 +6730,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"Specifies the resolution used to render at. A high resolution greatly "
-"improves visual quality, but also greatly increases GPU load and can cause "
-"issues in certain games.\n"
-"\"Multiple of 640x528\" will result in a size slightly larger than \"Window "
-"Size\" but yield fewer issues. Generally speaking, the lower the internal "
-"resolution is, the better your performance will be. Auto (Window Size), "
-"1.5x, and 2.5x may cause issues in some games.\n"
-"\n"
-"If unsure, select Native."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -7035,12 +7044,14 @@ msgid "Tab Split"
 msgstr "Tab Split"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "الجدول الأيسر"
+msgstr "اليسار أزرق"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "الجدول الأيمن"
+msgstr "اليمين أزرق"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -8123,8 +8134,9 @@ msgid "Wii Remote %i"
 msgstr "ريموت الوي %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "ريموت الوي متصل"
+msgstr "ريموت الوي %i"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8312,7 +8324,7 @@ msgstr "[انتظار]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "apploader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

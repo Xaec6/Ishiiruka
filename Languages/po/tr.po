@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # Bahadır Usta <bahadirusta@hotmail.com.tr>, 2017
 # Bahadır Usta <bahadirusta@hotmail.com.tr>, 2017
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Turkish (http://www.transifex.com/delroth/dolphin-emu/"
 "language/tr/)\n"
@@ -604,16 +604,18 @@ msgid "+ ADD"
 msgstr "+ EKLE"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "Orijinalin 1.5 katı (960x792)"
+msgstr "Orijinalin 5 katı (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "Orijinalin 2.5 katı (1600x1320)"
+msgstr "Orijinalin 5 katı (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -630,8 +632,9 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr "3D Derinliği"
+msgstr "Derinlik:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -853,8 +856,9 @@ msgstr "Adaptör Algılandı"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Adaptör Algılanamadı"
+msgstr "Adaptör Algılandı"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1032,15 +1036,16 @@ msgstr "Apploader Tarihi:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Apploader boyutu yanlış. Bu gerçekten bir apploader mı?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Apploader dosyadan yüklenemiyor."
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr "Apploader Tarihi:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1126,11 +1131,11 @@ msgstr "Otomatik (640x528'in katları)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Otomatik (Pencere Boyutu)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
-msgstr "Pencere Boyutunu Oto. Olarak Ayarla"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:126
 msgid ""
@@ -1368,8 +1373,9 @@ msgid "CP register "
 msgstr "CP kaydı"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "CPU Emülatör Motoru"
+msgstr "Ses Emülatörü Motoru"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1507,8 +1513,9 @@ msgid "Checking integrity..."
 msgstr "Düzgünlük denetleniyor..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "DVD kök dizinini seçin:"
+msgstr "NAND kök dizinini seçin:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1543,8 +1550,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Apploader olarak bir dosya seçin: (Sadece konumlardan yapılan disklere "
-"uygulanır)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1763,8 +1768,9 @@ msgstr ""
 "musunuz?"
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Bağlanıyor..."
+msgstr "Hesaplanıyor..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2091,8 +2097,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE Yeniden Derleyici"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD Kök Dizini:"
+msgstr "Wii NAND Kök Dizini:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2669,8 +2676,9 @@ msgid "Emulation State: "
 msgstr "Emülasyon Durumu:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr "Emülasyon hızı"
+msgstr "&Emülasyon"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3525,8 +3533,9 @@ msgid "Frame Range"
 msgstr "Çerçeve Aralığı"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr "Kare ilerletme"
+msgstr "Kare İlerletme"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3645,15 +3654,14 @@ msgid "GCI Folder"
 msgstr "GCI Klasörü"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"GCI kayıt dosyası bölge kodunun yanlış olması sebebiyle bu hafıza kartında "
-"yüklenemedi:\n"
-"%s"
+"%s\n"
+"yüklenemedi çünkü sanal hafıza kartında yeteri kadar boş blok yok"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3805,8 +3813,9 @@ msgid "Graphics settings"
 msgstr "Görüntü ayarları"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Görüntü ayarları"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -4012,8 +4021,9 @@ msgid "Icon"
 msgstr "Simge"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
-msgstr ""
+msgstr "Yeni kimlik oluşturuldu."
 
 #: Source/Core/DolphinWX/Main.cpp:216
 msgid ""
@@ -4291,7 +4301,8 @@ msgstr "İtalyanca"
 msgid "Italy"
 msgstr "İtalya"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4614,16 +4625,18 @@ msgid "Load from selected slot"
 msgstr "Seçili Slot'tan Yükle"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "Durumu Yükle"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "Durumu Yükle"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -5020,8 +5033,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Bağlı değil"
+msgstr "Bağlan"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5099,7 +5113,7 @@ msgstr "Uzantı:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "OSD Mesajları"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5160,7 +5174,8 @@ msgstr ""
 "Bu oyun için varsayılan (salt-okunur) konfigürasyon dosyasını harici metin "
 "düzenleyicisinde açar."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5273,7 +5288,7 @@ msgstr "Filmin Sonunda Duraklat"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "Odak Kaybında Duraklat"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -5856,8 +5871,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr "Durumu kaydet"
+msgstr "Durumu Kaydet"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -6030,8 +6046,9 @@ msgid "Select floating windows"
 msgstr "Sabit olmayan pencereyi seçin"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Oyunu Seç"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6585,16 +6602,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"Yorumlamada kullanılan çözünürlüğü belirler. Yüksek bir çözünürlük görsel "
-"kaliteyi epey artırır ama bir o kadar da performansın düşmesine ve nadiren "
-"bazı oyunlarda hatalara neden olabilir.\n"
-"\"640x528'in katları\" seçeneği, \"Pencere Boyutu\"ndan biraz daha büyüktür "
-"ama daha az sayıda hataya neden olur. Genel olarak, dahili çözünürlüğünüz ne "
-"kadar düşük olursa performansınız da bir o kadar yüksek olur. Otomatik "
-"(Pencere Boyutu), 1.5 kat, ve 2.5 kat bazı oyunlarda sorunlara neden "
-"olabilir.\n"
-"\n"
-"Emin değilseniz, \"Orijinal\" ayarını seçin."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -6907,12 +6914,14 @@ msgid "Tab Split"
 msgstr "Sekme Bölme"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Tablo Sol"
+msgstr "Mavi Sol"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Tablo Sağ"
+msgstr "Mavi Sağ"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7964,8 +7973,9 @@ msgid "Wii Remote %i"
 msgstr "Wii Remote %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "Wii Remote Bağlandı"
+msgstr "Wii Remote %i"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8157,7 +8167,7 @@ msgstr "[ bekleniyor ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "apploader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

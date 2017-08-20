@@ -136,10 +136,17 @@ bool DiscScrubber::ReadFromVolume(u64 offset, u32& buffer, const Partition& part
 
 bool DiscScrubber::ReadFromVolume(u64 offset, u64& buffer, const Partition& partition)
 {
+<<<<<<< HEAD
     std::experimental::optional<u32> value = m_disc->ReadSwapped<u32>(offset, partition);
   if (value)
     buffer = static_cast<u64>(*value) << 2;
   return bool(value);
+=======
+  std::optional<u64> value = m_disc->ReadSwappedAndShifted(offset, partition);
+  if (value)
+    buffer = *value;
+  return value.has_value();
+>>>>>>> Tinob/master
 }
 
 bool DiscScrubber::ParseDisc()

@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # Jordi Coma, 2011
 # Jordi Coma <jordicoma22@gmail.com>, 2011
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:17+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Catalan (http://www.transifex.com/delroth/dolphin-emu/"
 "language/ca/)\n"
@@ -573,16 +573,18 @@ msgid "+ ADD"
 msgstr "+ Afegir"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x Natiu (960x792)"
+msgstr "5x Natiu (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bits"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x Natiu (1600x1320)"
+msgstr "5x Natiu (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -599,8 +601,9 @@ msgid "3D"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr ""
+msgstr "Profunditat:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -808,8 +811,9 @@ msgstr "Adaptador detectat"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Adaptador no detectat"
+msgstr "Adaptador detectat"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -976,15 +980,16 @@ msgstr "Data Apploader:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Apploader té una mida dolenta... realment és un apploader?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Apploader no s'ha pogut carregar des de l'arxiu"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr "Data Apploader:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1066,7 +1071,7 @@ msgstr "Auto (Múltiple de 640x528)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Auto (Mida de la finestra)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
@@ -1303,8 +1308,9 @@ msgid "CP register "
 msgstr "Registre CP"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "Motor d'emulació de CPU"
+msgstr "Motor d'emulació DSP"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1431,8 +1437,9 @@ msgid "Checking integrity..."
 msgstr "Comprovant integritat..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Tria un directori arrel del DVD:"
+msgstr "Tria el directori arrel del NAND:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1467,8 +1474,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Trieu l'arxiu a utilitzar com «apploader»: (s'aplica als discos construïts a "
-"partir de només els directoris)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1680,8 +1685,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Connectant..."
+msgstr "Connectar"
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -1993,8 +1999,9 @@ msgid "DSP LLE recompiler"
 msgstr "Recompilador DSP LLE "
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "Arrel del DVD:"
+msgstr "Arrel de la NAND:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2554,8 +2561,9 @@ msgid "Emulation State: "
 msgstr "Estat d'emulació:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr ""
+msgstr "&Emulació"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3382,8 +3390,9 @@ msgid "Frame Range"
 msgstr "Rang d'imatges"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr ""
+msgstr "Avançar imatges"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3659,8 +3668,9 @@ msgid "Graphics settings"
 msgstr "Configuració de gràfics"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Configuració de gràfics"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -4115,7 +4125,8 @@ msgstr "Italià"
 msgid "Italy"
 msgstr "Itàlia"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4438,16 +4449,18 @@ msgid "Load from selected slot"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "Cargar estat"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "Cargar estat"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -4844,8 +4857,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "No està connectat"
+msgstr "Connectar"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -4923,7 +4937,7 @@ msgstr "Desplaçament:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "Missatges en pantalla"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -4984,7 +4998,8 @@ msgstr ""
 "Obre la configuració per defecre (mode només lectura) per aquest joc en un "
 "editor de text extern."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5673,8 +5688,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr ""
+msgstr "Guardar estat"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -5846,8 +5862,9 @@ msgid "Select floating windows"
 msgstr "Selecciona finestres flotants"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Guardar el estat més antic"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6654,12 +6671,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Taula esquerra"
+msgstr "Blau esquerra"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Taula dreta"
+msgstr "Blau dret"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7846,7 +7865,7 @@ msgstr "[ Esperant ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "apploader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

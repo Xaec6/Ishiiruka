@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # daborbor, 2017
 # daborbor, 2017
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Dutch (http://www.transifex.com/delroth/dolphin-emu/language/"
 "nl/)\n"
@@ -320,7 +320,7 @@ msgstr "&Controllerinstellingen"
 
 #: Source/Core/DolphinWX/Debugger/CodeView.cpp:438
 msgid "&Copy address"
-msgstr ""
+msgstr "&Kopieer adres"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:484
 msgid "&Create Signature File..."
@@ -615,16 +615,18 @@ msgid "+ ADD"
 msgstr "+ ADD"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x Natief (960x792)"
+msgstr "5x Natief (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x Natief (1600x1320)"
+msgstr "5x Natief (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -641,6 +643,7 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
 msgstr "3D diepte"
 
@@ -868,8 +871,9 @@ msgstr "Adapter gevonden"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Geen Adapter gevonden"
+msgstr "Adapter gevonden"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1044,15 +1048,16 @@ msgstr "Apploader Datum:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Apploader heeft de verkeerde grootte.. is het wel echt een Apploader?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Apploader kan het bestand niet laden"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr "Apploader Datum:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1138,11 +1143,11 @@ msgstr "Auto (Veelvoud van 640x528)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Automatisch (Venster Grootte)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
-msgstr "Venstergrootte Automatisch Aanpassen"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:126
 msgid ""
@@ -1382,8 +1387,9 @@ msgid "CP register "
 msgstr "CP register"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "CPU Emulatie Engine"
+msgstr "DSP Emulator Engine"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1523,8 +1529,9 @@ msgid "Checking integrity..."
 msgstr "Integriteit controleren..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Selecteer een DVD Station:"
+msgstr "Selecteer een NAND basismap:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1559,8 +1566,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Kies Bestand om als apploader te gebruiken (geldt voor schijven die alleen "
-"uit mappen zijn opgebouwd)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1777,8 +1782,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Verbinden..."
+msgstr "Berekenen..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2106,8 +2112,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE recompiler"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD Station:"
+msgstr "Wii NAND basismap:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2683,8 +2690,9 @@ msgid "Emulation State: "
 msgstr "Emulatie Staat:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr "Emulatie snelheid"
+msgstr "&Emulatie"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3562,8 +3570,9 @@ msgid "Frame Range"
 msgstr "Framebereik"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr ""
+msgstr "Frame Voorwaarts"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3682,14 +3691,15 @@ msgid "GCI Folder"
 msgstr "GCI Map"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"Het laden van %s is mislukt omdat het de verkeerde regio bevat voor deze "
-"geheugenkaart."
+"%s\n"
+"is niet geladen omdat er niet genoeg vrije blokken beschikbaar zijn op de "
+"geheugenkaart"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3851,8 +3861,9 @@ msgid "Graphics settings"
 msgstr "Grafische instellingen"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Grafische instellingen"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -3913,11 +3924,11 @@ msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes do not match."
-msgstr "Hashes komen niet overeen."
+msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes match!"
-msgstr "Hashes komen overeen!"
+msgstr ""
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcard.cpp:131
 msgid "Header checksum failed"
@@ -4063,8 +4074,9 @@ msgid "Icon"
 msgstr "Icoon"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
-msgstr "Genereer identiteit"
+msgstr "Nieuwe identiteit gegenereerd."
 
 #: Source/Core/DolphinWX/Main.cpp:216
 msgid ""
@@ -4363,7 +4375,8 @@ msgstr "Italiaans"
 msgid "Italy"
 msgstr "Italië"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4692,14 +4705,16 @@ msgid "Load from selected slot"
 msgstr "Laden van geselecteerde slot"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr "Laad laatste staat"
+msgstr "Laad staat"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
 msgstr "Laad staat"
 
@@ -5108,8 +5123,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr "Niet alle spelers hebben het spel. Weet u zeker dat u wilt doorgaan?"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Niet verbonden"
+msgstr "Verbind"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5187,7 +5203,7 @@ msgstr "Afstand:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "On-Screen Berichtgevingen"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5248,7 +5264,8 @@ msgstr ""
 "Opent de standaard (alleen lezen) configuratie voor deze spel in een externe "
 "tekst editor."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5361,7 +5378,7 @@ msgstr "Pauzeer aan het Einde van de Film"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "Pauzeer bij Verliezen van Focus"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -5944,6 +5961,7 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
 msgstr "Sla staat op"
 
@@ -6118,8 +6136,9 @@ msgid "Select floating windows"
 msgstr "Selecteer zwevende vensters"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr "Selecteer staat"
+msgstr "Selecteer Spel"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6675,15 +6694,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"Bepaalt de resolutie die gebruikt wordt voor het renderen. Een hoge "
-"resolutie verbetert de visuele kwaliteit enorm, maar is belastend voor de  "
-"GPU en kan glitches veroorzaken in sommige spellen.\n"
-"\"Meervouden van 640x528\" is een stuk trager dan \"Venster Grootte\" maar "
-"veroorzaakt minder problemen. Over het algemeen geldt dat hoe lager de "
-"interne resolutie, hoe beter de prestaties. Automatisch (Venster Grootte), "
-"1,5x, en 2,5x kunnen glitches veroorzaken in sommige spellen.\n"
-"\n"
-"In geval van twijfel selecteer \"640x528\"."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -6999,12 +7009,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Linker Tabel"
+msgstr "Blauw Links"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Rechter Tabel"
+msgstr "Blauw Rechts"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -8080,8 +8092,9 @@ msgid "Wii Remote %i"
 msgstr "Wii-afstandsbediening %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "Wii-afstandsbediening Verbonden"
+msgstr "Wii-afstandsbediening %i"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8269,7 +8282,7 @@ msgstr "[ wachten ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "applader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"
@@ -8298,3 +8311,63 @@ msgstr "x86 Grootte"
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:756
 msgid "| OR"
 msgstr "| OF"
+
+#~ msgid "%1 %"
+#~ msgstr "%1 %"
+
+#~ msgid "%1 ms"
+#~ msgstr "%1 ms"
+
+#~ msgid "%1[%2]: %3"
+#~ msgstr "%1[%2]: %3"
+
+#~ msgid "%1[%2]: %3 %"
+#~ msgstr "%1[%2]: %3 %"
+
+#~ msgid "&Cancel"
+#~ msgstr "&Annuleer"
+
+#~ msgid "&Language:"
+#~ msgstr "&Taal:"
+
+#~ msgid "..."
+#~ msgstr "..."
+
+#~ msgid "16x"
+#~ msgstr "16x"
+
+#~ msgid "1x"
+#~ msgstr "1x"
+
+#~ msgid "2x"
+#~ msgstr "2x"
+
+#~ msgid "4x"
+#~ msgstr "4x"
+
+#~ msgid "8x"
+#~ msgstr "8x"
+
+#~ msgid ""
+#~ "<p>DolphinQt is a new experimental GUI that is intended to replace the "
+#~ "current GUI based on wxWidgets. The implementation is <b>currently "
+#~ "incomplete</b> so some functionality (like changing certain settings) may "
+#~ "be missing.</p>\n"
+#~ "<p>Only developers working on the DolphinQt implementation and curious "
+#~ "testers should use it at the present time; normal users are recommended "
+#~ "to continue using the older DolphinWX GUI for the time being.</p>\n"
+#~ "<h3>Bug Reports</h3><p>At the current time there is no point making bug "
+#~ "reports about DolphinQt GUI's missing features as the developers are "
+#~ "already aware of those.</p>\n"
+#~ msgstr ""
+#~ "<p>DolphinQt is een nieuwe experimentele GUI die de huidige, op wxWidgets "
+#~ "gebaseerde, GUI gaat vervangen. De implementatie is <b>op dit moment "
+#~ "incompatibel</b>, sommige functies (zoals het aanpassen van bepaalde "
+#~ "instellingen) kunnen ontbreken.</p>\n"
+#~ "<p>Alleen ontwikkelaars die werken aan de DolphinQT implementatie en "
+#~ "nieuwsgierige tester zouden DolphinQt nu moeten gebruiken; het is voor "
+#~ "normale gebruikers aan te raden om het oudere DolphinWX GUI te blijven "
+#~ "gebruiken voor de komende tijd.</p>\n"
+#~ "<h3>Het rapporteren van bugs</h3><p>Het heeft op dit moment geen nut om "
+#~ "een bug report te maken over missende functies in de DolphinQt GUI. De "
+#~ "ontwikkelaars zijn hier al van op de hoogte.</p>\n"

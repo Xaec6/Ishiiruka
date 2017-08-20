@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # abuyop <abuyop@gmail.com>, 2013-2017
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Malay (Malaysia) (http://www.transifex.com/delroth/dolphin-"
 "emu/language/ms_MY/)\n"
@@ -603,16 +603,18 @@ msgid "+ ADD"
 msgstr "+ ADD"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x Natif (960x792)"
+msgstr "5x Natif (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x Natif (1600x1320)"
+msgstr "5x Natif (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -629,8 +631,9 @@ msgid "3D"
 msgstr "3D"
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr "Kedalaman 3D"
+msgstr "Kedalaman:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -853,8 +856,9 @@ msgstr "Penyesuai Dikesan"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Penyesuai Tidak Dikesan"
+msgstr "Penyesuai Dikesan"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1030,15 +1034,16 @@ msgstr "Tarikh Pemuatapl:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Sazi pemuatapl salah... adalah ia benar-benar apploader?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Pemuatapl tidak boleh dimuatkan dari fail"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Pemuatapl:"
+msgstr "Tarikh Pemuatapl:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1120,11 +1125,11 @@ msgstr "Auto (640x528 berbilang)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Auto (Saiz Tetingkap)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
-msgstr "Auto Laras Saiz Tetingkap"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:126
 msgid ""
@@ -1370,8 +1375,9 @@ msgid "CP register "
 msgstr "Daftar CP"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "Enjin Emulator CPU"
+msgstr "Enjin Emulator DSP"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1509,8 +1515,9 @@ msgid "Checking integrity..."
 msgstr "Memeriksa integiriti..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Pilih direktori root DVD:"
+msgstr "Pilih direktori root NAND:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1545,8 +1552,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Pilih fail yang digunakan sebagai pemuatapl: (dilaksana pada cakera yang "
-"dibina melalui direktori sahaja)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1763,8 +1768,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Menyambung..."
+msgstr "Mengira..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2100,8 +2106,9 @@ msgid "DSP LLE recompiler"
 msgstr "Pengompil semula DSP LLE"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "Root DVD:"
+msgstr "Root NAND Wii:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2682,8 +2689,9 @@ msgid "Emulation State: "
 msgstr "Keadaan Emulasi:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr "Kelajuan emulasi"
+msgstr "&Emulasi"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3582,8 +3590,9 @@ msgid "Frame Range"
 msgstr "Julat Bingkai"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr "Bingkai lanjutan"
+msgstr "Bingkai Lanjutan"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3702,15 +3711,15 @@ msgid "GCI Folder"
 msgstr "Folder GCI"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"Fail simpan GCI tidak dimuatkan kerana tidak ia adalah wilayah salah untuk "
-"kad ingatan maya ini:\n"
-"%s"
+"%s\n"
+"tidak dimuatkan kerana tidak mempunyai blok bebas yang mencukupi dalam kad "
+"ingatan maya"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3873,8 +3882,9 @@ msgid "Graphics settings"
 msgstr "Tetapan grafik"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr "Togol grafik"
+msgstr "Tetapan grafik"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -3936,11 +3946,11 @@ msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes do not match."
-msgstr "Cincangan tidak sepadan."
+msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes match!"
-msgstr "Cincangan sepadan!"
+msgstr ""
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcard.cpp:131
 msgid "Header checksum failed"
@@ -4093,8 +4103,9 @@ msgid "Icon"
 msgstr "Ikon"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
-msgstr "Penjanaan identiti"
+msgstr "Identiti baharu dijanakan."
 
 #: Source/Core/DolphinWX/Main.cpp:216
 msgid ""
@@ -4393,7 +4404,8 @@ msgstr "Itali"
 msgid "Italy"
 msgstr "Itali"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4727,16 +4739,18 @@ msgid "Load from selected slot"
 msgstr "Muat dari slot terpilih"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr "Muat keadaan terakhir"
+msgstr "Muat Keadaan"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr "Muat fail peta"
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr "Muat keadaan"
+msgstr "Muat Keadaan"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -5149,8 +5163,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr "Bukan semua pemain memilik permainan. Anda pasti mahu mulakannya?"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Tidak bersambung"
+msgstr "Sambung"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5228,7 +5243,7 @@ msgstr "Ofset:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "Mesej Paparan Atas-Skrin"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5291,7 +5306,8 @@ msgstr ""
 "Buka konfigurasi lalai (baca-sahaja) untuk permainan ini di dalam penyunting "
 "teks luar."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5331,7 +5347,7 @@ msgstr "Permainan lain"
 
 #: Source/Core/Core/HotkeyManager.cpp:261
 msgid "Other state hotkeys"
-msgstr "Lain-lain kekunci panas keadaan"
+msgstr ""
 
 #: Source/Core/DolphinWX/Input/InputConfigDiag.cpp:739
 msgid "Output"
@@ -5407,7 +5423,7 @@ msgstr "Jeda Dipenghujung Cereka"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "Jeda jika Hilang Fokus"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -6000,8 +6016,9 @@ msgid "Save signature as"
 msgstr "Simpan tandatangan sebagai"
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr "Simpan keadaan"
+msgstr "Simpan Keadaan"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -6183,8 +6200,9 @@ msgid "Select floating windows"
 msgstr "Pilih tetingkap terapung"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr "Pilih keadaan"
+msgstr "Pilih Permainan"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6745,16 +6763,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"Tentukan resolusi yang digunakan untuk penerapan. Resolusi tinggi "
-"menambahbaik kualiti visual, tetapi juga membebankan GPU dan seterusnya "
-"menyebabkan masalah dalam beberapa permainan.\n"
-"\"Multiple of 640x528\" akan menghasilkan saiz lebih besar sedikit "
-"berbanding \"Window Size\" dengan sedikit masalah. Iaitu, lebih rendah "
-"resolusi dalaman, lebih baik prestasi yang dihasilkan. Auto (Saiz "
-"Tetingkap), 1.5x, dan 2.5x akan menimbul masalah dalam sesetengah "
-"permainan.\n"
-"\n"
-"Jika tidak pasti, pilih 640x528."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -7070,12 +7078,14 @@ msgid "Tab Split"
 msgstr "Pisah Tab"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Jadual Kiri"
+msgstr "Biru Kiri"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Jadual Kanan"
+msgstr "Biru Kanan"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -8174,8 +8184,9 @@ msgid "Wii Remote %i"
 msgstr "Wii Remote %i"
 
 #: Source/Core/DolphinWX/Main.cpp:479
+#, fuzzy
 msgid "Wii Remote Connected"
-msgstr "Wii Remote Bersambung"
+msgstr "Wii Remote %i"
 
 #: Source/Core/DolphinWX/Config/WiiConfigPane.cpp:80
 msgid "Wii Remote Rumble"
@@ -8364,7 +8375,7 @@ msgstr "[ menunggu ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "pemuatapl (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

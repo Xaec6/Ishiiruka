@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # Delirious <delirious@freemail.hu>, 2011,2013
 # Delirious <delirious@freemail.hu>, 2013
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Hungarian (http://www.transifex.com/delroth/dolphin-emu/"
 "language/hu/)\n"
@@ -599,16 +599,18 @@ msgid "+ ADD"
 msgstr "+ HOZZÁAD"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x eredeti (960x792)"
+msgstr "5x eredeti (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x eredeti (1600x1320)"
+msgstr "5x eredeti (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -625,8 +627,9 @@ msgid "3D"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr ""
+msgstr "Mélység:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -833,8 +836,9 @@ msgstr "Adapter érzékelve"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Adapter nem érzékelhető"
+msgstr "Adapter érzékelve"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1009,15 +1013,16 @@ msgstr "Betöltőprogram dátuma:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "A betöltőprogram hibás méretű...ez tényleg egy betöltőprogram?"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "A betöltőprogram nem képes fájlból betölteni"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Betöltőprogram:"
+msgstr "Betöltőprogram dátuma:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1099,11 +1104,11 @@ msgstr "Automatikus (640x528 többszöröse)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Automatikus (ablakméret)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
-msgstr "Ablakméret automatikus igazítása"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:126
 msgid ""
@@ -1336,8 +1341,9 @@ msgid "CP register "
 msgstr "CP regiszter "
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "Processzor-emulátor motor"
+msgstr "DSP emulátor motor"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1475,8 +1481,9 @@ msgid "Checking integrity..."
 msgstr "Integritás ellenőrzése..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Válassz DVD gyökér mappát:"
+msgstr "Válassz NAND gyökér mappát:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1511,8 +1518,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Válassz betöltőprogramként használandó fájlt: (csak mappából létrehozott "
-"lemezekre alkalmazható)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1726,8 +1731,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Csatlakozás..."
+msgstr "Számolás..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2050,8 +2056,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE recompiler"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "DVD gyökér:"
+msgstr "Wii NAND gyökér:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2629,8 +2636,9 @@ msgid "Emulation State: "
 msgstr "Emuláció állapota:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr ""
+msgstr "&Emuláció"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3503,8 +3511,9 @@ msgid "Frame Range"
 msgstr "Képkocka hatókör"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr ""
+msgstr "Képkocka léptetés"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3623,14 +3632,14 @@ msgid "GCI Folder"
 msgstr "GCI mappa"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"GCI mentés nem lett betöltve, mert nem passzol a memóriakártya régiójához:\n"
-"%s"
+"%s\n"
+"nem lett betöltve, mert nincs elég szabad blokk a virtuális memóriakártyán"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3792,8 +3801,9 @@ msgid "Graphics settings"
 msgstr "&Grafikai beállítások"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "&Grafikai beállítások"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -3854,11 +3864,11 @@ msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes do not match."
-msgstr "A hash nem egyezik."
+msgstr ""
 
 #: Source/Core/DolphinWX/NetPlay/MD5Dialog.cpp:94
 msgid "Hashes match!"
-msgstr "A hash egyezik!"
+msgstr ""
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcard.cpp:131
 msgid "Header checksum failed"
@@ -4004,8 +4014,9 @@ msgid "Icon"
 msgstr "Ikon"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:233
+#, fuzzy
 msgid "Identity generation"
-msgstr "Azonosító generálása"
+msgstr "Új azonosító generálva."
 
 #: Source/Core/DolphinWX/Main.cpp:216
 msgid ""
@@ -4306,7 +4317,8 @@ msgstr "Olasz"
 msgid "Italy"
 msgstr "Olaszország"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4635,16 +4647,18 @@ msgid "Load from selected slot"
 msgstr "Betöltés a választott foglalatból"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "Állapot betöltése"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "Állapot betöltése"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -5046,8 +5060,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr "Nem minden játékos rendelkezik a játékkal. Biztos elindítod?"
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Nincs csatlakoztatva"
+msgstr "Csatlakozás"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5125,7 +5140,7 @@ msgstr "Eltolás:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "Képernyőn megjelenő üzenetek"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5186,7 +5201,8 @@ msgstr ""
 "A játékhoz tartozó alapértelmezett (írávédett) beállítás megnyitása külső "
 "szövegszerkesztőben."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5299,7 +5315,7 @@ msgstr "Szünet a videó végén"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "Szünet fókuszvesztéskor"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -5882,8 +5898,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr ""
+msgstr "Állapot mentése"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -6054,8 +6071,9 @@ msgid "Select floating windows"
 msgstr "Válassz lebegő ablakokat"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Játék választása"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6609,15 +6627,6 @@ msgid ""
 "\n"
 "If unsure, select Native."
 msgstr ""
-"A megjelenítésre használt felbontás. A magasabb felbontás nagyban javítja a "
-"vizuális minőséget, ugyanakkor nagyban növeli a GPU terhelését és bizonyos "
-"játékoknál problémát okozhat.\n"
-"A „640x528 többszöröse\" az „ablakméretnél” kicsivel nagyobb méretet "
-"eredményez, de kevesebb problémát okoz. Lényegében minél kisebb a belső "
-"felbontás, annál jobb a teljesítmény. Automatikus (ablakméret), 1.5x, és "
-"2.5x problémát okozhatnak néhány játéknál.\n"
-"\n"
-"Ha bizonytalan vagy, választ, hogy Natív."
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:100
 msgid "Speed Limit:"
@@ -6932,12 +6941,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Asztal balra"
+msgstr "Kék balra"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Asztal jobbra"
+msgstr "Kék jobbra"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -8200,7 +8211,7 @@ msgstr "[ várakozás ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "betöltőprogram (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"

@@ -1,7 +1,7 @@
 # Translation of dolphin-emu.pot to LANGUAGE
 # Copyright (C) 2003-2013
 # This file is distributed under the same license as the Dolphin Emulator package.
-#
+# 
 # Translators:
 # firespin <dartworldgr@hotmail.com>, 2014-2015
 # Gpower2 <gpower2@yahoo.com>, 2011
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: Dolphin Emulator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-07-17 14:17+0200\n"
-"PO-Revision-Date: 2017-07-17 12:18+0000\n"
+"PO-Revision-Date: 2017-08-11 12:31+0000\n"
 "Last-Translator: JosJuice\n"
 "Language-Team: Greek (http://www.transifex.com/delroth/dolphin-emu/language/"
 "el/)\n"
@@ -606,16 +606,18 @@ msgid "+ ADD"
 msgstr "+ ADD"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:515
+#, fuzzy
 msgid "1.5x Native (960x792)"
-msgstr "1.5x Αρχική (960x792)"
+msgstr "5x Αρχική (3200x2640)"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:61
 msgid "16-bit"
 msgstr "16-bit"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:517
+#, fuzzy
 msgid "2.5x Native (1600x1320)"
-msgstr "2.5x Αρχική (1600x1320)"
+msgstr "5x Αρχική (3200x2640)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:516
 msgid "2x Native (1280x1056) for 720p"
@@ -632,8 +634,9 @@ msgid "3D"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:256
+#, fuzzy
 msgid "3D depth"
-msgstr ""
+msgstr "Βάθος:"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:518
 msgid "3x Native (1920x1584) for 1080p"
@@ -841,8 +844,9 @@ msgstr "Προσαρμογέας Εντοπίστηκε"
 
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:30
 #: Source/Core/DolphinWX/Config/GCAdapterConfigDiag.cpp:78
+#, fuzzy
 msgid "Adapter Not Detected"
-msgstr "Προσαρμογέας Δεν Εντοπίστηκε"
+msgstr "Προσαρμογέας Εντοπίστηκε"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:366
 msgid "Adapter:"
@@ -1017,15 +1021,16 @@ msgstr "Apploader Ημερομηνία:"
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:323
 msgid "Apploader is the wrong size...is it really an apploader?"
-msgstr "Ο Apploader έχει λάθος μέγεθος... είναι πράγματι apploader;"
+msgstr ""
 
 #: Source/Core/DiscIO/VolumeDirectory.cpp:316
 msgid "Apploader unable to load from file"
-msgstr "Ο Apploader απέτυχε να φορτωθεί από αρχείο"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:88
+#, fuzzy
 msgid "Apploader:"
-msgstr "Apploader:"
+msgstr "Apploader Ημερομηνία:"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:493
 msgid "Apply Signat&ure File..."
@@ -1109,7 +1114,7 @@ msgstr "Αυτόματα (Πολλαπλάσιο του 640x528)"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:512
 msgid "Auto (Window Size)"
-msgstr "Αυτόματα (Μέγεθος Παραθύρου)"
+msgstr ""
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:445
 msgid "Auto Adjust Window Size"
@@ -1347,8 +1352,9 @@ msgid "CP register "
 msgstr "CP Καταχωρητές"
 
 #: Source/Core/DolphinWX/Config/GeneralConfigPane.cpp:71
+#, fuzzy
 msgid "CPU Emulator Engine"
-msgstr "Μηχανή Εξομοίωσης CPU"
+msgstr "Μηχανή Εξομοίωσης DSP"
 
 #: Source/Core/DolphinWX/Config/AdvancedConfigPane.cpp:77
 msgid "CPU Options"
@@ -1488,8 +1494,9 @@ msgid "Checking integrity..."
 msgstr "Έλεγχος ακεραιότητας..."
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:49
+#, fuzzy
 msgid "Choose a DVD root directory:"
-msgstr "Επιλέξτε έναν φάκελο ρίζας DVD:"
+msgstr "Επιλέξτε έναν φάκελο ρίζας NAND:"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:57
 msgid "Choose a NAND root directory:"
@@ -1524,8 +1531,6 @@ msgid ""
 "Choose file to use as apploader: (applies to discs constructed from "
 "directories only)"
 msgstr ""
-"Επιλέξτε ένα αρχείο για χρήση ως apploader: (έχει εφαρμογή σε δίσκους που "
-"απαρτίζονται μόνο από φακέλους)"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:417
 msgid "Choose priority input file"
@@ -1737,8 +1742,9 @@ msgid "Connect to the Internet and perform an online system update?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:476
+#, fuzzy
 msgid "Connecting..."
-msgstr "Γίνεται Σύνδεση..."
+msgstr "Υπολογισμός..."
 
 #: Source/Core/DolphinWX/NetPlay/NetPlaySetupFrame.cpp:117
 msgid "Connection Type:"
@@ -2050,8 +2056,9 @@ msgid "DSP LLE recompiler"
 msgstr "DSP LLE recompiler"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:85
+#, fuzzy
 msgid "DVD Root:"
-msgstr "Ρίζα DVD:"
+msgstr "Wii NAND Ρίζα:"
 
 #: Source/Core/DolphinWX/ControllerConfigDiag.cpp:52
 msgid "Dance Mat"
@@ -2630,8 +2637,9 @@ msgid "Emulation State: "
 msgstr "Κατάσταση Λειτουργίας:"
 
 #: Source/Core/Core/HotkeyManager.cpp:245
+#, fuzzy
 msgid "Emulation speed"
-msgstr "Ταχύτητα εξομοίωσης"
+msgstr "&Εξομοίωση"
 
 #: Source/Core/DolphinWX/VideoConfigDiag.cpp:829
 msgid "Enable API Validation Layers"
@@ -3468,8 +3476,9 @@ msgid "Frame Range"
 msgstr "Εύρος Καρέ"
 
 #: Source/Core/Core/HotkeyManager.cpp:246
+#, fuzzy
 msgid "Frame advance"
-msgstr ""
+msgstr "Προώθηση ανά Καρέ"
 
 #: Source/Core/VideoCommon/RenderBase.cpp:932
 #, c-format
@@ -3588,15 +3597,15 @@ msgid "GCI Folder"
 msgstr "GCI Φάκελος"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:55
-#, c-format
+#, fuzzy, c-format
 msgid ""
 "GCI save file was not loaded because it is the wrong region for this memory "
 "card:\n"
 "%s"
 msgstr ""
-"Το αρχείο αποθήκευσης GCI δεν φορτώθηκε επειδή είναι λάθος η περιοχή για "
-"αυτή την κάρτα μνήμης:\n"
-"%s"
+"%s\n"
+"δεν φορτώθηκε επειδή δεν υπάρχουν αρκετά ελεύθερα μπλοκ στην εικονική κάρτα "
+"μνήμης"
 
 #: Source/Core/Core/HW/GCMemcard/GCMemcardDirectory.cpp:350
 msgid "GCMemcardDirectory: ClearBlock called with invalid block address"
@@ -3748,8 +3757,9 @@ msgid "Graphics settings"
 msgstr "Ρυθμίσεις Γραφικών"
 
 #: Source/Core/Core/HotkeyManager.cpp:252
+#, fuzzy
 msgid "Graphics toggles"
-msgstr ""
+msgstr "Ρυθμίσεις Γραφικών"
 
 #: Source/Core/DolphinWX/Cheats/CheatSearchTab.cpp:110
 msgid "Greater Than"
@@ -4233,7 +4243,8 @@ msgstr "Ιταλικά"
 msgid "Italy"
 msgstr "Ιταλία"
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84 Source/Core/Core/HW/GCPadEmu.cpp:87
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:84
+#: Source/Core/Core/HW/GCPadEmu.cpp:87
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:316
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:65
 msgid "Iterative Input"
@@ -4559,16 +4570,18 @@ msgid "Load from selected slot"
 msgstr "Φόρτωση από την επιλεγμένη θέση"
 
 #: Source/Core/Core/HotkeyManager.cpp:260
+#, fuzzy
 msgid "Load last state"
-msgstr ""
+msgstr "Φόρτωση Σημείου Αποθήκευσης"
 
 #: Source/Core/DolphinWX/Debugger/CodeWindowFunctions.cpp:262
 msgid "Load map file"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:257
+#, fuzzy
 msgid "Load state"
-msgstr ""
+msgstr "Φόρτωση Σημείου Αποθήκευσης"
 
 #: Source/Core/Core/PowerPC/PPCSymbolDB.cpp:387
 #, c-format
@@ -4976,8 +4989,9 @@ msgid "Not all players have the game. Do you really want to start?"
 msgstr ""
 
 #: Source/Core/DolphinWX/Main.cpp:473
+#, fuzzy
 msgid "Not connected"
-msgstr "Μη Συνδεδεμένο"
+msgstr "Σύνδεση"
 
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:242
 #: Source/Core/DolphinWX/Debugger/DebuggerPanel.cpp:247
@@ -5055,7 +5069,7 @@ msgstr "Offset:"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:90
 msgid "On-Screen Display Messages"
-msgstr "Απεικόνιση Μηνυμάτων Στην Οθόνη"
+msgstr ""
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:518
 msgid "Online &Documentation"
@@ -5116,7 +5130,8 @@ msgstr ""
 "Ανοίγει τις προεπιλεγμένες (μόνο για ανάγνωση) ρυθμίσεις για αυτό το "
 "παιχνίδι σε έναν εξωτερικό επεξεργαστή κειμένου."
 
-#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82 Source/Core/Core/HW/GCPadEmu.cpp:85
+#: Source/Core/Core/HW/GCKeyboardEmu.cpp:82
+#: Source/Core/Core/HW/GCPadEmu.cpp:85
 #: Source/Core/Core/HW/WiimoteEmu/WiimoteEmu.cpp:308
 #: Source/Core/DolphinWX/Input/HotkeyInputConfigDiag.cpp:70
 msgid "Options"
@@ -5229,7 +5244,7 @@ msgstr "Παύση στο Τέλος της Ταινίας"
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:95
 msgid "Pause on Focus Lost"
-msgstr "Παύση Όταν Χάνεται η Εστίαση"
+msgstr ""
 
 #: Source/Core/DolphinWX/Config/InterfaceConfigPane.cpp:131
 msgid "Pauses the emulator when focus is taken away from the emulation window."
@@ -5807,8 +5822,9 @@ msgid "Save signature as"
 msgstr ""
 
 #: Source/Core/Core/HotkeyManager.cpp:258
+#, fuzzy
 msgid "Save state"
-msgstr ""
+msgstr "Αποθήκευση Σημείου"
 
 #: Source/Core/DolphinWX/MainMenuBar.cpp:476
 msgid ""
@@ -5981,8 +5997,9 @@ msgid "Select floating windows"
 msgstr "Επιλέξτε αιωρούμενα παράθυρα"
 
 #: Source/Core/Core/HotkeyManager.cpp:259
+#, fuzzy
 msgid "Select state"
-msgstr ""
+msgstr "Επιλογή Θέσης Αποθήκευσης"
 
 #: Source/Core/DolphinWX/FrameTools.cpp:346
 msgid "Select the file to load"
@@ -6801,12 +6818,14 @@ msgid "Tab Split"
 msgstr ""
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:46
+#, fuzzy
 msgid "Table Left"
-msgstr "Αριστερό Table"
+msgstr "Αριστερό Μπλε"
 
 #: Source/Core/Core/HW/WiimoteEmu/Attachment/Turntable.cpp:47
+#, fuzzy
 msgid "Table Right"
-msgstr "Δεξί Table"
+msgstr "Δεξί Μπλε"
 
 #: Source/Core/DolphinWX/ISOProperties/InfoPanel.cpp:121
 msgid "Taiwan"
@@ -7997,7 +8016,7 @@ msgstr "[ σε αναμονή ]"
 
 #: Source/Core/DolphinWX/Config/PathConfigPane.cpp:54
 msgid "apploader (.img)"
-msgstr "apploader (.img)"
+msgstr ""
 
 #: Source/Core/DolphinWX/ISOProperties/ISOProperties.cpp:290
 msgid "auto"
